@@ -231,8 +231,10 @@ $\displaystyle \\ (\Rightarrow) \sum_{k=1}^{n}X_{k}$は確率収束するとす�
 $\\$ここで実数列$\lbrace s_{n} \rbrace$が収束しないとすれば$\lbrace s_{n} \rbrace$はCauchy列でないので
 $\\{}^\exists \varepsilon>0 \ s.t. \ {}^\forall N \in \mathbb{N} , \ {}^\forall n,m \ge N \land |s_{n}-s_{m}| > \varepsilon$であるから,
 $\displaystyle \\ {}^\exists \varepsilon>0 \ s.t. \ {}^\forall m \in \mathbb{N}, \ \sup_{n>m} |s_{n}-s_{m}| > \varepsilon$となる. $\displaystyle \sum_{k=1}^{n}X_{k}$はCauchy列でないから,
-$\displaystyle \\ {}^\exists \varepsilon, \ \delta >0 \ s.t. \ \left[ {}^\forall m \in \mathbb{N},\ P(\sup_{n>m} |\sum_{k=1}^{n}X_{k} - \sum_{k=1}^{m}X_{k}| > \varepsilon) \ge \delta  \right]$となる.この$\varepsilon, \ \delta$を固定する.
-$\\ $
+$\displaystyle \\ {}^\exists \varepsilon >0, \ {}^\exists \delta \in (0,1] \ s.t. \ \left[ {}^\forall m \in \mathbb{N},\ P\left(\sup_{n>m} |\sum_{k=1}^{n}X_{k} - \sum_{k=1}^{m}X_{k}| > \varepsilon \right) \ge \delta  \right]$となる.この$\varepsilon, \ \delta$を固定する.
+$\displaystyle \\ {}^\forall m, \ N \in \mathbb{N} \ (m<N)$をとる.
+%
+$\displaystyle \\ P\left(\sup_{ m < n \le N } \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) \le \frac{1}{1-C_{m, N}} P\left( \left| \sum_{ k = m+1 }^{N} X_{k} \right| > \frac{\varepsilon}{2} \right)$  ただし$ \displaystyle C_{m, N} = \sup_{m < n \le N} P\left( \left| \sum_{k=n}^{N}X_{k} \right| > \frac{\varepsilon}{2} \right)$
 
 \end{proof}
 
