@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.12.28)  7 JAN 2022 12:34
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.12.28)  7 JAN 2022 15:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -257,14 +257,27 @@ Overfull \hbox (12.62463pt too wide) in paragraph at lines 229--241
 ^^T \OML/cmm/m/it/10 P [] [] 
  []
 
-[6] [7] (./zemi_texfile.aux) ) 
+
+Overfull \hbox (40.6799pt too wide) in paragraph at lines 243--250
+[]$ \JY1/mc/m/n/10 単調性から\OT1/cmr/m/n/10 , $[] \OML/cmm/m/it/10 P [] \OT1/c
+mr/m/n/10 = \OML/cmm/m/it/10 P [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P []$
+ []
+
+[6]
+Overfull \hbox (3.26212pt too wide) in paragraph at lines 257--258
+[]$\OML/cmm/m/it/10 P [] \OMS/cmsy/m/n/10 ^^U \OML/cmm/m/it/10 P []$ \JY1/mc/m/
+n/10 となる\OT1/cmr/m/n/10 . \JY1/mc/m/n/10 つまり $\OML/cmm/m/it/10 P [] \OT1/
+cmr/m/n/10 =
+ []
+
+[7] [8] (./zemi_texfile.aux) ) 
 Here is how much of TeX's memory you used:
  1955 strings out of 479466
  25334 string characters out of 5870547
- 339309 words of memory out of 5000000
+ 343309 words of memory out of 5000000
  19652 multiletter control sequences out of 15000+600000
  421202 words of font info for 108 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  67i,9n,74p,1014b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on zemi_texfile.dvi (7 pages, 44488 bytes).
+Output written on zemi_texfile.dvi (8 pages, 48396 bytes).

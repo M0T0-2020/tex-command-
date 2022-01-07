@@ -241,7 +241,23 @@ $ \displaystyle C_{m, N} = \sup_{m < n \le N} P\left( \left| \sum_{k=n}^{N}X_{k}
 
 %
 ここで補題 8を使うと,
-$\displaystyle \\ P\left(\sup_{ m < n \le N } \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) \le \frac{1}{1-C_{m, N}} P\left( \left| \sum_{ k = m+1 }^{N} X_{k} \right| > \frac{\varepsilon}{2} \right)$ 
+$\displaystyle \\ P\left(\sup_{ m < n \le N } \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) \le \frac{1}{1-C_{m, N}} P\left( \left| \sum_{ k = m+1 }^{N} X_{k} \right| > \frac{\varepsilon}{2} \right)$ とかけて,
+まず$\displaystyle N \to \infty$とすると,$\\$
+単調性から, $\displaystyle \lim_{N \to \infty} P\left(\sup_{ m < n \le N } \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) =   P\left( \lim_{N \to \infty} \sup_{ m < n \le N } \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right)=   P\left( \sup_{ m < n} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right)$ 
+$\displaystyle \\ \le \lim_{N \to \infty} \frac{1}{1-C_{m, N}} P\left( \left| \sum_{ k = m+1 }^{N} X_{k} \right| > \frac{\varepsilon}{2} \right)$, $\ \displaystyle \lim_{m \to \infty} \lim_{N \to \infty} \frac{1}{1-C_{m, N}} P\left( \left| \sum_{ k = m+1 }^{N} X_{k} \right| > \frac{\varepsilon}{2} \right)$だから,
+$\displaystyle \\ \lim_{m \to \infty}  P\left( \sup_{ m < n} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) = 0$
+ここで, $\displaystyle \left\{ \sup_{ m < n} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right\}$は$m$に関して単調減少なので,
+
+%考察が必要
+$\\ \displaystyle \lim_{m \to \infty}  P\left( \sup_{ m < n} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) = P\left( \lim_{m \to \infty} \sup_{ m < n} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) = $ 
+
+
+$\\ \\ \\ \\ $
+
+$\displaystyle P\left( \varlimsup_{m \to \infty} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) \ge P\left( \lim_{m \to \infty} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right)$となる.つまり $\displaystyle P\left( \lim_{m, n \to \infty} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) = 0$. よって$\displaystyle \sum_{k=1}^{n}X_{k}$がほとんど確実にCauchy列であることがわかった. これは$\displaystyle \sum_{k=1}^{n}X_{k}$が概収束しないことに矛盾する.
+
+
+
 \end{proof}
 
 
