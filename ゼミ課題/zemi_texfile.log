@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.12.28)  6 JAN 2022 23:06
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.12.28)  7 JAN 2022 12:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -252,10 +252,9 @@ File: ueus.fd 2013/01/14 v3.01 Euler Script
 
 ] [2]
 [3] [4] [5]
-Overfull \hbox (10.9251pt too wide) in paragraph at lines 229--238
-[]\OML/cmm/m/it/10 P [] \OMS/cmsy/m/n/10 ^^T []\OML/cmm/m/it/10 P []$ \JY1/mc/m
-/n/10 ただし $\OML/cmm/m/it/10 C[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 P []$ 
-
+Overfull \hbox (12.62463pt too wide) in paragraph at lines 229--241
+\OML/cmm/m/it/10 P [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P [] \OMS/cmsy/m/n/10 
+^^T \OML/cmm/m/it/10 P [] [] 
  []
 
 [6] [7] (./zemi_texfile.aux) ) 
@@ -268,4 +267,4 @@ Here is how much of TeX's memory you used:
  934 hyphenation exceptions out of 8191
  67i,9n,74p,1014b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on zemi_texfile.dvi (7 pages, 41220 bytes).
+Output written on zemi_texfile.dvi (7 pages, 44488 bytes).

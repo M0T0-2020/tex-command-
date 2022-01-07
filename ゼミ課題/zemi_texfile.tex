@@ -232,10 +232,16 @@ $\\$ここで実数列$\lbrace s_{n} \rbrace$が収束しないとすれば$\lbr
 $\\{}^\exists \varepsilon>0 \ s.t. \ {}^\forall N \in \mathbb{N} , \ {}^\forall n,m \ge N \land |s_{n}-s_{m}| > \varepsilon$であるから,
 $\displaystyle \\ {}^\exists \varepsilon>0 \ s.t. \ {}^\forall m \in \mathbb{N}, \ \sup_{n>m} |s_{n}-s_{m}| > \varepsilon$となる. $\displaystyle \sum_{k=1}^{n}X_{k}$はCauchy列でないから,
 $\displaystyle \\ {}^\exists \varepsilon >0, \ {}^\exists \delta \in (0,1] \ s.t. \ \left[ {}^\forall m \in \mathbb{N},\ P\left(\sup_{n>m} |\sum_{k=1}^{n}X_{k} - \sum_{k=1}^{m}X_{k}| > \varepsilon \right) \ge \delta  \right]$となる.この$\varepsilon, \ \delta$を固定する.
-$\displaystyle \\ {}^\forall m, \ N \in \mathbb{N} \ (m<N)$をとる.
+%Cm,Nを定める.
+ $\\ \displaystyle \displaystyle \sum_{k=1}^{n}X_{k}$は確率収束するので$\displaystyle \sum_{k=1}^{N} X_{k} - \sum_{k=1}^{m}X_{k} \stackrel{P}{\longrightarrow}  0 $となる. 
 %
-$\displaystyle \\ P\left(\sup_{ m < n \le N } \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) \le \frac{1}{1-C_{m, N}} P\left( \left| \sum_{ k = m+1 }^{N} X_{k} \right| > \frac{\varepsilon}{2} \right)$  ただし$ \displaystyle C_{m, N} = \sup_{m < n \le N} P\left( \left| \sum_{k=n}^{N}X_{k} \right| > \frac{\varepsilon}{2} \right)$
+なぜなら $\displaystyle \sum_{k=1}^{n}X_{k} \stackrel{P}{\longrightarrow} s$とすると, $\displaystyle P\left( \left| \sum_{k=1}^{N} X_{k} - \sum_{k=1}^{m}X_{k} \right| > \varepsilon\right) = P\left( \left| \sum_{k=1}^{N} X_{k} - s +s - \sum_{k=1}^{m}X_{k} \right| > \varepsilon\right) \le P\left( \left| \sum_{k=1}^{N} X_{k} - s\right| + \left| s - \sum_{k=1}^{m}X_{k} \right| > \varepsilon\right) \\ \le P\left( \left\{ \left| \sum_{k=1}^{N} X_{k} - s\right| > \frac{\varepsilon}{2} \right\} \cup \left\{  \left| s - \sum_{k=1}^{m}X_{k} \right| > \frac{\varepsilon}{2} \right\} \right) \\ \le P\left( \left| \sum_{k=1}^{N} X_{k} - s\right| > \frac{\varepsilon}{2} \right) + P\left( \left| \sum_{k=1}^{m} X_{k} - s\right| > \frac{\varepsilon}{2} \right) \to 0 \ (m,\ N \to \infty)$となるから. $\\$
+よって,ある$M \in \mathbb{N}$が存在して, ${}^\forall m, \ N \ge M \ (m < N)$に対して,$\displaystyle P\left( \left| \sum_{k=m+1}^{N} X_{k} \right| > \frac{\varepsilon}{2}\right) < 1$で, $\displaystyle P\left( \left| \sum_{k=m+1}^{N} X_{k} \right| > \frac{\varepsilon}{2}\right) \to 0 \ (m, \ N \to \infty)$この$m, \ N $を固定する.$\\$
+$ \displaystyle C_{m, N} = \sup_{m < n \le N} P\left( \left| \sum_{k=n}^{N}X_{k} \right| > \frac{\varepsilon}{2} \right)$とおくと,$ \displaystyle \  C_{m, N} < 1$ かつ$\displaystyle C_{m, N} \to 0 \ (m, \ N \to \infty)$となる.
 
+%
+ここで補題 8を使うと,
+$\displaystyle \\ P\left(\sup_{ m < n \le N } \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) \le \frac{1}{1-C_{m, N}} P\left( \left| \sum_{ k = m+1 }^{N} X_{k} \right| > \frac{\varepsilon}{2} \right)$ 
 \end{proof}
 
 
