@@ -283,11 +283,24 @@ $n > N$において,$\\$
 $\displaystyle \sum_{k=1}^{n-1}(b_{k+1}-b_{k}) |r_{k}| \le \sum_{k=1}^{N-1}(b_{k+1}-b_{k}) |r_{k}| + \varepsilon \sum_{k=N}^{n-1}(b_{k+1}-b_{k}) \le \tilde{r} (b_{N}-b_{1}) + \varepsilon (b_{n}-b_{N}) \ よって$ $\\$
 $\displaystyle\left| \frac{ \sum_{k=1}^{n} b_{k}x_{k} }{b_{n}}\right| \le \frac{1}{b_{n}} ( \tilde{r}(b_{N}-b_{1}) + \varepsilon ( b_{n} -b_{N} ) + b_{1}|s| + b_{n}\varepsilon ) \to \varepsilon $つまり$\displaystyle \varlimsup_{n \to \infty} \left| \frac{ \sum_{k=1}^{n} b_{k}x_{k} }{b_{n}}\right| \le \varepsilon$となるから$\displaystyle \lim_{n \to \infty} \left| \frac{ \sum_{k=1}^{n} b_{k}x_{k} }{b_{n}}\right| \le \varepsilon$がわかった.ここで$\varepsilon \downarrow 0$とすれば,$\displaystyle\frac{1}{b_{n}} \sum_{k=1}^{n} b_{k} x_{k} \to 0 $が示された.
 \end{proof}
-この補題を使って定理7を証明する.
+この補題を使って定理10を証明する.
 \begin{proof}
 $\\$
-Kronecker's Lemmaにより, $\displaystyle\sum_{k=1}^{n}\frac{X_{k}}{b_{k}}$がほとんど確実に収束すれば,$\displaystyle \frac{1}{b_{k}} \sum_{k=1}^{n} b_{k} \frac{X_{k}}{b_{k}} = \frac{1}{b_{k}} \sum_{k=1}^{n} X_{k} \stackrel{a.s.}{\longrightarrow}  0$となる.
+Kronecker's Lemmaにより, $\displaystyle\sum_{k=1}^{n}\frac{X_{k}}{b_{k}}$がほとんど確実に収束すれば,$\displaystyle \frac{1}{b_{k}} \sum_{k=1}^{n} b_{k} \frac{X_{k}}{b_{k}} = \frac{1}{b_{k}} \sum_{k=1}^{n} X_{k} \stackrel{a.s.}{\longrightarrow}  0$となる.仮定から,
+$X_{1}, X_{2}, \dots$は独立確率変数,
+$\displaystyle E\left[ \frac{X_{k}}{b_{k}} \right] = 0, \ \sum_{k=1}^{\infty} E\left[ \frac{X_{k}^{2}}{b_{k}^{2}} \right] < \infty$であるから,系 9から $\displaystyle\sum_{k=1}^{n}\frac{X_{k}}{b_{k}}$は概収束する. 
+$\displaystyle \ \therefore \frac{X_{1} + \dots + X_{n}}{b_{n}} \stackrel{a.s.}{\longrightarrow}  0 $
 \end{proof}
+
+
+%定理3.33
+\begin{thm}
+$X_{1}, X_{2}, \dots$を$L_{d} \ (d \ge 0)$上に分布する確率変数列とする.
+$\\$このとき$\displaystyle L_{d}$に含まれる状態は全て再帰的または全て非再帰的である.
+\end{thm}
+\begin{proof}
+\end{proof}
+
 
 
 \end{document}
