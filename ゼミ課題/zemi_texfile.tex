@@ -11,6 +11,7 @@
 \newtheorem{dfn}[thm]{定義}
 \newtheorem{prop}[thm]{命題}
 \newtheorem{lem}[thm]{補題}
+\newtheorem{cor}[thm]{系}
 
 
 \begin{document}
@@ -230,12 +231,12 @@ $\\ (\Leftarrow) \ 概収束するならば確率収束するので成立する.
 $\displaystyle \\ (\Rightarrow) \sum_{k=1}^{n}X_{k}$は確率収束するとする. ここで$\displaystyle \sum_{k=1}^{n}X_{k}$が概収束しないと仮定する.(背理法)
 $\\$ここで実数列$\lbrace s_{n} \rbrace$が収束しないとすれば$\lbrace s_{n} \rbrace$はCauchy列でないので
 $\\{}^\exists \varepsilon>0 \ s.t. \ {}^\forall N \in \mathbb{N} , \ {}^\forall n,m \ge N \land |s_{n}-s_{m}| > \varepsilon$であるから,
-$\displaystyle \\ {}^\exists \varepsilon>0 \ s.t. \ {}^\forall m \in \mathbb{N}, \ \sup_{n>m} |s_{n}-s_{m}| > \varepsilon$となる. $\displaystyle \sum_{k=1}^{n}X_{k}$はCauchy列でないから,
+$\displaystyle \\ {}^\exists \varepsilon>0 \ s.t. \ {}^\forall m \in \mathbb{N}, \ \sup_{n>m} |s_{n}-s_{m}| > \varepsilon$となる. $\displaystyle \sum_{k=1}^{n}X_{k}$はほとんど確実にCauchy列でないから,
 $\displaystyle \\ {}^\exists \varepsilon >0, \ {}^\exists \delta \in (0,1] \ s.t. \ \left[ {}^\forall m \in \mathbb{N},\ P\left(\sup_{n>m} |\sum_{k=1}^{n}X_{k} - \sum_{k=1}^{m}X_{k}| > \varepsilon \right) \ge \delta  \right]$となる.この$\varepsilon, \ \delta$を固定する.
 %Cm,Nを定める.
- $\\ \displaystyle \displaystyle \sum_{k=1}^{n}X_{k}$は確率収束するので$\displaystyle \sum_{k=1}^{N} X_{k} - \sum_{k=1}^{m}X_{k} \stackrel{P}{\longrightarrow}  0 $となる. 
-%
-なぜなら $\displaystyle \sum_{k=1}^{n}X_{k} \stackrel{P}{\longrightarrow} s$とすると, $\displaystyle P\left( \left| \sum_{k=1}^{N} X_{k} - \sum_{k=1}^{m}X_{k} \right| > \varepsilon\right) = P\left( \left| \sum_{k=1}^{N} X_{k} - s +s - \sum_{k=1}^{m}X_{k} \right| > \varepsilon\right) \le P\left( \left| \sum_{k=1}^{N} X_{k} - s\right| + \left| s - \sum_{k=1}^{m}X_{k} \right| > \varepsilon\right) \\ \le P\left( \left\{ \left| \sum_{k=1}^{N} X_{k} - s\right| > \frac{\varepsilon}{2} \right\} \cup \left\{  \left| s - \sum_{k=1}^{m}X_{k} \right| > \frac{\varepsilon}{2} \right\} \right) \\ \le P\left( \left| \sum_{k=1}^{N} X_{k} - s\right| > \frac{\varepsilon}{2} \right) + P\left( \left| \sum_{k=1}^{m} X_{k} - s\right| > \frac{\varepsilon}{2} \right) \to 0 \ (m,\ N \to \infty)$となるから. $\\$
+ $\\ \displaystyle \displaystyle \sum_{k=1}^{n}X_{k}$は確率収束するので$\displaystyle \sum_{k=1}^{N} X_{k} - \sum_{k=1}^{m}X_{k} \stackrel{P}{\rightarrow} 0 $となる. 
+%何故ならば
+$\displaystyle \\ \because \sum_{k=1}^{n}X_{k} \stackrel{P}{\rightarrow} s$とすると, $\displaystyle P\left( \left| \sum_{k=1}^{N} X_{k} - \sum_{k=1}^{m}X_{k} \right| > \varepsilon\right) = P\left( \left| \sum_{k=1}^{N} X_{k} - s +s - \sum_{k=1}^{m}X_{k} \right| > \varepsilon\right) \le P\left( \left| \sum_{k=1}^{N} X_{k} - s\right| + \left| s - \sum_{k=1}^{m}X_{k} \right| > \varepsilon\right) \le P\left( \left\{ \left| \sum_{k=1}^{N} X_{k} - s\right| > \frac{\varepsilon}{2} \right\} \cup \left\{  \left| s - \sum_{k=1}^{m}X_{k} \right| > \frac{\varepsilon}{2} \right\} \right) \\ \le P\left( \left| \sum_{k=1}^{N} X_{k} - s\right| > \frac{\varepsilon}{2} \right) + P\left( \left| \sum_{k=1}^{m} X_{k} - s\right| > \frac{\varepsilon}{2} \right) \to 0 \ (m,\ N \to \infty)$となるから. $\\$
 よって,ある$M \in \mathbb{N}$が存在して, ${}^\forall m, \ N \ge M \ (m < N)$に対して,$\displaystyle P\left( \left| \sum_{k=m+1}^{N} X_{k} \right| > \frac{\varepsilon}{2}\right) < 1$で, $\displaystyle P\left( \left| \sum_{k=m+1}^{N} X_{k} \right| > \frac{\varepsilon}{2}\right) \to 0 \ (m, \ N \to \infty)$この$m, \ N $を固定する.$\\$
 $ \displaystyle C_{m, N} = \sup_{m < n \le N} P\left( \left| \sum_{k=n}^{N}X_{k} \right| > \frac{\varepsilon}{2} \right)$とおくと,$ \displaystyle \  C_{m, N} < 1$ かつ$\displaystyle C_{m, N} \to 0 \ (m, \ N \to \infty)$となる.
 
@@ -246,18 +247,19 @@ $\displaystyle \\ P\left(\sup_{ m < n \le N } \left| \sum_{ k = m+1 }^{n} X_{k} 
 単調性から, $\displaystyle \lim_{N \to \infty} P\left(\sup_{ m < n \le N } \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) =   P\left( \lim_{N \to \infty} \sup_{ m < n \le N } \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right)=   P\left( \sup_{ m < n} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right)$ 
 $\displaystyle \\ \le \lim_{N \to \infty} \frac{1}{1-C_{m, N}} P\left( \left| \sum_{ k = m+1 }^{N} X_{k} \right| > \frac{\varepsilon}{2} \right)$, $\ \displaystyle \lim_{m \to \infty} \lim_{N \to \infty} \frac{1}{1-C_{m, N}} P\left( \left| \sum_{ k = m+1 }^{N} X_{k} \right| > \frac{\varepsilon}{2} \right)$だから,
 $\displaystyle \\ \lim_{m \to \infty}  P\left( \sup_{ m < n} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) = 0$
-ここで, $\displaystyle \left\{ \sup_{ m < n} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right\}$は$m$に関して単調減少なので,
+ これは$\displaystyle {}^\forall m \in \mathbb{N},\ P\left(\sup_{n>m} |\sum_{k=1}^{n}X_{k} - \sum_{k=1}^{m}X_{k}| > \varepsilon \right) \ge \delta > 0$に矛盾する. 背理法により $\displaystyle \sum_{k=1}^{n}X_{k}$は概収束することがわかった.
+\end{proof}
 
-%考察が必要
-$\\ \displaystyle \lim_{m \to \infty}  P\left( \sup_{ m < n} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) = P\left( \lim_{m \to \infty} \sup_{ m < n} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) = $ 
-
-
-$\\ \\ \\ \\ $
-
-$\displaystyle P\left( \varlimsup_{m \to \infty} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) \ge P\left( \lim_{m \to \infty} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right)$となる.つまり $\displaystyle P\left( \lim_{m, n \to \infty} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) = 0$. よって$\displaystyle \sum_{k=1}^{n}X_{k}$がほとんど確実にCauchy列であることがわかった. これは$\displaystyle \sum_{k=1}^{n}X_{k}$が概収束しないことに矛盾する.
-
-
-
+%系
+\begin{cor}
+$\displaystyle \\ E[X_{k}] = 0 \ ( {}^\forall k \in \mathbb{N} ), \ \sum_{k=1}^{\infty}E[X_{k}^{2}] < \infty$とする.このとき$\displaystyle \sum_{k=1}^{n}X_{ k }$は確率収束する.
+\end{cor}
+\begin{proof}
+$\displaystyle \\ X_{1}, X_{2}, \dots$は独立なので,$\displaystyle \sum_{k=1}^{n}X_{ k }$が確率収束することを示せば定理8から$\displaystyle \sum_{k=1}^{n}X_{ k }$は確率収束する.
+$\displaystyle \\ \sum_{k=1}^{\infty}E[X_{k}^{2}] = s^{2}$ (ただし $s \ge 0$ )とする. ${}^\forall \varepsilon > 0$ に対してChebyshevの不等式から $\displaystyle \\ P\left( \left| \sum_{k=1}^{n}X_{ k } - s \right| > \varepsilon \right) \le \frac{1}{ \varepsilon ^ {2} } E\left[ \left| \sum_{k=1}^{n}X_{ k } - s \right|^{2} \right]$ となる.
+$\displaystyle E\left[ \left| \sum_{k=1}^{n}X_{ k } - s \right|^{2} \right] \to 0 \ (n \to \infty )$を示したい. $\displaystyle \\ E\left[ \left| \sum_{k=1}^{n}X_{ k } - s \right|^{2} \right] = E\left[ \left| \sum_{k=1}^{n}X_{ k } \right|^{2} \right] -2sE\left[ \sum_{k=1}^{n}X_{ k } \right] + s^{2} \\ = E\left[ \sum_{k=1}^{n}X_{ k }^{2} + 2 \sum_{i<j}X_{ i }X_{ j }  \right]-2sE\left[ \sum_{k=1}^{n}X_{ k } \right] + s^{2} $ここで,$\displaystyle X_{1}, X_{2}, \dots$は独立だから 
+$\displaystyle \\ \sum_{i<j} E\left[ X_{ i }X_{ j }  \right] = \sum_{i<j} E\left[ X_{ i } \right] E\left[X_{ j }  \right]$が成立する. また$\displaystyle E[X_{k}] = 0 \ ( {}^\forall k \in \mathbb{N} )$なので
+$\displaystyle \\ = \sum_{k=1}^{n} E\left[ {X_{ k }}^{2} \right] -2s\sum_{k=1}^{n} E\left[ X_{ k } \right] + s^{2} \to s^{2} -2s^{2}+s^{2}=0 \ (n \to \infty) \\ \sum_{k=1}^{n}X_{ k }$が確率収束することがわかったので$\displaystyle \sum_{k=1}^{n}X_{ k }$は確率収束する.
 \end{proof}
 
 
