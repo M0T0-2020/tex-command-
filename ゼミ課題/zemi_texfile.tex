@@ -303,23 +303,49 @@ $\displaystyle \\ G = \left\{ x \in L_{d} | \ xは再帰的\right\}$
 とおくと, $G$は閉集合となる.($G$が空のときは全ての状態が非再帰的なので$G \neq \emptyset$とする.)
 $\displaystyle \\ \because {}^\forall \left\{ x_{n} \right\}_{n=1}^{\infty} \subset G$をとって $x_{n} \to x $とする.このとき$x \in G$を示したい.
 $\displaystyle \\ x$の開近傍$I$を任意にとる.$I$に対してnを十分大きく取れば$x_{n} \in I$となる.この$n$を固定する.$I$は$x_{n}$の近傍でもあるから,$P(S_{n} \in I \ i.o.) = 1 \ \therefore x \in G$
-$\displaystyle \\ y$が$y$の任意の近傍$I$に対して$k \in \mathbb{N}$が存在して$P(S_{k} \in I) >0$となるときyは候補状態であるとする.
-$\\ x$が再帰的かつ$y$が候補状態$\Rightarrow \ x-y$は再帰的である. 
+$\displaystyle \\ y \in \mathbb{R}$が$y$の任意の近傍$I$に対して$k \in \mathbb{N}$が存在して$P(S_{k} \in I) >0$となるときyは候補状態であるとする.
+$x$が再帰的かつ$y$が候補状態$\Rightarrow \ x-y$は再帰的である. 
 $\displaystyle \\ {}^\forall \varepsilon >0$をとって,\ $k \in \mathbb{N}$を$P(\left| S_{k} - y \right| < \varepsilon) >0$を満たすようにとる.
-$\\ x$は再帰的だから$\displaystyle P(\bigcap_{m \in \mathbb{N} } \bigcup_{n > m} \left\{ \left| S_{n} - x \right| < \varepsilon \right\}) = 1$となるから,
+$\\ x$は再帰的より$\displaystyle P(\bigcap_{m \in \mathbb{N} } \bigcup_{n > m} \left\{ \left| S_{n} - x \right| < \varepsilon \right\}) = 1$となるから,
 $\displaystyle  \\
 0=P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\}) \ge 
 P( \left| S_{k} - y \right| < \varepsilon, \ \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\}) \\
 = P(\left| S_{k} - y \right| < \varepsilon)P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\})= P(\left| S_{k} - y \right| < \varepsilon)P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - (x-y) \right| \ge 2\varepsilon \right\}) \\
 $
-$\displaystyle \because \displaystyle \omega \in \left\{ \left| S_{k} - y \right|  < \varepsilon \right\} \cap \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\}$をとると,$\displaystyle {}^\exists m \in \mathbb{N} \ s.t. \\ {}^\forall n \ge m, \ \left| S_{k+n}(\omega) - S_{k}(\omega) -(x-y) \right| \ge 2 \varepsilon$となる.
+$\displaystyle \because \displaystyle {}^\forall \omega \in \left\{ \left| S_{k} - y \right|  < \varepsilon \right\} \cap \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\}$をとると,$\displaystyle {}^\exists m \in \mathbb{N} \ s.t. \\ {}^\forall n \ge m, \ \left| S_{k+n}(\omega) - S_{k}(\omega) -(x-y) \right| \ge 2 \varepsilon$となる.
 $\displaystyle 2\varepsilon \le \left| S_{k+n}(\omega) -  x \right| + \left| S_{k}(\omega) -y \right| <  \left| S_{k+n}(\omega) -  x \right|  + \varepsilon$から
-$\displaystyle \\ \varepsilon \le \left| S_{k+n}(\omega) -  x \right| \ ({}^\forall n \ge m), \ N=k+m$とおけば, \
-$\displaystyle {}^\forall n \ge N$に対して, $ \left| S_{n}(\omega) -  x \right| \ge \varepsilon$ なので $\displaystyle \omega \in \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\} \ \therefore \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\} \supset \left\{ \left| S_{k} - y \right|  < \varepsilon \right\} \cap \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\}$ 
+$\displaystyle \varepsilon \le \left| S_{k+n}(\omega) -  x \right| \ ({}^\forall n \ge m), \ N=k+m$とおけば, \\
+$\displaystyle {}^\forall n \ge N$に対して, $ \left| S_{n}(\omega) -  x \right| \ge \varepsilon$ なので $\displaystyle \omega \in \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\} \\ \therefore \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\} \supset \left\{ \left| S_{k} - y \right|  < \varepsilon \right\} \cap \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\}$ 
 $\\$また $X_{1}, X_{2}, \dots$は独立なので,$\ S_{k}$と$\displaystyle S_{k+n} - S_{k} = \sum_{m=k+1}^{k+n} X_{m}$は独立.\ 同一分布性から
 $\displaystyle \\ P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\})= P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - (x-y) \right| \ge 2\varepsilon \right\})$も成立する.
-$\\ $
+$\displaystyle \\ P(\left| S_{k} - y \right| < \varepsilon) >0$なので$P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - (x-y) \right| \ge 2\varepsilon \right\}) = 0$つまり $\displaystyle \\ P(\left\{ \left| S_{n} - (x-y) \right| < 2\varepsilon \right\} \ i.o.) = 1 \quad I_{\varepsilon} = (x-y -2\varepsilon, x-y + 2\varepsilon)$とおけば,$P( \left| S_{n} \right| \in I_{\varepsilon}  \ i.o.) = 1$
+$\\ \varepsilon >0$は任意だったから$x-y$は再帰的である.
+$\displaystyle \\ x \in G$は候補状態である
+%x in G$は候補状態.
+$\because {}^\forall x \in G$をとる.\ $x$の開近傍$I$を任意にとる. $\displaystyle P(S_{n} \in I \ i.o.) = 1$であるから,${}^\forall k \in \mathbb{N}$に対して$P(S_{k} \in I )= 0$であるとすれば \ $\displaystyle \sum_{k=1}^{\infty} P(S_{k} \in I) < \infty$よりBorel-Ccantelli Lammaから$P(S_{k} \in I \ i.o.)= 0$これは$\displaystyle P(S_{n} \in I \ i.o.) = 1$に矛盾する.よって${}^\exists m \in \mathbb{N} \ s.t. \ P(S_{k} \in I ) > 0$となる.
+$\\$よって\ $x-x =0 \in G$である.
+このことから$G$は群である.$G$が$\mathbb{R}$上で閉なので$G$は$\mathbb{R}$上の閉部分群である. 
+%ここで$\mathbb{R}$上の閉部分群はある格子$L_{l} \ (l \ge 0)$である.
+%$X_{1}, X_{2},\dots$は$L_{d}$上に分布するので$S_{n} \in L_{d}$から任意の候補状態$y$は$y \in L_{d}$となる.よって
+全ての候補状態$y$に対して $0-y = y \in G$となる.
+%$L_{d} \subset G$となる.
+%$S_{n} \in L_{d}$から $G \subset L_{d}$である.
+%d>0
+$\displaystyle \\ \bullet d>0$のとき\ $P(X_{1} = nd) >0$ かつ$P(X_{1}=(n+1)d)>0$となる$n \in \mathbb{Z}$が存在しないとき
+$\\ 0 \in G$なので0は候補状態なので
+$\displaystyle \sum_{n \in \mathbb{Z}} P(X_{1} = (2d) n)=1$となって, $d$の最大性に反する. 
+よってある$n \in \mathbb{Z}$が取れて$nd, (n+1)d \in G$となる. $G$は群なので$(n+1)d - nd = d \in G$このことから$L_{d} \subset G$である.
+%d=0
+$\displaystyle \\ \bullet d=0$のとき\ このとき$G$に対して${}^\exists l > 0 \ s.t. \ G=\left\{ nl | n \in \mathbb{Z}  \right\}となると仮定する(背理法).$候補状態は$G$の元なので$\displaystyle \sum_{n \in \mathbb{Z}}P(X_{1}=nl)=1$となり,これは$d=0$に矛盾する.よって$G=\mathbb{R} = L_{0}$
+$\\$以上で$d \ge 0$に対して$L_{d} = G$となり, $L_{d}$の全ての元は再帰的となる.
 \end{proof}
+
+%定理3.34
+\begin{thm}
+\end{thm}
+\begin{proof}
+\end{proof}
+
 
 
 
