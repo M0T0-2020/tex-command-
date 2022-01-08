@@ -349,6 +349,7 @@ $\\ (i)$もし, 有界区間$J \subset \mathbb{R}$が存在して $J \cap L_{d} 
 $\\$ $(i) \ J \cap L_{d} \neq \emptyset$かつ $\displaystyle \sum_{n=1}^{\infty}P(S_{n} \in J) < \infty$を満たす有界区間$J \subset \mathbb{R}$がとれたとする.
 Borel-Canteli's Lemma$\\$から$P(S_{n} \in J \ i.o.)=0$となって, $L_{d}$は少なくとも再帰的でない状態が含まれる.$\displaystyle \\ \because x \in L{d} \cap J$をとれば, $x$の開近傍$I \subset J$がとれて, $P(S_{n} \in I \ i.o.) \le P(S_{n} \in J \ i.o.) = 0$となって$x$は再帰的でない$L_{d}$の元である.
 $\displaystyle \\ $定理12から$L_{d}$の元は全て再帰状態にはならない.つまり再帰状態は存在しない.
+%(ii)の証明
 $\displaystyle \\ \\ (ii)$長さ$l$の有界区間$\displaystyle J \subset \mathbb{R}$で$0 < {}^\forall \varepsilon < \frac{l}{2}$に対して, ${}^\exists x \in \mathbb{R} \ s.t. \ I = (x-\varepsilon, x+\varepsilon) \subset J$かつ$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I) = \infty$となるものがとれたとする. $0 \in L_{d}$なので,0が再帰的であることがわかれば定理12から$L_{d}$の全ての状態が再帰的である.
 %
 $A_{k} = \begin{cases} \left\{ S_{k} \in I, \ S_{n+k} \notin I \ n=1,2,\dots \right\} & (k \geq 1) \\ \left\{ S_{n} \notin I \ n=1,2,\dots \right\} & (k = 0) \end{cases}$と定めると,$\displaystyle \bigcup_{m \in \mathbb{N}} \bigcap_{n>m} \left\{ S_{n} \notin I \right\} = \bigcup_{k=0}^{\infty} A_{k}$となる.
@@ -359,6 +360,24 @@ $\\ \displaystyle \because (\subset) {}^\forall \omega \in$ (左辺) とする. 
 $\\ (\supset)$ $ {}^\forall \omega \in$ (右辺)とする. ${}^\exists k \in \mathbb{N} \ s.t. \ \omega \in A_{k}$となる.
 $\\ k \ge 1$のとき $\displaystyle \omega \in A_{k} \subset \left\{ S_{n+k} \notin n=1,2,\dots \right\} = \bigcap_{n=k+1}^{\infty} \left\{ S_{n} \notin I \right\} ,\ k=0$のとき $\displaystyle \omega \in A_{0} = \bigcap_{n=1}^{\infty} \left\{ S_{n}\notin I \right\}$
 定め方から$A_{0}, A_{1}, \dots$は非交和なので, $\displaystyle P(\bigcup_{m \in \mathbb{N}} \bigcap_{n>m} \left\{ S_{n} \notin I \right\} ) = P(\bigcup_{k=0}^{\infty} A_{k}) = \sum_{k=0}^{\infty} P(A_{k})$
+$\\ k \ge 1$のとき, $P(A_{k}) \ge P(S_{k} \in I, \ \left| S_{n+k} - S_{k} \right| \ge 2\varepsilon, \ n=1,2,\dots)$
+$\displaystyle \\ \because \omega \in \left\{ S_{k} \in I \right\} \cap \left\{ \left| S_{n+k} - S_{k} \right| \ge 2\varepsilon, \ n=1,2,\dots \right\}$を任意にとる.
+$\displaystyle \\ S_{k}(\omega)\in I$かつ$ ( S_{n+k}(\omega) - S_{k}(\omega) \le -2\varepsilon$または$2\varepsilon \le S_{n+k}(\omega) - S_{k}(\omega), \ n=1,2,\dots )$
+$\\ I$の定め方から, $x-\varepsilon < S_{k} < x+\varepsilon $だから
+$\\ \Rightarrow $
+$\displaystyle S_{k}(\omega)\in I$かつ$ ( S_{n+k}(\omega) \le (x+\varepsilon) -2\varepsilon$または$2\varepsilon +(x-\varepsilon) \le S_{n+k}(\omega), \ n=1,2,\dots )$
+$\displaystyle \\ \Leftrightarrow $
+$\displaystyle S_{k}(\omega)\in I$かつ$ ( S_{n+k}(\omega) \le x -\varepsilon$または$x+\varepsilon \le S_{n+k}(\omega), \ n=1,2,\dots )$
+$\displaystyle \\ \Leftrightarrow $
+$\displaystyle S_{k}(\omega)\in I$かつ$ ( S_{n+k}(\omega) \notin I, \ n=1,2,\dots )$
+$\Leftrightarrow \displaystyle \omega \in A_{k}$ 
+$\\ \\$
+$\displaystyle P(S_{k}\in I, \ \left| S_{n+k} -S_{k} \right| \ge 2\varepsilon, \ n=1,2,\dots) = P(S_{k}\in I) P( \left| S_{n+k} -S_{k} \right| \ge 2\varepsilon, \ n=1,2,\dots) \quad \because$独立性 
+$\\$
+$ = P(S_{k}\in I) P( \left| S_{n} \right| \ge 2\varepsilon, \ n=1,2,\dots) \quad \because$同一分布性
+$\\ \displaystyle P(  \bigcup_{m \in \mathbb{N}} \bigcap_{n>m} \left\{ S_{n} \notin I \right\} ) = \sum_{k=0}^{\infty} P(A_{k}) \ge P(A_{0}) + \sum_{k=1}^{\infty} P(A_{k}) \\ \ge P(A_{0}) + P( \left| S_{n} \right| \ge 2\varepsilon, \ n=1,2,\dots) \sum_{k=1}^{\infty} P(S_{k}\in I) \quad $ここで, $\displaystyle \sum_{k=1}^{\infty} P(S_{k}\in I) = \infty$であるから
+$\\ P( \left| S_{n} \right| \ge 2\varepsilon, \ n=1,2,\dots)  = 0$. 以上で $\displaystyle 0 < {}^\forall \varepsilon < \frac{l}{2} \ , P( \left| S_{n} \right| \ge 2\varepsilon, \ n=1,2,\dots)  = 0 \ $となる $(*)$
+
 \end{proof}
 
 
