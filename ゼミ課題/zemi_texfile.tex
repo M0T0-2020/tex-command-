@@ -343,15 +343,22 @@ $\\$以上で$d \ge 0$に対して$L_{d} = G$となり, $L_{d}$の全ての状�
 %定理3.34
 \begin{thm}
 $\displaystyle X_{1}, X_{2}, \dots$を$L_{d}$上に分布する確率変数列とする(ただし$d \ge 0$). 
-$\\ (i)$もし, 有界区間$J \subset \mathbb{R}$が存在して $J \cap L_{d} \neq \emptyset$かつ $\displaystyle \sum_{n=1}^{\infty}P(S_{n} \in J) < \infty$を満たせば,再帰状態は存在しない.$\\ (ii)$もし, 有界区間$J \subset \mathbb{R}$が存在して $\displaystyle \sum_{n=1}^{\infty}P(S_{n} \in J) = \infty$を満たせば,$L_{d}$の全ての状態は再帰状態である.
+$\\ (i)$もし, 有界区間$J \subset \mathbb{R}$が存在して $J \cap L_{d} \neq \emptyset$かつ $\displaystyle \sum_{n=1}^{\infty}P(S_{n} \in J) < \infty$を満たせば,再帰状態は存在しない.$\\ (ii)$もし, 有界区間$\displaystyle J \subset \mathbb{R}$で$0 < {}^\forall \varepsilon < \frac{\left|\left|J\right|\right|}{2}$に対して, ${}^\exists x \in \mathbb{R} \ s.t. \ I = (x-\varepsilon, x+\varepsilon) \subset J$かつ$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I) = \infty$となるものが存在すれば, $L_{d}$の全ての状態は再帰状態である.
 \end{thm}
 \begin{proof}
 $\\$ $(i) \ J \cap L_{d} \neq \emptyset$かつ $\displaystyle \sum_{n=1}^{\infty}P(S_{n} \in J) < \infty$を満たす有界区間$J \subset \mathbb{R}$がとれたとする.
 Borel-Canteli's Lemma$\\$から$P(S_{n} \in J \ i.o.)=0$となって, $L_{d}$は少なくとも再帰的でない状態が含まれる.$\displaystyle \\ \because x \in L{d} \cap J$をとれば, $x$の開近傍$I \subset J$がとれて, $P(S_{n} \in I \ i.o.) \le P(S_{n} \in J \ i.o.) = 0$となって$x$は再帰的でない$L_{d}$の元である.
 $\displaystyle \\ $定理12から$L_{d}$の元は全て再帰状態にはならない.つまり再帰状態は存在しない.
-$\displaystyle \\ \\ (ii)$長さ$l$の有界区間$\displaystyle J \subset \mathbb{R}$で$0 < {}^\forall \varepsilon < \frac{l}{2}$に対して, ${}^\exists x \in \mathbb{R} \ s.t. \ I = (x-\varepsilon, x+\varepsilon) \subset J$かつ$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I) = \infty$となるものがとれたとする.
-
-
+$\displaystyle \\ \\ (ii)$長さ$l$の有界区間$\displaystyle J \subset \mathbb{R}$で$0 < {}^\forall \varepsilon < \frac{l}{2}$に対して, ${}^\exists x \in \mathbb{R} \ s.t. \ I = (x-\varepsilon, x+\varepsilon) \subset J$かつ$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I) = \infty$となるものがとれたとする. $0 \in L_{d}$なので,0が再帰的であることがわかれば定理12から$L_{d}$の全ての状態が再帰的である.
+%
+$A_{k} = \begin{cases} \left\{ S_{k} \in I, \ S_{n+k} \notin I \ n=1,2,\dots \right\} & (k \geq 1) \\ \left\{ S_{n} \notin I \ n=1,2,\dots \right\} & (k = 0) \end{cases}$と定めると,$\displaystyle \bigcup_{m \in \mathbb{N}} \bigcap_{n>m} \left\{ S_{n} \notin I \right\} = \bigcup_{k=0}^{\infty} A_{k}$となる.
+%
+$\\ \displaystyle \because (\subset) {}^\forall \omega \in$ (左辺) とする. このとき${}^\exists m \in \mathbb{N}$がとれて, $S_{n}(\omega) \notin I \ ({}^\forall n > m)$となる. $1 \le i \le m-1$の中で$S_{i}(\omega) \in I$となるものが存在するときその最大値を$k$とすれば, $S_{k}(\omega) \in I, \ S_{n}(\omega) \notin I \ ({}^\forall n \ge k)$が成立する.
+よって, $\omega \in A_{k}$となる. $S_{i} \notin I \ (1 \le {}^\forall i \le m-1)$のときは, $\omega \in \left\{ S_{n} \notin I \ n=1,2,\dots \right\} = A_{0}$ 以上で $\\ \displaystyle \omega \in$ (右辺)
+%
+$\\ (\supset)$ $ {}^\forall \omega \in$ (右辺)とする. ${}^\exists k \in \mathbb{N} \ s.t. \ \omega \in A_{k}$となる.
+$\\ k \ge 1$のとき $\displaystyle \omega \in A_{k} \subset \left\{ S_{n+k} \notin n=1,2,\dots \right\} = \bigcap_{n=k+1}^{\infty} \left\{ S_{n} \notin I \right\} ,\ k=0$のとき $\displaystyle \omega \in A_{0} = \bigcap_{n=1}^{\infty} \left\{ S_{n}\notin I \right\}$
+定め方から$A_{0}, A_{1}, \dots$は非交和なので, $\displaystyle P(\bigcup_{m \in \mathbb{N}} \bigcap_{n>m} \left\{ S_{n} \notin I \right\} ) = P(\bigcup_{k=0}^{\infty} A_{k}) = \sum_{k=0}^{\infty} P(A_{k})$
 \end{proof}
 
 
