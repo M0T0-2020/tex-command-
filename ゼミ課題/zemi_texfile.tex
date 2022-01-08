@@ -377,6 +377,26 @@ $\\$
 $ = P(S_{k}\in I) P( \left| S_{n} \right| \ge 2\varepsilon, \ n=1,2,\dots) \quad \because$同一分布性
 $\\ \displaystyle P(  \bigcup_{m \in \mathbb{N}} \bigcap_{n>m} \left\{ S_{n} \notin I \right\} ) = \sum_{k=0}^{\infty} P(A_{k}) \ge P(A_{0}) + \sum_{k=1}^{\infty} P(A_{k}) \\ \ge P(A_{0}) + P( \left| S_{n} \right| \ge 2\varepsilon, \ n=1,2,\dots) \sum_{k=1}^{\infty} P(S_{k}\in I) \quad $ここで, $\displaystyle \sum_{k=1}^{\infty} P(S_{k}\in I) = \infty$であるから
 $\\ P( \left| S_{n} \right| \ge 2\varepsilon, \ n=1,2,\dots)  = 0$. 以上で $\displaystyle 0 < {}^\forall \varepsilon < \frac{l}{2} \ , P( \left| S_{n} \right| \ge 2\varepsilon, \ n=1,2,\dots)  = 0 \ $となる $(*)$
+$\\ \displaystyle 0 < {}^\forall \varepsilon < \frac{l}{2}$を新しく固定する. $I = (-\varepsilon, \ \varepsilon)$として, $\left\{ A_{k} \right\}_{k=0}^{\infty}$を先と同様にとる. $I_{\delta} = (-\delta, \delta)$ (ただし, $\delta < \varepsilon$)とする. ${}^\forall k \ge 1$として $\displaystyle A_{k} = \lim_{\delta \uparrow \varepsilon} \left\{ S_{k} \in I_{\delta}, \ S_{n+k} \notin I \ n=1,2,\dots \right\}$となるから
+$\\ \displaystyle P(A_{k}) = P(\lim_{\delta \uparrow \varepsilon} \left\{ S_{k} \in I_{\delta}, \ S_{n+k} \notin I \ n=1,2,\dots \right\})$ 連続性から
+$\\ \displaystyle \qquad \quad  = \lim_{\delta \uparrow \varepsilon} P(\left\{ S_{k} \in I_{\delta}, \ S_{n+k} \notin I \ n=1,2,\dots \right\})$
+$\\ \displaystyle P(S_{k} \in I_{\delta}, \ S_{n+k} \notin I \ n=1,2,\dots) \le P(S_{k}\in I_{\delta}, \ \left| S_{n+k} - S_{k} \right| \ge \varepsilon - \delta \ n = 1,2,\dots )$となる.
+%because 
+$\\ \displaystyle \because \ \omega \in \left\{ S_{k} \in I_{\delta}, \ S_{n+k} \notin I \ n=1,2,\dots \right\}$を任意のとる. $\\ \displaystyle -\delta < S_{k}(\omega) < \delta, \ S_{n+k}(\omega) \le -\varepsilon または\ \varepsilon \le S_{n+k}(\omega) \ (n =1,2,\dots)$となる.
+$\\ S_{n+k}(\omega) - S_{k}(\omega) \le -\varepsilon - S_{k}(\omega) < -\varepsilon + \delta$または $\varepsilon - \delta < \varepsilon - S_{k}(\omega) \le S_{n+k}(\omega) - S_{k}(\omega)$
+$\\$よって $\displaystyle \left| S_{n+k}(\omega) - S_{k}(\omega) \right| \ge \varepsilon - \delta \quad \therefore \ \omega \in \left\{ S_{k} \in I_{\delta}, \ \left| S_{n+k} - S_{k} \right| \ge \varepsilon - \delta \ n = 1,2,\dots \right\}  $
+%
+$\\$
+独立性と同一分布性から
+$\displaystyle \\ P(S_{k}\in I_{\delta}, \ \left| S_{n+k} - S_{k} \right| \ge \varepsilon - \delta \ n = 1,2,\dots ) = P(S_{k}\in I_{\delta}) P(\left| S_{n+k} - S_{k} \right| \ge \varepsilon - \delta \ n = 1,2,\dots)$ 
+$\\ \qquad  = P(S_{k}\in I_{\delta}) P(\left| S_{n} \right| \ge \varepsilon - \delta \ n = 1,2,\dots) = 0$
+$\\ \because \displaystyle  0 < \frac{\varepsilon - \delta}{2} < \frac{l}{2}$なので$(*)$より $P(\left| S_{n} \right| \ge \varepsilon - \delta \ n = 1,2,\dots) =0 \\$
+以上で$P(A_{k})=0 \ ({}^\forall k \ge 1)$となる. 
+$\\ 0< \varepsilon<\frac{l}{2}$だから$0<\frac{\varepsilon}{2} < \frac{l}{2}$なので $P(A_{0}) = P(S_{n} \notin I \ n=1,2,\dots) = P(\left| S_{n} \right| \ge \varepsilon \ n=1,2,\dots) = 0$
+これまでのことから$0 < {}^\forall \varepsilon < \frac{l}{2}, \ I= (-\varepsilon, \varepsilon)$に対して, $P (S_{n} \in I \ i.o.)=1 $
+$\\$よって,0は再帰的となる.
+
+
 
 \end{proof}
 
