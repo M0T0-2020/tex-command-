@@ -299,6 +299,26 @@ $X_{1}, X_{2}, \dots$を$L_{d} \ (d \ge 0)$上に分布する確率変数列と�
 $\\$このとき$\displaystyle L_{d}$に含まれる状態は全て再帰的または全て非再帰的である.
 \end{thm}
 \begin{proof}
+$\displaystyle \\ G = \left\{ x \in L_{d} | \ xは再帰的\right\}$
+とおくと, $G$は閉集合となる.($G$が空のときは全ての状態が非再帰的なので$G \neq \emptyset$とする.)
+$\displaystyle \\ \because {}^\forall \left\{ x_{n} \right\}_{n=1}^{\infty} \subset G$をとって $x_{n} \to x $とする.このとき$x \in G$を示したい.
+$\displaystyle \\ x$の開近傍$I$を任意にとる.$I$に対してnを十分大きく取れば$x_{n} \in I$となる.この$n$を固定する.$I$は$x_{n}$の近傍でもあるから,$P(S_{n} \in I \ i.o.) = 1 \ \therefore x \in G$
+$\displaystyle \\ y$が$y$の任意の近傍$I$に対して$k \in \mathbb{N}$が存在して$P(S_{k} \in I) >0$となるときyは候補状態であるとする.
+$\\ x$が再帰的かつ$y$が候補状態$\Rightarrow \ x-y$は再帰的である. 
+$\displaystyle \\ {}^\forall \varepsilon >0$をとって,\ $k \in \mathbb{N}$を$P(\left| S_{k} - y \right| < \varepsilon) >0$を満たすようにとる.
+$\\ x$は再帰的だから$\displaystyle P(\bigcap_{m \in \mathbb{N} } \bigcup_{n > m} \left\{ \left| S_{n} - x \right| < \varepsilon \right\}) = 1$となるから,
+$\displaystyle  \\
+0=P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\}) \ge 
+P( \left| S_{k} - y \right| < \varepsilon, \ \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\}) \\
+= P(\left| S_{k} - y \right| < \varepsilon)P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\})= P(\left| S_{k} - y \right| < \varepsilon)P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - (x-y) \right| \ge 2\varepsilon \right\}) \\
+$
+$\displaystyle \because \displaystyle \omega \in \left\{ \left| S_{k} - y \right|  < \varepsilon \right\} \cap \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\}$をとると,$\displaystyle {}^\exists m \in \mathbb{N} \ s.t. \\ {}^\forall n \ge m, \ \left| S_{k+n}(\omega) - S_{k}(\omega) -(x-y) \right| \ge 2 \varepsilon$となる.
+$\displaystyle 2\varepsilon \le \left| S_{k+n}(\omega) -  x \right| + \left| S_{k}(\omega) -y \right| <  \left| S_{k+n}(\omega) -  x \right|  + \varepsilon$から
+$\displaystyle \\ \varepsilon \le \left| S_{k+n}(\omega) -  x \right| \ ({}^\forall n \ge m), \ N=k+m$とおけば, \
+$\displaystyle {}^\forall n \ge N$に対して, $ \left| S_{n}(\omega) -  x \right| \ge \varepsilon$ なので $\displaystyle \omega \in \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\} \ \therefore \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\} \supset \left\{ \left| S_{k} - y \right|  < \varepsilon \right\} \cap \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\}$ 
+$\\$また $X_{1}, X_{2}, \dots$は独立なので,$\ S_{k}$と$\displaystyle S_{k+n} - S_{k} = \sum_{m=k+1}^{k+n} X_{m}$は独立.\ 同一分布性から
+$\displaystyle \\ P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\})= P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - (x-y) \right| \ge 2\varepsilon \right\})$も成立する.
+$\\ $
 \end{proof}
 
 
