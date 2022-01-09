@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.12.28)  9 JAN 2022 10:49
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.12.28)  9 JAN 2022 11:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -203,6 +203,12 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 6.72699pt on input line 37.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 4.805pt on input line 37.
+LaTeX Font Info:    Trying to load font information for U+eus on input line 37.
+
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueus.fd
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+)
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 39.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
@@ -251,22 +257,17 @@ LaTeX Font Info:    Font shape `JY1/mc/m/it' in size <5> not available
 (Font)              Font shape `JY1/mc/m/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 4.805pt on input line 54.
-LaTeX Font Info:    Trying to load font information for U+eus on input line 54.
-
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueus.fd
-File: ueus.fd 2013/01/14 v3.01 Euler Script
-) [1
+ [1
 
 ] [2]
 [3] [4] [5] [6]
-Overfull \hbox (40.6799pt too wide) in paragraph at lines 273--280
+Overfull \hbox (40.6799pt too wide) in paragraph at lines 270--277
 []$ \JY1/mc/m/n/10 単調性から\OT1/cmr/m/n/10 , $[] \OML/cmm/m/it/10 P [] \OT1/c
 mr/m/n/10 = \OML/cmm/m/it/10 P [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P []$
  []
 
 [7] [8]
-Overfull \hbox (38.90494pt too wide) in paragraph at lines 347--386
+Overfull \hbox (38.90494pt too wide) in paragraph at lines 344--383
 [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 < "
 \OT1/cmr/m/n/10 )\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ([] [] []) = \OML/cmm/m/it/1
 0 P\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 < "\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 P\
@@ -277,10 +278,10 @@ OT1/cmr/m/n/10 ([] [] [])[]
 Here is how much of TeX's memory you used:
  1968 strings out of 479466
  25479 string characters out of 5870547
- 349328 words of memory out of 5000000
+ 351328 words of memory out of 5000000
  19664 multiletter control sequences out of 15000+600000
  422369 words of font info for 114 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 67i,15n,74p,1045b,267s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,15n,74p,1045b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on zemi_texfile.dvi (12 pages, 76164 bytes).
+Output written on zemi_texfile.dvi (12 pages, 76408 bytes).

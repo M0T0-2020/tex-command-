@@ -34,7 +34,7 @@
 %\end{proof}
 
 %section 末尾事象とinfinte often
-以下では$(\Omega, \ \mathscr{F}, \ P)を確率空間とする.$
+以下では$(\Omega, \ \mathcal{F}, \ P)を確率空間とする.$
 
 \section{末尾事象とinfinte often}
 \begin{dfn} 
@@ -50,7 +50,7 @@ $\\$ 定義から末尾加法族の元 $E \in \delta$ は末尾事象となる.
 %近似定理
 \begin{thm}
 近似定理 \par
-$(\Omega, \mathscr{F}, P)$を確率空間, \ $X_{1}, X_{2}, \dots$ を確率変数列とする.\par
+$X_{1}, X_{2}, \dots$ を確率変数列とする.\par
 ${}^\forall A_{1} \in \sigma (\textbf{X}),{}^\forall \varepsilon > 0$ に対して, ある$n \in \mathbb{N}, A_{2} \in \mathcal{F} (X_{1}, X_{2}, \dots , X{n})$が存在して$P(A_{1} \triangle A_{2}) \le 0$ となる. \par (ただし $A \triangle B := (A-B) \cup (B-A)$ )
 \end{thm}
 
@@ -104,7 +104,7 @@ Kolmogorov zero-one law
 $X_{1},X_{2}, \dots を独立な確率変数とする.この時, E\in\delta であるとすればP(E)は0,1のいずれかの値をとる.$
 
 \begin{proof}
-$\\ {}^\forall E \in \delta をとる. \  E \in \sigma (\textbf {X}), \ であるから,定理1により各n \in \mathbb{N}に対して,
+$\\ {}^\forall E \in \delta をとる. \  E \in \sigma (\textbf {X}), \ であるから,定理2により各n \in \mathbb{N}に対して,
 あるE_{n} \in \sigma (X_{1}, X_{2}, \dots , X_{n}) \ が取れて \ P(E \triangle E_{n}) \to 0 となる.
 このことからP(E_{n}) \to P(E),\\ P(E_{n} \cup E) \to P(E)がわかる.\\
 \because \\
@@ -140,11 +140,8 @@ Borel-Ccantelli Lamma
 (\textbf{I}), ${\lbrace A_{n} \rbrace }_{n \in \mathbb{N}} \in \mathcal{F}  について, \sum_{n=1}^{\infty} P(A_{n}) < \infty ならば, P(A_{n} \ i.o.) = 0 \ が成立する.$ \par
 (\textbf{II}), ${\lbrace A_{n} \rbrace }_{n \in \mathbb{N}} \in \mathcal{F}  について, {\lbrace A_{n} \rbrace }_{n \in \mathbb{N}} が独立かつ,\sum_{n=1}^{\infty}P(A_{n}) = \infty ならば, P(A_{n}  \ i.o.) = 1 \ が成立する.$
 \begin{proof}
-$\\ \\ \\
-(\textbf{I})
-$  \par
-
-$P(A_{n} \ i.o.) = P(\displaystyle\lim_{m \to \infty} \displaystyle\bigcup_{n=m}^{\infty}{A_n}) = \displaystyle\lim_{m \to \infty} P(\displaystyle\bigcup_{n=m}^{\infty}{A_n}) \le \displaystyle\lim_{m \to \infty} (\sum_{n=m}^{\infty}P(A_{n})) (\because 二つ目の等号は測度の連続性,不等号には劣加法性を使った)\\
+$\\ (\textbf{I}) $ 
+$\\ P(A_{n} \ i.o.) = P(\displaystyle\lim_{m \to \infty} \displaystyle\bigcup_{n=m}^{\infty}{A_n}) = \displaystyle\lim_{m \to \infty} P(\displaystyle\bigcup_{n=m}^{\infty}{A_n}) \le \displaystyle\lim_{m \to \infty} (\sum_{n=m}^{\infty}P(A_{n})) (\because 二つ目の等号は測度の連続性,不等号には劣加法性を使った)\\
 \sum_{n=1}^{\infty} P(A_{n}) < \infty であるから\displaystyle\lim_{m \to \infty} (\sum_{n=m}^{\infty}P(A_{n})) = 0 \ \therefore P(A_{n} \ i.o.) = 0
 $
 
@@ -166,7 +163,7 @@ $A_{n} = \lbrace \omega \ ; (\omega_{n},\dots,\omega_{n+k-1}) = \textbf {s}  \rb
 $P(A_{n} \ i.o.) = 1$
 \end{prop}
 \begin{proof}
-$B_{1} = \lbrace \omega \ ; (\omega_{1},\dots,\omega_{k}) = \textbf {s}  \rbrace , B_{2} = \lbrace \omega \ ; (\omega_{k+1},\dots,\omega_{2k}) = \textbf {s}  \rbrace , \ \dots$とおく. このとき, ${\lbrace B_{n} \rbrace}_{n \in \mathbb{N}}$は独立となる. また,$\lbrace B_{n} \ i.o. \rbrace \subset \lbrace A_{n} \ i.o.\rbrace$である$( \because \ B_{l} = A_{(l-1)k + 1})$ . \ $P(B_{n}) = P(B_{1}) = \frac{1}{2^{k}} > 0$なので$\displaystyle\sum_{n=1}^{\infty}P(B_{n}) = \infty$.以上のことから定理3$(\textbf{II})$を使うと, $P(B_{n} \ i.o.) = 1 \le P(A_{n} \ i.o.) \ \therefore P(A_{n} \ i.o.)=1$
+$B_{1} = \lbrace \omega \ ; (\omega_{1},\dots,\omega_{k}) = \textbf {s}  \rbrace , B_{2} = \lbrace \omega \ ; (\omega_{k+1},\dots,\omega_{2k}) = \textbf {s}  \rbrace , \ \dots$とおく. このとき, ${\lbrace B_{n} \rbrace}_{n \in \mathbb{N}}$は独立となる. また,$\lbrace B_{n} \ i.o. \rbrace \subset \lbrace A_{n} \ i.o.\rbrace$である$( \because \ B_{l} = A_{(l-1)k + 1})$ . \ $P(B_{n}) = P(B_{1}) = \frac{1}{2^{k}} > 0$なので$\displaystyle\sum_{n=1}^{\infty}P(B_{n}) = \infty$.以上のことから補題5$(\textbf{II})$を使うと, $P(B_{n} \ i.o.) = 1 \le P(A_{n} \ i.o.) \ \therefore P(A_{n} \ i.o.)=1$
 \end{proof}
 
 $\\$
@@ -183,7 +180,7 @@ $P(Head) \ne \frac{1}{2}$とする. このとき$P(Z_{n} = 0 \ i.o.) = 0$とな�
 \begin{proof}
 $\quad$\par
 $P(Head) = p$とおく.\par
-$\displaystyle\sum_{n=1}^{\infty}P(Z_{n} = 0) < \infty$であることが示せれば, 定理3($\textbf{I}$)から$P(Z_{n} = 0 \ i.o.) = 0$がわかる.
+$\displaystyle\sum_{n=1}^{\infty}P(Z_{n} = 0) < \infty$であることが示せれば, 補題5($\textbf{I}$)から$P(Z_{n} = 0 \ i.o.) = 0$がわかる.
 Stirlingの近似\par 公式から,十分大きいnに対して, $^{}_{2n}C_{n} = 2^{2n} \frac{1+\delta_{n}}{\sqrt{\pi n}}$(ただし$ \delta_{n} \downarrow 0$)であり, また,$\ p \neq \frac{1}{2}$なので$2^{2}p(1-p)$\par $< 1$より,ある$0 < \lambda < 1$ が存在して$2^{2}p(1-p) < \frac{1}{\lambda} 2^{2}p(1-p) < 1$ となる.$\delta_{n} \downarrow 0$だから十分大きいn\par に対して は$\delta_{n} < \frac{\lambda}{2^{2}p(1-p)} -1$が成立する.\par 
 以上で$N \in \mathbb{N}$ を, $n \ge N $で $\displaystyle P(Z_{2n})=^{}_{2n}C_{n} \ p^{n} (1-p)^{n} = 2^{2n} \frac{1+\delta_{n}}{\sqrt{\pi n}} \ p^{n} (1-p)^{n}$ かつ$\displaystyle\delta_{n} < \frac{\lambda}{2^{2}p(1-p)} -1$\par を満たすようにとる. $\displaystyle a_{n} = 2^{2n} \frac{1+\delta_{n}}{\sqrt{\pi n}} \ p^{n} (1-p)^{n}$とおく.\ $n \ge N$ において $\displaystyle\frac{a_{n+1}}{a_{n}} =  2^{2} \frac{1+\delta_{n+1}}{1+\delta_{n}} \sqrt{\frac{n}{n+1}}$\par $\displaystyle p(1-p) \le 2^{2} \sqrt{\frac{n}{n+1}}\frac{\lambda}{2^{2}p(1-p)} p(1-p)= \lambda \sqrt{\frac{n}{n+1}} \le \lambda $だから, $\displaystyle a_{n+1} \le (1-\lambda)a_{n} \le \dots \le (1-\lambda)^{n+1-N}a_{N}$\par 
 $\displaystyle\sum_{n=1}^{\infty}P(Z_{2n} = 0) = \displaystyle\sum_{n=1}^{N}P(Z_{2n} = 0) + \displaystyle\sum_{n=N+1}^{\infty}P(Z_{2n} = 0) \le \displaystyle\sum_{n=1}^{N}P(Z_{2n} = 0) + \displaystyle\sum_{n=N+1}^{\infty} \lambda^{n-N} a_{N}$\par
@@ -253,8 +250,8 @@ $\\ \lbrace |S_{N} - S_{j} | \le \alpha \rbrace \in \sigma (X_{j+1}, \dots , X_{
 %まとめ
 $\\ \displaystyle \sum_{j=1}^{N}P(|S_{N}-S_{j}| \le \alpha , \ j^{*}=j) = \sum_{j=1}^{N} P(|S_{N}-S_{j}| \le \alpha)P( j^{*}=j) \ge (1-c)\sum_{j=1}^{N} P(j^{*}=j) \\ = (1-c) P(\sup_{1 \le j \le N} |S_{j}| > 2\alpha) \\ (1-c) P(\sup_{1 \le j \le N} |S_{j}| > 2\alpha) \le \sum_{j=1}^{N}P(|S_{N}-S_{j}| \le \alpha , \ j^{*}=j)  \le P(|S_{N}| > \alpha, \ \sup_{1 \le j \le N} |S_{j} | > 2\alpha) \\ \le P(|S_{N}| > \alpha) \quad \therefore P(\sup_{1 \le j \le N} |S_{j}| > 2\alpha) \le \frac{1}{1-c} P(|S_{N}| > \alpha)$
 \end{proof}
-補題 8を使って,定理7の証明をする.
-%定理７の証明
+補題 10を使って,定理9の証明をする.
+%定理9の証明
 \begin{proof}
 $\\ (\Leftarrow) \ 概収束するならば確率収束するので成立する.$
 $\displaystyle \\ (\Rightarrow) \sum_{k=1}^{n}X_{k}$は確率収束するとする. ここで$\displaystyle \sum_{k=1}^{n}X_{k}$が概収束しないと仮定する.(背理法)
@@ -281,14 +278,14 @@ $\displaystyle \\ \lim_{m \to \infty}  P\left( \sup_{ m < n} \left| \sum_{ k = m
 
 %系
 \begin{cor}
-$\displaystyle \\ E[X_{k}] = 0 \ ( {}^\forall k \in \mathbb{N} ), \ \sum_{k=1}^{\infty}E[X_{k}^{2}] < \infty$とする.このとき$\displaystyle \sum_{k=1}^{n}X_{ k }$は確率収束する.
+$\displaystyle \\ E[X_{k}] = 0 \ ( {}^\forall k \in \mathbb{N} ), \ \sum_{k=1}^{\infty}E[X_{k}^{2}] < \infty$とする.このとき$\displaystyle \sum_{k=1}^{n}X_{ k }$は概収束する.
 \end{cor}
 \begin{proof}
-$\displaystyle \\ X_{1}, X_{2}, \dots$は独立なので,$\displaystyle \sum_{k=1}^{n}X_{ k }$が確率収束することを示せば定理8から$\displaystyle \sum_{k=1}^{n}X_{ k }$は確率収束する.
+$\displaystyle \\ X_{1}, X_{2}, \dots$は独立なので,$\displaystyle \sum_{k=1}^{n}X_{ k }$が確率収束することを示せば定理9から$\displaystyle \sum_{k=1}^{n}X_{ k }$は概収束する.
 $\displaystyle \\ \sum_{k=1}^{\infty}E[X_{k}^{2}] = s^{2}$ (ただし $s \ge 0$ )とする. ${}^\forall \varepsilon > 0$ に対してChebyshevの不等式から $\displaystyle \\ P\left( \left| \sum_{k=1}^{n}X_{ k } - s \right| > \varepsilon \right) \le \frac{1}{ \varepsilon ^ {2} } E\left[ \left| \sum_{k=1}^{n}X_{ k } - s \right|^{2} \right]$ となる.
 $\displaystyle E\left[ \left| \sum_{k=1}^{n}X_{ k } - s \right|^{2} \right] \to 0 \ (n \to \infty )$を示したい. $\displaystyle \\ E\left[ \left| \sum_{k=1}^{n}X_{ k } - s \right|^{2} \right] = E\left[ \left| \sum_{k=1}^{n}X_{ k } \right|^{2} \right] -2sE\left[ \sum_{k=1}^{n}X_{ k } \right] + s^{2} \\ = E\left[ \sum_{k=1}^{n}X_{ k }^{2} + 2 \sum_{i<j}X_{ i }X_{ j }  \right]-2sE\left[ \sum_{k=1}^{n}X_{ k } \right] + s^{2} $ここで,$\displaystyle X_{1}, X_{2}, \dots$は独立だから 
 $\displaystyle \\ \sum_{i<j} E\left[ X_{ i }X_{ j }  \right] = \sum_{i<j} E\left[ X_{ i } \right] E\left[X_{ j }  \right]$が成立する. また$\displaystyle E[X_{k}] = 0 \ ( {}^\forall k \in \mathbb{N} )$なので
-$\displaystyle \\ = \sum_{k=1}^{n} E\left[ {X_{ k }}^{2} \right] -2s\sum_{k=1}^{n} E\left[ X_{ k } \right] + s^{2} \to s^{2} -2s^{2}+s^{2}=0 \ (n \to \infty) \\ \sum_{k=1}^{n}X_{ k }$が確率収束することがわかったので$\displaystyle \sum_{k=1}^{n}X_{ k }$は確率収束する.
+$\displaystyle \\ = \sum_{k=1}^{n} E\left[ {X_{ k }}^{2} \right] -2s\sum_{k=1}^{n} E\left[ X_{ k } \right] + s^{2} \to s^{2} -2s^{2}+s^{2}=0 \ (n \to \infty) \\ \sum_{k=1}^{n}X_{ k }$が確率収束することがわかったので$\displaystyle \sum_{k=1}^{n}X_{ k }$は概収束する.
 \end{proof}
 
 
@@ -312,7 +309,7 @@ $n > N$において,$\\$
 $\displaystyle \sum_{k=1}^{n-1}(b_{k+1}-b_{k}) |r_{k}| \le \sum_{k=1}^{N-1}(b_{k+1}-b_{k}) |r_{k}| + \varepsilon \sum_{k=N}^{n-1}(b_{k+1}-b_{k}) \le \tilde{r} (b_{N}-b_{1}) + \varepsilon (b_{n}-b_{N}) \ よって$ $\\$
 $\displaystyle\left| \frac{ \sum_{k=1}^{n} b_{k}x_{k} }{b_{n}}\right| \le \frac{1}{b_{n}} ( \tilde{r}(b_{N}-b_{1}) + \varepsilon ( b_{n} -b_{N} ) + b_{1}|s| + b_{n}\varepsilon ) \to \varepsilon $つまり$\displaystyle \varlimsup_{n \to \infty} \left| \frac{ \sum_{k=1}^{n} b_{k}x_{k} }{b_{n}}\right| \le \varepsilon$となるから$\displaystyle \lim_{n \to \infty} \left| \frac{ \sum_{k=1}^{n} b_{k}x_{k} }{b_{n}}\right| \le \varepsilon$がわかった.ここで$\varepsilon \downarrow 0$とすれば,$\displaystyle\frac{1}{b_{n}} \sum_{k=1}^{n} b_{k} x_{k} \to 0 $が示された.
 \end{proof}
-この補題を使って定理10を証明する.
+この補題を使って定理12を証明する.
 \begin{proof}
 $\\$
 Kronecker's Lemmaにより, $\displaystyle\sum_{k=1}^{n}\frac{X_{k}}{b_{k}}$がほとんど確実に収束すれば,$\displaystyle \frac{1}{b_{k}} \sum_{k=1}^{n} b_{k} \frac{X_{k}}{b_{k}} = \frac{1}{b_{k}} \sum_{k=1}^{n} X_{k} \stackrel{a.s.}{\longrightarrow}  0$となる.仮定から,
@@ -324,7 +321,7 @@ $\displaystyle \ \therefore \frac{X_{1} + \dots + X_{n}}{b_{n}} \stackrel{a.s.}{
 
 %section 再帰状態と格子状に分布する確率変数
 \section{再帰状態と格子状に分布する確率変数}
-以下では$X_{1}, X_{2}, \dots$を独立同一分布に従う確率変数列とする.
+以下では$X_{1}, X_{2}, \dots$を独立同一分布に従う確率変数列とする. $\displaystyle S_{n} = \sum_{k=1}^{n} X_{k}$と定める.
 %定義 
 \begin{dfn} 
 再帰状態 (recurrent state)
@@ -361,7 +358,7 @@ $\displaystyle \because \displaystyle {}^\forall \omega \in \left\{ \left| S_{k}
 $\displaystyle 2\varepsilon \le \left| S_{k+n}(\omega) -  x \right| + \left| S_{k}(\omega) -y \right| <  \left| S_{k+n}(\omega) -  x \right|  + \varepsilon$から
 $\displaystyle \varepsilon \le \left| S_{k+n}(\omega) -  x \right| \ ({}^\forall n \ge m), \ N=k+m$とおけば, \\
 $\displaystyle {}^\forall n \ge N$に対して, $ \left| S_{n}(\omega) -  x \right| \ge \varepsilon$ なので $\displaystyle \omega \in \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\} \\ \therefore \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\} \supset \left\{ \left| S_{k} - y \right|  < \varepsilon \right\} \cap \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\}$ 
-$\\$また $X_{1}, X_{2}, \dots$は独立なので,$\ S_{k}$と$\displaystyle S_{k+n} - S_{k} = \sum_{m=k+1}^{k+n} X_{m}$は独立.\ 同一分布性から
+$\\$また $X_{1}, X_{2}, \dots$は独立なので,$\ S_{k}$と$\displaystyle S_{k+n} - S_{k} = \sum_{m=k+1}^{k+n} X_{m}$は独立.\ また同一分布性から
 $\displaystyle \\ P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\})= P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - (x-y) \right| \ge 2\varepsilon \right\})$も成立する.
 $\displaystyle \\ P(\left| S_{k} - y \right| < \varepsilon) >0$なので$P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - (x-y) \right| \ge 2\varepsilon \right\}) = 0$つまり $\displaystyle \\ P(\left\{ \left| S_{n} - (x-y) \right| < 2\varepsilon \right\} \ i.o.) = 1 \quad I_{\varepsilon} = (x-y -2\varepsilon, x-y + 2\varepsilon)$とおけば,$P( \left| S_{n} \right| \in I_{\varepsilon}  \ i.o.) = 1$
 $\\ \varepsilon >0$は任意だったから$x-y$は再帰的である.
@@ -393,11 +390,11 @@ $\\ (i)$もし, 有界区間$J \subset \mathbb{R}$が存在して $J \cap L_{d} 
 \begin{proof}
 $\\$ $(i) \ J \cap L_{d} \neq \emptyset$かつ $\displaystyle \sum_{n=1}^{\infty}P(S_{n} \in J) < \infty$を満たす有界区間$J \subset \mathbb{R}$がとれたとする.
 Borel-Canteli's Lemma$\\$から$P(S_{n} \in J \ i.o.)=0$となって, $L_{d}$は少なくとも再帰的でない状態が含まれる.$\displaystyle \\ \because x \in L{d} \cap J$をとれば, $x$の開近傍$I \subset J$がとれて, $P(S_{n} \in I \ i.o.) \le P(S_{n} \in J \ i.o.) = 0$となって$x$は再帰的でない$L_{d}$の元である.
-$\displaystyle \\ $定理12から$L_{d}$の元は全て再帰状態にはならない.つまり再帰状態は存在しない.
+$\displaystyle \\ $定理16から$L_{d}$の元は全て再帰状態にはならない.つまり再帰状態は存在しない.
 %(ii)の証明
-$\displaystyle \\ \\ (ii)$長さ$l$の有界区間$\displaystyle J \subset \mathbb{R}$で$0 < {}^\forall \varepsilon < \frac{l}{2}$に対して, ${}^\exists x \in \mathbb{R} \ s.t. \ I = (x-\varepsilon, x+\varepsilon) \subset J$かつ$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I) = \infty$となるものがとれたとする. $0 \in L_{d}$なので,0が再帰的であることがわかれば定理12から$L_{d}$の全ての状態が再帰的である.
+$\displaystyle \\ \\ (ii)$長さ$l$の有界区間$\displaystyle J \subset \mathbb{R}$で$0 < {}^\forall \varepsilon < \frac{l}{2}$に対して, ${}^\exists x \in \mathbb{R} \ s.t. \ I = (x-\varepsilon, x+\varepsilon) \subset J$かつ$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I) = \infty$となるものがとれたとする. $0 \in L_{d}$なので,0が再帰的であることがわかれば$\\$定理16から$L_{d}$の全ての状態が再帰的である.
 %
-$A_{k} = \begin{cases} \left\{ S_{k} \in I, \ S_{n+k} \notin I \ n=1,2,\dots \right\} & (k \geq 1) \\ \left\{ S_{n} \notin I \ n=1,2,\dots \right\} & (k = 0) \end{cases}$と定めると,$\displaystyle \bigcup_{m \in \mathbb{N}} \bigcap_{n>m} \left\{ S_{n} \notin I \right\} = \bigcup_{k=0}^{\infty} A_{k}$となる.
+$A_{k} = \begin{cases} \left\{ S_{k} \in I, \ S_{n+k} \notin I \ n=1,2,\dots \right\} & (k \geq 1) \\ \left\{ S_{n} \notin I \ n=1,2,\dots \right\} & (k = 0) \end{cases} \\$と定めると,$\displaystyle \bigcup_{m \in \mathbb{N}} \bigcap_{n>m} \left\{ S_{n} \notin I \right\} = \bigcup_{k=0}^{\infty} A_{k}$となる.
 %
 $\\ \displaystyle \because (\subset) {}^\forall \omega \in$ (左辺) とする. このとき${}^\exists m \in \mathbb{N}$がとれて, $S_{n}(\omega) \notin I \ ({}^\forall n > m)$となる. $1 \le i \le m-1$の中で$S_{i}(\omega) \in I$となるものが存在するときその最大値を$k$とすれば, $S_{k}(\omega) \in I, \ S_{n}(\omega) \notin I \ ({}^\forall n \ge k)$が成立する.
 よって, $\omega \in A_{k}$となる. $S_{i} \notin I \ (1 \le {}^\forall i \le m-1)$のときは, $\omega \in \left\{ S_{n} \notin I \ n=1,2,\dots \right\} = A_{0}$ 以上で $\\ \displaystyle \omega \in$ (右辺)
@@ -443,16 +440,20 @@ $\\$よって,0は再帰的となる. $\therefore L_{d}$の全ての状態は再
 \end{proof}
 
 \begin{cor}
-$\\ \displaystyle \left\{ S_{n} \right\}_{n \in \mathbb{N}}$に対して,
-$\\ L_{d} \cap I \neq \emptyset$ を満たす全ての有界区間$I$に対して, $P(S_{n} \in I \ i.o.)=1$ \ か
-$\\ L_{d} \cap I \neq \emptyset$を満たす全ての有界区間$I$ に対して, $P(S_{n} \in I  \ i.o.)=0$ \ のいずれかが成立する.
+$\\ \displaystyle \left\{ S_{n} \right\}_{n \in \mathbb{N}}$に対して, 次の$(i), \ (ii)$ のいずれかが成立する.
+$\\  (i) \ L_{d} \cap I \neq \emptyset$ を満たす全ての有界区間$I$に対して, $P(S_{n} \in I \ i.o.)=1$ 
+$\\ (ii) \ L_{d} \cap I \neq \emptyset$を満たす全ての有界区間$I$ に対して, $P(S_{n} \in I  \ i.o.)=0$
 \end{cor}
 \begin{proof}
-$\\ L_{d} \cap I \neq \emptyset$となる全ての有界区間$I$に対して$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I)= \infty$となるとき, 定理13から$L_{d}$の全ての状態は再帰的である.つまり　$L_{d} \cap I \neq \emptyset$となる任意の有界区間$I$とすれば, $ {}^\forall x \in L_{d} \cap I$として 
+$\\ L_{d} \cap I \neq \emptyset$となる全ての有界区間$I$に対して$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I)= \infty$となるとき, 定理17から$L_{d}$の全ての状態は再帰的である.つまり　$L_{d} \cap I \neq \emptyset$となる任意の有界区間$I$とすれば, $ {}^\forall x \in L_{d} \cap I$として 
 $ P(S_{n} \in I \ i.o.) \ge P(S_{n} = x \ i.o.) =1 \quad (\because \ x$は再帰的)となる.
-$\\ L_{d} \cap I \neq \emptyset$となる有界区間$I$が存在して$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I) < \infty$となるとき, 定理13から再帰状態は存在しない. よって任意の有界区間$I \ ( L_{d} \cap I \neq \emptyset )$ に対して $I$を含む開区間$J$とすれば $P(S_{n}\in I \ i.o.) \le P(S_{n} \in J \ i.o. ) =0$ ( $\because \ J$は $L_{d}$のある元の開近傍)
+$\\ L_{d} \cap I \neq \emptyset$となる有界区間$I$が存在して$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I) < \infty$となるとき, 定理17から再帰状態は存在しない. よって任意の有界区間$I \ ( L_{d} \cap I \neq \emptyset )$ に対して $I$を含む開区間$J$とすれば $P(S_{n}\in I \ i.o.) \le P(S_{n} \in J \ i.o. ) =0$ ( $\because \ J$は $L_{d}$のある元の開近傍)
 \end{proof}
 
+\begin{dfn}
+$\\ \displaystyle \left\{ S_{n} \right\}_{n \in \mathbb{N}}$が系$18 \ (i)$を満たすとき, 再帰的という.また, 系$18 \ (ii)$を満たすとき, 非再帰的という.
+
+\end{dfn}
 
 
 \end{document}
