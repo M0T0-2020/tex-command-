@@ -33,6 +33,8 @@
 
 %\end{proof}
 
+%section 末尾事象とinfinte often
+\section{末尾事象とinfinte often}
 
 %近似定理
 \begin{thm}
@@ -193,6 +195,9 @@ $\\$ 以上で　$ \displaystyle\sum_{k=1}^{\infty} P(C_{k}) \ge  \displaystyle\
 %$11 \displaystyle{=}_{\lbrace Z_{\varphi (k)} = j \rbrace_{|j|<k} は非交和}  11$
 \end{proof}
 
+%section 独立確率変数に対する大数の法則
+\section{独立確率変数に対する大数の法則}
+
 %RANDOM SIGNS PROBLEM
 \begin{thm}
 $X_{1}, X_{2}, \dots$を独立確率変数とする.$\\$
@@ -292,6 +297,9 @@ $\displaystyle E\left[ \frac{X_{k}}{b_{k}} \right] = 0, \ \sum_{k=1}^{\infty} E\
 $\displaystyle \ \therefore \frac{X_{1} + \dots + X_{n}}{b_{n}} \stackrel{a.s.}{\longrightarrow}  0 $
 \end{proof}
 
+
+%section 再帰性と格子状に分布する確率変数
+\section{再帰性と格子状に分布する確率変数}
 
 %定理3.33
 \begin{thm}
@@ -393,10 +401,20 @@ $\\ \qquad  = P(S_{k}\in I_{\delta}) P(\left| S_{n} \right| \ge \varepsilon - \d
 $\\ \because \displaystyle  0 < \frac{\varepsilon - \delta}{2} < \frac{l}{2}$なので$(*)$より $P(\left| S_{n} \right| \ge \varepsilon - \delta \ n = 1,2,\dots) =0 \\$
 以上で$P(A_{k})=0 \ ({}^\forall k \ge 1)$となる. 
 $\\ 0< \varepsilon<\frac{l}{2}$だから$0<\frac{\varepsilon}{2} < \frac{l}{2}$なので $P(A_{0}) = P(S_{n} \notin I \ n=1,2,\dots) = P(\left| S_{n} \right| \ge \varepsilon \ n=1,2,\dots) = 0$
-これまでのことから$0 < {}^\forall \varepsilon < \frac{l}{2}, \ I= (-\varepsilon, \varepsilon)$に対して, $P (S_{n} \in I \ i.o.)=1 $
+これまでのことから$0 < {}^\forall \varepsilon < \frac{l}{2}, \ I= (-\varepsilon, \varepsilon)$に対して, $P (S_{n} \in I \ i.o.)=1 $ 
 $\\$よって,0は再帰的となる. $\therefore L_{d}$の全ての状態は再帰的である.
 \end{proof}
 
+\begin{cor}
+$\\ \displaystyle \left\{ S_{n} \right\}_{n \in \mathbb{N}}$に対して,
+$\\ L_{d} \cap I \neq \emptyset$ を満たす全ての有界区間$I$に対して, $P(S_{n} \in I \ i.o.)=1$ \ か
+$\\ L_{d} \cap I \neq \emptyset$を満たす全ての有界区間$I$ に対して, $P(S_{n} \in I  \ i.o.)=0$ \ のいずれかが成立する.
+\end{cor}
+\begin{proof}
+$\\ L_{d} \cap I \neq \emptyset$となる全ての有界区間$I$に対して$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I)= \infty$となるとき, 定理13から$L_{d}$の全ての状態は再帰的である.つまり　$L_{d} \cap I \neq \emptyset$となる任意の有界区間$I$とすれば, $ {}^\forall x \in L_{d} \cap I$として 
+$ P(S_{n} \in I \ i.o.) \ge P(S_{n} = x \ i.o.) =1 \quad (\because \ x$は再帰的)となる.
+$\\ L_{d} \cap I \neq \emptyset$となる有界区間$I$が存在して$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I) < \infty$となるとき, 定理13から再帰状態は存在しない. よって任意の有界区間$I \ ( L_{d} \cap I \neq \emptyset )$ に対して $I$を含む開区間$J$とすれば $P(S_{n}\in I \ i.o.) \le P(S_{n} \in J \ i.o. ) =0$ ( $\because \ J$は $L_{d}$のある元の開近傍)
+\end{proof}
 
 
 
