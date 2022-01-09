@@ -34,7 +34,18 @@
 %\end{proof}
 
 %section 末尾事象とinfinte often
+以下では$(\Omega, \ \mathscr{F}, \ P)を確率空間とする.$
+
 \section{末尾事象とinfinte often}
+\begin{dfn} 
+末尾事象 (tail event)
+$\\ X_{1}, X_{2}, \dots$を確率変数列とする.
+$\\ E \in \sigma (X_{1}, X_{2}, \dots)$が末尾事象(tail event)であるとは
+$E \in \sigma (X_{n}, X_{n+1},\dots) \quad ({}^\forall n \in \mathbb{N}) \\ $が成立することである.
+$ \\$末尾加法族(tail  $\sigma$-field) $\delta$を
+$\displaystyle \delta = \bigcap_{n \in \mathbb{N}} \sigma (X_{n}, X_{n+1}, \dots)$と定める.
+$\\$ 定義から末尾加法族の元 $E \in \delta$ は末尾事象となる.
+\end{dfn}
 
 %近似定理
 \begin{thm}
@@ -107,6 +118,19 @@ P(E \cup E_{n})-P(E) \le P(E_{n} \triangle E) \to 0 \ (n \to \infty).
 P(E \cap E_{n} ) = P(E)P( E_{n} )であり.\\ 各辺でn \to \infty とすれば, \ P(E) = P(E)^{2} であるから, P(E)=0,1 となることがわかった.
 $
 \end{proof}
+
+%infinite often
+\begin{dfn} 
+infinite often
+$\\ \left\{ A_{n} \right\}_{n \in \mathbb{N}} \subset \mathscr{F}$とする. $\left\{ A_{n} \ i.o. \right\}$を
+ $\displaystyle \left\{ A_{n} \ i.o. \right\} = \lim_{m \to \infty} \bigcup_{n>m} A_{n}$と定める.
+ $\\  \left\{ A_{n} \ i.o. \right\}$は $\left\{ \omega \ | \ \omega \in A_{n} となるnが無限個存在する. \right\}$ともかける.
+ $\\ \displaystyle \because \omega \in \lim_{m \to \infty} \bigcup_{n>m} A_{n}$を任意にとる. $1$に対して$\omega \in A_{n_{1}}$となる$n_{1} \in \mathbb{N}$をとる.続いて $n_{1}$に対して$\omega \in A_{n_{2}}$となる$n_{2} \in \mathbb{N}$をとる.これを続ければ $\omega \in A_{n}$となる$n$の列として$\left\{ n_{k} \right\}_{k \in \mathbb{N}}$が取れるので, $\omega \in \left\{ \omega ' \ | \ \omega ' \in A_{n} となるnが無限個存在する. \right\}$である.
+ $\\ \omega \in \left\{ \omega \ | \ \omega \in A_{n} となるnが無限個存在する. \right\}$を任意にとる.このとき任意の$m \in \mathbb{N}$に対して
+ $\\ \omega \in A_{n}$ となる$n>m$が無限個存在する.よって $\displaystyle \omega \in \lim_{m \to \infty} \bigcup_{n>m} A_{n}$
+ 
+\end{dfn}
+
 
 %ボレルカンテリの補題
 %\{, \lbrace	\}, \rbrace
@@ -298,8 +322,21 @@ $\displaystyle \ \therefore \frac{X_{1} + \dots + X_{n}}{b_{n}} \stackrel{a.s.}{
 \end{proof}
 
 
-%section 再帰性と格子状に分布する確率変数
-\section{再帰性と格子状に分布する確率変数}
+%section 再帰状態と格子状に分布する確率変数
+\section{再帰状態と格子状に分布する確率変数}
+以下では$X_{1}, X_{2}, \dots$を独立同一分布に従う確率変数列とする.
+%定義 
+\begin{dfn} 
+再帰状態 (recurrent state)
+$\\ x \in \mathbb{R}$ とする. $x$が再帰状態(recurrent state)であるとは, $x$の任意の開近傍$I$に対して $P(S_{n} \in I \ i.o.)=1$
+となることである.
+\end{dfn}
+
+\begin{dfn} 
+格子上に分布する確率変数 
+$\\ X$が格子$\displaystyle L_{d} = \left\{ nd \ | \ n \in \mathbb{Z} \right\}, \ (d >0)$上に分布するとは, $\displaystyle \sum_{n \in \mathbb{Z}} P(X = nd)=1$かつ$\displaystyle \\ {}^\exists l >d \ s.t. \sum_{n \in \mathbb{Z}} P(X = nl)=1$とならないことである.
+$\\ X$が格子上に分布しないとき, $L_{0} = \mathbb{R}$とかいて, $X$は$L_{0}$上に分布するという.
+\end{dfn}
 
 %定理3.33
 \begin{thm}
