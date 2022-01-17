@@ -484,7 +484,21 @@ $\displaystyle \\ \sum_{n=1}^{\infty} P(S_{n} \in I ) \le 1 + \sum_{n=1}^{\infty
  
  命題21を使って, 定理20を証明する.
  \begin{proof}
- $\displaystyle \\ {}^\forall M \in \mathbb{N}$をとる.
+ $\displaystyle \\ {}^\forall M \in \mathbb{N}$をとる. $\displaystyle \sum_{n=1}^{\infty} P (\left| S_{n} \right| < M) = 
+ \sum_{k=-M}^{M-1} \sum_{n=1}^{\infty} P (S_{n} \in (k, k+1))$   命題21より
+ $\displaystyle \\ \le \sum_{k=-M}^{M-1}(1 + \sum_{n=1}^{\infty} P (\left| S_{n} \right| \le 1) ) =  2M (1 + \sum_{n=1}^{\infty} P( \left| S_{n} \right| \le 1))$つまり
+ $\displaystyle \\ \varlimsup_{M \to \infty} \frac{1}{2M} \sum_{n=1}^{\infty} P( \left| S_{n} \right| < M) \le 1 + \sum_{n=1}^{\infty}P( \left| S_{n} \right| \le 1) - (*)$
+ $\\$大数の強法則から $\frac{S_{n}}{n} \stackrel{P}{\rightarrow} 0 \ (\because 概収束 \Rightarrow 確率収束)$となる. ${}^\forall \varepsilon >0$をとる.このとき
+ $\displaystyle \\ {}^\exists m \in \mathbb{N} \ s.t. \ P(\left|S_{n} \right| < \varepsilon n) > \frac{1}{2} \ ({}^\forall n > m)$となる. $M \in \mathbb{N}$を $\displaystyle \varepsilon (m+1) < M$となるようにとれば,
+ $\displaystyle \\ P(\left|S_{n} \right| < M ) \ge P(\left|S_{n} \right| < \varepsilon (m+1) ) > \frac{1}{2} $ となる.
+ $\displaystyle \\ \therefore \sum_{n=1}^{\infty} P(\left|S_{n} \right| < M) \ge \sum_{n=m+1}^{\infty} P(\left|S_{n} \right| < M) > \frac{1}{2} (\frac{M}{\varepsilon}-m) \ $から $\displaystyle \frac{1}{2M} \sum_{n=1}^{\infty} P(|S_{n}| < M) \ge \frac{1}{4 \varepsilon} - \frac{m}{4M}$
+ $\displaystyle \\ (*)$から $\displaystyle 1+\sum_{n=1}^{\infty} P ( |S_{n}| \le 1 ) \ge \varlimsup_{M \to \infty} \frac{1}{2M} \sum_{n=1}^{\infty} P( |S_{n}| < M ) \ge \frac{1}{4 \varepsilon}$ となり, $\varepsilon \downarrow 0$とすれば, 
+ $\\ \displaystyle \sum_{n=1}^{\infty}P(|S_{n}| \le 1) = \infty$ となる. ここで　$\displaystyle 0 < {}^\forall \delta < \frac{1}{2}$に対して, 
+ $\displaystyle \frac{1}{N} < \delta$となる $N \in \mathbb{N}$をとって, $\displaystyle \sum_{n=1}^{\infty} P (\left| S_{n} \right| < M) =  \sum_{k= -MN}^{N(M-1)} \sum_{n=1}^{\infty} P(S_{n} \in (\frac{k}{N}, \frac{k+1}{N})) \le 2MN (1+ \sum_{n=1}^{\infty}P(|S_{n}| \le \frac{1}{N}))$となって,
+ $\\ \displaystyle 1 + \sum_{n=1}^{\infty} P (|S_{n}| \le \frac{1}{N}) \ge 
+ \varlimsup_{M \to \infty} \frac{1}{MN} \sum_{n=1}^{\infty} P(|S_{n}| < M) \ge
+ \frac{1}{4 \varepsilon N} \rightarrow \infty \ (\varepsilon \downarrow 0)$から $\displaystyle \sum_{n=1}^{\infty} P (|S_{n}| \le \frac{1}{N}) = \infty$
+ $\\$このことから, 定理17$(ii)$より$L_{d}$の全ての元は再帰的. 系18から$\displaystyle { \left\{ S_{n} \right\} }_{n}^{\infty}$は再帰的となる.
  \end{proof}
  
  \end{document}
