@@ -495,10 +495,11 @@ $\displaystyle \\ \sum_{n=1}^{\infty} P(S_{n} \in I ) \le 1 + \sum_{n=1}^{\infty
  $\displaystyle \\ (*)$から $\displaystyle 1+\sum_{n=1}^{\infty} P ( |S_{n}| \le 1 ) \ge \varlimsup_{M \to \infty} \frac{1}{2M} \sum_{n=1}^{\infty} P( |S_{n}| < M ) \ge \frac{1}{4 \varepsilon}$ となり, $\varepsilon \downarrow 0$とすれば, 
  $\\ \displaystyle \sum_{n=1}^{\infty}P(|S_{n}| \le 1) = \infty$ となる. ここで　$\displaystyle 0 < {}^\forall \delta < \frac{1}{2}$に対して, 
  $\displaystyle \frac{1}{N} < \delta$となる $N \in \mathbb{N}$をとって, $\displaystyle \sum_{n=1}^{\infty} P (\left| S_{n} \right| < M) =  \sum_{k= -MN}^{N(M-1)} \sum_{n=1}^{\infty} P(S_{n} \in (\frac{k}{N}, \frac{k+1}{N})) \le 2MN (1+ \sum_{n=1}^{\infty}P(|S_{n}| \le \frac{1}{N}))$となって,
- $\\ \displaystyle 1 + \sum_{n=1}^{\infty} P (|S_{n}| \le \frac{1}{N}) \ge 
+ $\\ \displaystyle 1 + \sum_{n=1}^{\infty} P (|S_{n}| < \frac{1}{\delta}) \ge 
+ 1 + \sum_{n=1}^{\infty} P (|S_{n}| \le \frac{1}{N}) \ge 
  \varlimsup_{M \to \infty} \frac{1}{MN} \sum_{n=1}^{\infty} P(|S_{n}| < M) \ge
- \frac{1}{4 \varepsilon N} \rightarrow \infty \ (\varepsilon \downarrow 0)$から $\displaystyle \sum_{n=1}^{\infty} P (|S_{n}| \le \frac{1}{N}) = \infty$
- $\\$このことから, 定理17$(ii)$より$L_{d}$の全ての元は再帰的. 系18から$\displaystyle { \left\{ S_{n} \right\} }_{n}^{\infty}$は再帰的となる.
+ \frac{1}{4 \varepsilon N} \rightarrow \infty \ (\varepsilon \downarrow 0)$だから, $\\ \displaystyle \sum_{n=1}^{\infty} P (|S_{n}| < \frac{1}{\delta}) = \infty$となる.
+ このことから, 定理17$(ii)$より$L_{d}$の全ての元は再帰的. $\\$系18から$\displaystyle { \left\{ S_{n} \right\} }_{n}^{\infty}$は再帰的となる.
  \end{proof}
  
  \end{document}
