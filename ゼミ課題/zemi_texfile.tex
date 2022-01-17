@@ -49,29 +49,29 @@ $\\$ 定義から末尾加法族の元 $E \in \delta$ は末尾事象となる.
 
 %近似定理
 \begin{thm}
-近似定理 \par
-$X_{1}, X_{2}, \dots$ を確率変数列とする.\par
-${}^\forall A_{1} \in \sigma (\textbf{X}),{}^\forall \varepsilon > 0$ に対して, ある$n \in \mathbb{N}, A_{2} \in \mathcal{F} (X_{1}, X_{2}, \dots , X{n})$が存在して$P(A_{1} \triangle A_{2}) \le 0$ となる. \par (ただし $A \triangle B := (A-B) \cup (B-A)$ )
+近似定理 
+$\\ X_{1}, X_{2}, \dots$ を確率変数列とする.
+$\displaystyle \\ {}^\forall A_{1} \in \sigma (\textbf{X}),{}^\forall \varepsilon > 0$ に対して, ある$n \in \mathbb{N}, A_{2} \in \mathcal{F} (X_{1}, X_{2}, \dots , X{n})$が存在して$P(A_{1} \triangle A_{2}) \le 0$ となる. $\\$ (ただし $A \triangle B := (A-B) \cup (B-A)$ )
 \end{thm}
 
 \begin{proof}
-$\quad$\par
-${}^\forall A_{1} \in \sigma (\textbf{X}), {}^\forall \varepsilon > 0$を固定する. \par
-$\mathscr{F}_{0} = \displaystyle\bigcup_{n \in  \mathbb{N}} \sigma (X_{1}, X_{2}, \dots, X_{n}) $, $\mathcal{C} = {\lbrace A \in \mathcal{F} | \ {}^\forall \varepsilon > 0 に対して, {}^\exists B \in \mathscr{F}_{0} \ s.t. \ P(A \triangle B) \le \varepsilon \rbrace  }$と定める. \par
-$\mathscr{F}_{0}  \subset \mathcal{C}$は明らかだから,$\mathcal{C}$が$\sigma$加法族であることを示せば, $\sigma (\mathscr{F}_{0}) \subset \mathcal{C}$で, $\sigma (\mathscr{F}_{0}) = \sigma (\textbf {X})$であることから,\par
-$A_{1} \in \sigma (\textbf{X}) \subset \mathcal{C}$なので,${}^\exists A_{2} \in \mathscr{F}_{0} \ s.t. \ P(A_{1} \triangle A_{2}) \le \varepsilon$となり、定理が成立するのがわかる.\par
+$\\$
+${}^\forall A_{1} \in \sigma (\textbf{X}), {}^\forall \varepsilon > 0$を固定する. 
+$\displaystyle \\ \mathscr{F}_{0} = \displaystyle\bigcup_{n \in  \mathbb{N}} \sigma (X_{1}, X_{2}, \dots, X_{n}) $, $\mathcal{C} = {\lbrace A \in \mathcal{F} | \ {}^\forall \varepsilon > 0 に対して, {}^\exists B \in \mathscr{F}_{0} \ s.t. \ P(A \triangle B) \le \varepsilon \rbrace  }$と定める. 
+$\displaystyle \\ \mathscr{F}_{0}  \subset \mathcal{C}$は明らかだから,$\mathcal{C}$が$\sigma$加法族であることを示せば, $\sigma (\mathscr{F}_{0}) \subset \mathcal{C}$で, $\sigma (\mathscr{F}_{0}) = \sigma (\textbf {X})$であることから,
+$\displaystyle \\ A_{1} \in \sigma (\textbf{X}) \subset \mathcal{C}$なので,${}^\exists A_{2} \in \mathscr{F}_{0} \ s.t. \ P(A_{1} \triangle A_{2}) \le \varepsilon$となり、定理が成立するのがわかる.
 %%証明
-$\bullet \ \mathcal{C}$が$\sigma$加法族であること示す.\par
+$\displaystyle \\ \bullet \ \mathcal{C}$が$\sigma$加法族であること示す.\par
 $\quad$ $(i)$ $\Omega \in \mathcal{C} \ (\because \ \Omega \in \ \mathscr{F}_{0}) $\par
 
 $\quad$ $(ii)$ ${}^\forall A \in \mathcal{C}に対して, A^c \in \mathcal{C}$\par
 $\qquad$ $\because {}^\forall \varepsilon > 0$ を固定する.このとき$B \in \mathcal{F}_{0}$が取れて, $P(A \triangle B) \le \varepsilon $となる.$\mathcal{F}_{0}$の定め方から, \ $B^c \in \mathcal{F}_{0}$ \par $\quad \qquad$であって, $P(A^c \triangle B^c) = P((A^c \cap B) \cup (A \cap B^c)) = P((B-A) \cup (A-B)) = P(A \triangle B) \le \varepsilon$\par $\quad \qquad$ $\therefore A^c \in \mathcal{C}$
 
 $\quad$ $(iii)$ ${}^\forall \lbrace A_{n} \rbrace_{n \in \mathbb{N}} \subset \mathcal{C}, {}^\forall \varepsilon > 0$をとる. $\lbrace B_{n} \rbrace_{n \in \mathbb{N}} \subset \mathcal{F}_{0}$を$P(A_{n} \triangle B_{n}) \le \frac{\varepsilon}{2^{n+1}} $となるようにとる.\par 
-$\quad \qquad$また,測度の上からの連続性から　ある$N \in \mathbb{N}$が取れて, $P( \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}) \le \frac{\varepsilon}{2}$となる.\par$\quad \qquad$ ここで, $\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle \displaystyle\bigcup_{n=1}^{\infty} A_{n} \subset (\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle A_{n}) \cup \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}$を示せれば,単調性と劣加法性から,\par $\quad \qquad$ $P(\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle \displaystyle\bigcup_{n=1}^{\infty} A_{n}) \le P((\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle A_{n}) \cup \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}) \le  \displaystyle\sum_{n=1}^{N}P(B_{n} \triangle A_{n}) + P(\displaystyle\bigcup_{n=N+1}^{\infty} A_{n})$ \par $\quad \qquad$ $\le \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon $となる. $\displaystyle\bigcup_{n=1}^{N} B_{n} \in \mathcal{F}_{0}$であることから　$\displaystyle\bigcup_{n=1}^{\infty} A_{n} \in \mathcal{C}$となる.\par
+$\quad \qquad$また,測度の上からの連続性から　ある$N \in \mathbb{N}$が取れて, $P( \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}) \le \frac{\varepsilon}{2}$となる.\par$\quad \qquad$ ここで, $\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle \displaystyle\bigcup_{n=1}^{\infty} A_{n} \subset (\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle A_{n}) \cup \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}$を示せれば,単調性と劣加法性から,\par $\quad \qquad$ $P(\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle \displaystyle\bigcup_{n=1}^{\infty} A_{n}) \le P((\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle A_{n}) \cup \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}) \le  \displaystyle\sum_{n=1}^{N}P(B_{n} \triangle A_{n}) + P(\displaystyle\bigcup_{n=N+1}^{\infty} A_{n})$ \par $\quad \qquad$ $\le \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon $となる. $\displaystyle\bigcup_{n=1}^{N} B_{n} \in \mathcal{F}_{0}$であることから　$\displaystyle\bigcup_{n=1}^{\infty} A_{n} \in \mathcal{C}$となる.
 
 %%証明の中の証明
-$\quad \qquad$ $\bullet \ \displaystyle\bigcup_{n=1}^{N} B_{n} \triangle \displaystyle\bigcup_{n=1}^{\infty} A_{n} \subset (\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle A_{n}) \cup \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}$を示す. \par
+$\displaystyle \\ \quad$ $\bullet \ \displaystyle\bigcup_{n=1}^{N} B_{n} \triangle \displaystyle\bigcup_{n=1}^{\infty} A_{n} \subset (\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle A_{n}) \cup \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}$を示す. \par
 $\quad \qquad$ $\because \ \omega \in \displaystyle\bigcup_{n=1}^{N} B_{n} \triangle \displaystyle\bigcup_{n=1}^{\infty} A_{n} \Leftrightarrow (\omega \in \displaystyle\bigcup_{n=1}^{N} B_{n} - \displaystyle\bigcup_{n=1}^{\infty} A_{n}) \lor  (\omega \in \displaystyle\bigcup_{n=1}^{\infty} A_{n} - \displaystyle\bigcup_{n=1}^{N} B_{n})$ \par 
 $\qquad \qquad \qquad$
 $ \Leftrightarrow (\omega \in \displaystyle\bigcup_{n=1}^{N} B_{n} \cap \displaystyle\bigcap_{n=1}^{\infty} A_{n}^{c}) \lor 
@@ -452,8 +452,39 @@ $\\ L_{d} \cap I \neq \emptyset$となる有界区間$I$が存在して$\display
 
 \begin{dfn}
 $\\ \displaystyle \left\{ S_{n} \right\}_{n \in \mathbb{N}}$が系$18 \ (i)$を満たすとき, 再帰的という.また, 系$18 \ (ii)$を満たすとき, 非再帰的という.
-
 \end{dfn}
 
+%定理
+\begin{thm}
+$\displaystyle \\ E\left[ X_{1} \right] = 0$となるとき,$\displaystyle \ S_{1}, S_{2}, \dots$は再帰的となる.
+\end{thm}
 
-\end{document}
+証明の前にまず命題を一つ示す.
+%命題
+\begin{prop}
+$\displaystyle \\ I$が長さ$a$の区間であるとき, 
+$\displaystyle \sum_{n=1}^{\infty} P \left(S_{n} \in I \right) \le 1 + \sum_{n=1}^{\infty} P \left( \left| S_{n} \right| \le a  \right)$となる.
+\end{prop}
+\begin{proof}
+$\displaystyle \\ I$を長さ$a$の任意の区間としてとる.
+$\displaystyle N := \sum_{n=1}^{\infty} 1_{ \left\{ S_{n} \in I \right\} }$とおくと, $N$は和　$S_{1}, S_{2}, \dots$の中で$I$に含まれるものを数えたものとなる.
+$\displaystyle \\ n^{*} (\omega) := \begin{cases} S_{n}(\omega) \in I となる最小の n \in \mathbb{N} \\ \infty & (もしS_{n}(\omega) \notin I \ , n = 1,2,\dots ) \end{cases}$とおく. $\displaystyle \\ \left\{ n^{*} = k \right\}$ 上では $1_{ \left\{ S_{n} \in I \right\} } = 0$ $({}^\forall n < k)$ , $1_{ \left\{ S_{k} \in I \right\} } = 1$ となるから,
+$\displaystyle \\ N = \sum_{n=1}^{k-1} 1_{ \left\{ S_{n} \in I \right\} } + 1_{ \left\{ S_{k} \in I \right\} } + \sum_{n=k+1}^{\infty} 1_{ \left\{ S_{n} \in I \right\} } = 1 + \sum_{n=1}^{\infty} 1_{ \left\{ S_{k+n} \in I \right\} } = 1 + \sum_{n=1}^{\infty} 1_{ \left\{ S_{k+n} - S_{k} \in I - S_{k} \right\} } \\ \le 1 + \sum_{n=1}^{\infty} 1_{ \left\{ S_{k+n} - S_{k} \in \left[-a,a\right] \right\} }$
+$\displaystyle \\ \quad \because {}^\forall \omega \in \left\{ n^{*} = k \right\}$に対して, $I - S_{k}(\omega) \subset [-a, a] $となる. つまり $1_{ \left\{ I - S_{k}(\omega)  \right\} } \le 1_{ \left[ -a, a \right]}$が成立する.
+$\\$なぜなら, $\overline{I} = \left[ I_{1}, I_{1}+a \right]$とかくと$(I_{1} \in \mathbb{R})$ 
+$\\ -I_{1} - a \le -S_{k}(\omega) \le -I_{1}$ であって, $I - I_{1} - a = \left[-a, 0\right], \ I - I_{1}= \left[0,a\right]$であるから,
+$\\I - S_{k}(\omega) \subset \left[-a, a\right]$だから, $1_{ \left\{ I - S_{k}  \right\} } \le 1_{ \left[ -a, a \right]}$となる.
+$\\ \left\{ n^{*} = k \right\} \in \sigma (X_{1}, X_{2}, \dots, X_{k}) $なので, $\left\{ n^{*} = k \right\}$と$\left\{ S_{k+n} - S_{k} \in [-a,a] \right\}$は独立となる.
+$\displaystyle \\ \int_{ \left\{ n^{*} = k \right\} }{N(\omega) P (d\omega)} \le \int_{ \left\{ n^{*} = k \right\} } { \left( 1 + \sum_{n=1}^{\infty} 1_{ \left\{ (S_{k+n} - S_{k})(\omega) \in \left[-a,a\right] \right\}  } \right) P (d\omega) } \ $ 単調収束定理から, 
+$\displaystyle \\ = P( n^{*} = k ) + \sum_{n=1}^{\infty} \int_{ \left\{ n^{*} = k \right\} } {1_{ \left\{ S_{k+n}(\omega) - S_{k}(\omega) \in \left[-a,a\right] \right\}  } P (d\omega) } = P( n^{*} = k ) + \sum_{n=1}^{\infty} P\left( \left\{ n^{*}=k \right\} \cap  \left\{ S_{k+n} - S_{k} \in \left[-a,a\right] \right\}  \right) \\ =  P( n^{*} = k ) +  \sum_{n=1}^{\infty} P(n^{*} = k) P (S_{k+n} - S_{k} \in \left[-a,a\right]) \qquad ( \because$  独立性から$) \ $また同一分布性から 
+$\displaystyle \\ = P( n^{*} = k ) + P(n^{*} = k) \sum_{n=1}^{\infty} P ( \left| S_{n} \right| \le a)$ ここで両辺$k$で和をとると, 左辺は単調収束定理を使って,
+$\displaystyle \\ \sum_{k=1}^{\infty} \int_{ \left\{ n^{*} = k \right\} }{N(\omega) P (d\omega)} = \int_{ \Omega }{\sum_{n=1}^{\infty} 1_{ \left\{ S_{n}(\omega) \in I \right\} } P (d\omega)} = \sum_{n=1}^{\infty} P(S_{n} \in I )$となって,
+$\displaystyle \\ \sum_{n=1}^{\infty} P(S_{n} \in I ) \le 1 + \sum_{n=1}^{\infty} P ( \left| S_{n} \right| \le a)$が成立する.
+\end{proof}
+ 
+ 命題21を使って, 定理20を証明する.
+ \begin{proof}
+ $\displaystyle \\ {}^\forall M \in \mathbb{N}$をとる.
+ \end{proof}
+ 
+ \end{document}
