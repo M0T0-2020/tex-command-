@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.12.28)  26 JAN 2022 10:48
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.12.28)  26 JAN 2022 10:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -286,10 +286,10 @@ k\OT1/cmr/m/n/10 ) + [] \OML/cmm/m/it/10 P [] []
 Here is how much of TeX's memory you used:
  1968 strings out of 479466
  25479 string characters out of 5870547
- 350328 words of memory out of 5000000
+ 351328 words of memory out of 5000000
  19664 multiletter control sequences out of 15000+600000
  422369 words of font info for 114 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  67i,15n,74p,1041b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on zemi_texfile.dvi (14 pages, 87444 bytes).
+Output written on zemi_texfile.dvi (14 pages, 87448 bytes).
