@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.12.28)  29 JAN 2022 18:32
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.12.28)  29 JAN 2022 21:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -314,22 +314,28 @@ Overfull \hbox (36.12723pt too wide) detected at line 481
 /cmr/m/n/10 ([] [] [])
  []
 
-[12] [13] [14]
-Overfull \hbox (39.46245pt too wide) in paragraph at lines 625--639
-[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n[] \O
-T1/cmr/m/n/10 = \OML/cmm/m/it/10 k\OT1/cmr/m/n/10 ) + [] [][] [] = \OML/cmm/m/i
-t/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 
-k\OT1/cmr/m/n/10 ) + [] \OML/cmm/m/it/10 P [] [] 
+[12] [13] [14] [15]
+Overfull \hbox (46.2356pt too wide) detected at line 637
+\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 = [] 1[] + 1[] + [] 1[] = 1 + [] 1[] = 1 + [
+] 1[][] [] \OMS/cmsy/m/n/10 ^^T \OT1/cmr/m/n/10 1 + [] 1[]
  []
 
-[15] [16] [17] (./zemi_texfile.aux) ) 
+
+Overfull \hbox (35.01811pt too wide) detected at line 645
+\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n[] \OT1/
+cmr/m/n/10 = \OML/cmm/m/it/10 k\OT1/cmr/m/n/10 ) + [] [][] [] = \OML/cmm/m/it/1
+0 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 k\O
+T1/cmr/m/n/10 ) + [] \OML/cmm/m/it/10 P []
+ []
+
+[16] [17] (./zemi_texfile.aux) ) 
 Here is how much of TeX's memory you used:
  1982 strings out of 479466
  25736 string characters out of 5870547
- 342328 words of memory out of 5000000
+ 339328 words of memory out of 5000000
  19672 multiletter control sequences out of 15000+600000
  423077 words of font info for 117 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  67i,14n,74p,1008b,269s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on zemi_texfile.dvi (17 pages, 93052 bytes).
+Output written on zemi_texfile.dvi (17 pages, 93264 bytes).

@@ -140,7 +140,7 @@ $\\ \bullet P(E_{n} \cup E) \to P(E)$
 $$\\ P(E \cup E_{n}) \le P((E_{n}-E) \cup E) \le P(E_{n}-E) + P(E) \le P(E_{n} \triangle E) + P(E)$$から
 $$P(E \cup E_{n})-P(E) \le P(E_{n} \triangle E) \to 0 \ (n \to \infty)$$
 また, $E \subset (E \cup E_{n}) \cup (E \triangle E_{n})$だから$$P(E)-P(E \cup E_{n}) \le P(E \triangle E_{n}) \to 0 \ (n \to \infty)$$
-この時, $E \in \delta$ だから, $E \in \sigma (X_{n+1}, X_{n+2}, \dots)$ である.つまり, $E$ と$E_{n}$ は独立.
+この時, $E \in \delta$ だから, $E \in \sigma (X_{n+1}, X_{n+2}, \dots)$ である.つまり, $E$ と$E_{n}$ は独立である.
 $\displaystyle \\ P(E \cap E_{n} ) = P(E)P( E_{n} )$ だから,各辺で$n \to \infty$ とすれば, $P(E) = P(E)^{2}$. つまり $P(E)=0,1$ となることがわかった.
 
 \end{proof}
@@ -321,7 +321,7 @@ $$|S_{j}(\omega)| - |S_{N}(\omega)| \le \alpha \, かつ \, |S_{j}(\omega)| > 2\
  \par
 以上で$ \lbrace |S_{N}| > \alpha \rbrace \cap \lbrace j^{*} = j \rbrace \supset \lbrace |S_{N}-S_{j}| \le \alpha \rbrace  \cap \lbrace j^{*} = j \rbrace $
 $\displaystyle\\ \ \lbrace j^{*} = j \rbrace = ( \bigcap_{k=1}^{j-1}\lbrace |S_{k}| > 2\alpha \rbrace^{c} ) \cap \lbrace |S_{j}| > 2\alpha \rbrace$なので,$\lbrace j^{*} = j \rbrace \in \sigma (X_{1}, \dots , X_{j})$,
-$\\ \lbrace |S_{N} - S_{j} | \le \alpha \rbrace \in \sigma (X_{j+1}, \dots , X_{N})$であるから, $ \lbrace j^{*} = j \rbrace $と$ \lbrace |S_{N} - S_{j} | \le \alpha \rbrace $は独立.
+$\\ \lbrace |S_{N} - S_{j} | \le \alpha \rbrace \in \sigma (X_{j+1}, \dots , X_{N})$であるから, $ \lbrace j^{*} = j \rbrace $と$ \lbrace |S_{N} - S_{j} | \le \alpha \rbrace $は独立である.
 $\\$仮定から$\displaystyle P(|S_{N}-S_{j}| > \alpha) \le c $なので$\displaystyle 1 - P(|S_{N}-S_{j}| > \alpha) = P(|S_{N}-S_{j}| \le \alpha) \ge 1-c$となる.よって
 %まとめ
 $$ \sum_{j=1}^{N}P(|S_{N}-S_{j}| \le \alpha , \ j^{*}=j) = \sum_{j=1}^{N} P(|S_{N}-S_{j}| \le \alpha)P( j^{*}=j) $$
@@ -492,7 +492,7 @@ $\\$
 ここで
 $N=k+m$とおけば, 
 $\displaystyle n \ge N$に対して, $ \left| S_{n}(\omega) -  x \right| \ge \varepsilon$ なので $\displaystyle \omega \in \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\} \\ \therefore \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\} \supset \left\{ \left| S_{k} - y \right|  < \varepsilon \right\} \cap \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\}$ 
-$\\$また $X_{1}, X_{2}, \dots$は独立なので,$\ S_{k}$と$\displaystyle S_{k+n} - S_{k} = \sum_{m=k+1}^{k+n} X_{m}$は独立.
+$\\$また $X_{1}, X_{2}, \dots$は独立なので,$\ S_{k}$と$\displaystyle S_{k+n} - S_{k} = \sum_{m=k+1}^{k+n} X_{m}$は独立である.
 $\\$また同一分布性から
 $$P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\})= P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - (x-y) \right| \ge 2\varepsilon \right\})$$も成立する.
 $\displaystyle \\ P(\left| S_{k} - y \right| < \varepsilon) >0$なので$P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - (x-y) \right| \ge 2\varepsilon \right\}) = 0$つまり $\displaystyle \\ P(\left\{ \left| S_{n} - (x-y) \right| < 2\varepsilon \right\} \ i.o.) = 1 \quad I_{\varepsilon} = (x-y -2\varepsilon, x-y + 2\varepsilon)$とおけば,$P( \left| S_{n} \right| \in I_{\varepsilon}  \ i.o.) = 1$
@@ -553,7 +553,10 @@ $\\$
 $\displaystyle \omega \in$ (右辺)
 %
 $\\ (\supset)$ $\omega \in$ (右辺)とする. このとき$ k \in \mathbb{N}$が存在して $\omega \in A_{k}$となる.
-$\\ k \ge 1$のとき $\displaystyle \omega \in A_{k} \subset \left\{ S_{n+k} \notin n=1,2,\dots \right\} = \bigcap_{n=k+1}^{\infty} \left\{ S_{n} \notin I \right\} ,\ k=0$のとき $\displaystyle \omega \in A_{0} = \bigcap_{n=1}^{\infty} \left\{ S_{n}\notin I \right\}$
+$\\ k \ge 1$のとき $\displaystyle \omega \in A_{k} \subset \left\{ S_{n+k} \notin n=1,2,\dots \right\} = \bigcap_{n=k+1}^{\infty} \left\{ S_{n} \notin I \right\}$
+$\\ k=0$のとき $\displaystyle \omega \in A_{0} = \bigcap_{n=1}^{\infty} \left\{ S_{n}\notin I \right\}$ $\qquad \therefore \omega \in$ (左辺)
+$\\$
+
 定め方から$A_{0}, A_{1}, \dots$は非交和なので
 $$\displaystyle P(\bigcup_{m \in \mathbb{N}} \bigcap_{n>m} \left\{ S_{n} \notin I \right\} ) = P(\bigcup_{k=0}^{\infty} A_{k}) = \sum_{k=0}^{\infty} P(A_{k})$$
 $\\ k \ge 1$のとき
@@ -561,38 +564,44 @@ $$P(A_{k}) \ge P(S_{k} \in I, \ \left| S_{n+k} - S_{k} \right| \ge 2\varepsilon,
 $\\$
 $\displaystyle \because \omega \in \left\{ S_{k} \in I \right\} \cap \left\{ \left| S_{n+k} - S_{k} \right| \ge 2\varepsilon, \ n=1,2,\dots \right\}$を任意にとる.
 $\displaystyle \\ S_{k}(\omega)\in I$かつ$ ( S_{n+k}(\omega) - S_{k}(\omega) \le -2\varepsilon$または$2\varepsilon \le S_{n+k}(\omega) - S_{k}(\omega), \ n=1,2,\dots )$
-$\\ I$の定め方から, $x-\varepsilon < S_{k} < x+\varepsilon $だから
-$\\ \Rightarrow $
-$\displaystyle S_{k}(\omega)\in I$かつ$ ( S_{n+k}(\omega) \le (x+\varepsilon) -2\varepsilon$または$2\varepsilon +(x-\varepsilon) \le S_{n+k}(\omega), \ n=1,2,\dots )$
-$\displaystyle \\ \Leftrightarrow $
-$\displaystyle S_{k}(\omega)\in I$かつ$ ( S_{n+k}(\omega) \le x -\varepsilon$または$x+\varepsilon \le S_{n+k}(\omega), \ n=1,2,\dots )$
+$\\ \qquad$ (このとき$I$の定め方から, $x-\varepsilon < S_{k} < x+\varepsilon $だから)
+$\\$
+$\displaystyle \Rightarrow S_{k}(\omega)\in I$かつ$ ( S_{n+k}(\omega) \le (x+\varepsilon) -2\varepsilon$または$2\varepsilon +(x-\varepsilon) \le S_{n+k}(\omega), \ n=1,2,\dots )$
+$\\  $
+$\displaystyle \Leftrightarrow S_{k}(\omega)\in I$かつ$ ( S_{n+k}(\omega) \le x -\varepsilon$または$x+\varepsilon \le S_{n+k}(\omega), \ n=1,2,\dots )$
 $\displaystyle \\ \Leftrightarrow $
 $\displaystyle S_{k}(\omega)\in I$かつ$ ( S_{n+k}(\omega) \notin I, \ n=1,2,\dots )$
-$\Leftrightarrow \displaystyle \omega \in A_{k}$ 
-$\\ \\$
-$\displaystyle P(S_{k}\in I, \ \left| S_{n+k} -S_{k} \right| \ge 2\varepsilon, \ n=1,2,\dots) = P(S_{k}\in I) P( \left| S_{n+k} -S_{k} \right| \ge 2\varepsilon, \ n=1,2,\dots) \quad \because$独立性 
+$\\ \displaystyle \Leftrightarrow  \omega \in A_{k}$ 
+
+$\\$独立性と同一分布性から
+$$ P(S_{k}\in I, \ \left| S_{n+k} -S_{k} \right| \ge 2\varepsilon, \ n=1,2,\dots) = P(S_{k}\in I) P( \left| S_{n+k} -S_{k} \right| \ge 2\varepsilon, \ n=1,2,\dots)$$
+$$ = P(S_{k}\in I) P( \left| S_{n} \right| \ge 2\varepsilon, \ n=1,2,\dots)$$
+が成立する.よって
+$$ P(  \bigcup_{m \in \mathbb{N}} \bigcap_{n>m} \left\{ S_{n} \notin I \right\} ) = \sum_{k=0}^{\infty} P(A_{k}) \ge P(A_{0}) + \sum_{k=1}^{\infty} P(A_{k})$$
+$$ \ge P(A_{0}) + P( \left| S_{n} \right| \ge 2\varepsilon, \ n=1,2,\dots) \sum_{k=1}^{\infty} P(S_{k}\in I) \quad $$
+ここで, $\displaystyle \sum_{k=1}^{\infty} P(S_{k}\in I) = \infty$
+であるから
+$P( \left| S_{n} \right| \ge 2\varepsilon, \ n=1,2,\dots)  = 0$が示せた.
 $\\$
-$ = P(S_{k}\in I) P( \left| S_{n} \right| \ge 2\varepsilon, \ n=1,2,\dots) \quad \because$同一分布性
-$\\ \displaystyle P(  \bigcup_{m \in \mathbb{N}} \bigcap_{n>m} \left\{ S_{n} \notin I \right\} ) = \sum_{k=0}^{\infty} P(A_{k}) \ge P(A_{0}) + \sum_{k=1}^{\infty} P(A_{k}) \\ \ge P(A_{0}) + P( \left| S_{n} \right| \ge 2\varepsilon, \ n=1,2,\dots) \sum_{k=1}^{\infty} P(S_{k}\in I) \quad $ここで, $\displaystyle \sum_{k=1}^{\infty} P(S_{k}\in I) = \infty$であるから
-$\\ P( \left| S_{n} \right| \ge 2\varepsilon, \ n=1,2,\dots)  = 0$. 以上で $\displaystyle 0 < {}^\forall \varepsilon < \frac{l}{2} \ , P( \left| S_{n} \right| \ge 2\varepsilon, \ n=1,2,\dots)  = 0 \ $となる $(*)$
-$\\ \displaystyle 0 < {}^\forall \varepsilon < \frac{l}{2}$を新しく固定する. $I = (-\varepsilon, \ \varepsilon)$として, $\left\{ A_{k} \right\}_{k=0}^{\infty}$を先と同様にとる. $I_{\delta} = (-\delta, \delta)$ (ただし, $\delta < \varepsilon$)とする. ${}^\forall k \ge 1$として $\displaystyle A_{k} = \lim_{\delta \uparrow \varepsilon} \left\{ S_{k} \in I_{\delta}, \ S_{n+k} \notin I \ n=1,2,\dots \right\}$となるから
-$\\ \displaystyle P(A_{k}) = P(\lim_{\delta \uparrow \varepsilon} \left\{ S_{k} \in I_{\delta}, \ S_{n+k} \notin I \ n=1,2,\dots \right\})$ 連続性から
-$\\ \displaystyle \qquad \quad  = \lim_{\delta \uparrow \varepsilon} P(\left\{ S_{k} \in I_{\delta}, \ S_{n+k} \notin I \ n=1,2,\dots \right\})$
-$\\ \displaystyle P(S_{k} \in I_{\delta}, \ S_{n+k} \notin I \ n=1,2,\dots) \le P(S_{k}\in I_{\delta}, \ \left| S_{n+k} - S_{k} \right| \ge \varepsilon - \delta \ n = 1,2,\dots )$となる.
+以上で任意の$ \varepsilon \in ( 0, \frac{l}{2})$に対して $P( \left| S_{n} \right| \ge 2\varepsilon, \ n=1,2,\dots)  = 0 \ $となる $(*)$
+$\\ \displaystyle \varepsilon \in (0, \frac{l}{2})$を新しく固定する. $I = (-\varepsilon, \ \varepsilon)$として, $\left\{ A_{k} \right\}_{k=0}^{\infty}$を先と同様にとる. $I_{\delta} = (-\delta, \delta)$ (ただし, $\delta < \varepsilon$)とする. 任意の$ k \in \mathbb{N}$に対して $\displaystyle A_{k} = \lim_{\delta \uparrow \varepsilon} \left\{ S_{k} \in I_{\delta}, \ S_{n+k} \notin I \ n=1,2,\dots \right\}$となるから
+$$ P(A_{k}) = P(\lim_{\delta \uparrow \varepsilon} \left\{ S_{k} \in I_{\delta}, \ S_{n+k} \notin I \ n=1,2,\dots \right\})$$ 連続性から
+$$ = \lim_{\delta \uparrow \varepsilon} P(\left\{ S_{k} \in I_{\delta}, \ S_{n+k} \notin I \ n=1,2,\dots \right\})$$
+$\displaystyle P(S_{k} \in I_{\delta}, \ S_{n+k} \notin I \ n=1,2,\dots) \le P(S_{k}\in I_{\delta}, \ \left| S_{n+k} - S_{k} \right| \ge \varepsilon - \delta \ n = 1,2,\dots )$となる.
 %because 
-$\\ \displaystyle \because \ \omega \in \left\{ S_{k} \in I_{\delta}, \ S_{n+k} \notin I \ n=1,2,\dots \right\}$を任意のとる. $\\ \displaystyle -\delta < S_{k}(\omega) < \delta, \ S_{n+k}(\omega) \le -\varepsilon または\ \varepsilon \le S_{n+k}(\omega) \ (n =1,2,\dots)$となる.
+$\\ \displaystyle \because \ \omega \in \left\{ S_{k} \in I_{\delta}, \ S_{n+k} \notin I \ n=1,2,\dots \right\}$を任意にとる. $\\ \displaystyle -\delta < S_{k}(\omega) < \delta, \ S_{n+k}(\omega) \le -\varepsilon または\ \varepsilon \le S_{n+k}(\omega) \ (n =1,2,\dots)$となる.
 $\\ S_{n+k}(\omega) - S_{k}(\omega) \le -\varepsilon - S_{k}(\omega) < -\varepsilon + \delta$または $\varepsilon - \delta < \varepsilon - S_{k}(\omega) \le S_{n+k}(\omega) - S_{k}(\omega)$
 $\\$よって $\displaystyle \left| S_{n+k}(\omega) - S_{k}(\omega) \right| \ge \varepsilon - \delta \quad \therefore \ \omega \in \left\{ S_{k} \in I_{\delta}, \ \left| S_{n+k} - S_{k} \right| \ge \varepsilon - \delta \ n = 1,2,\dots \right\}  $
 %
 $\\$
 独立性と同一分布性から
-$\displaystyle \\ P(S_{k}\in I_{\delta}, \ \left| S_{n+k} - S_{k} \right| \ge \varepsilon - \delta \ n = 1,2,\dots ) = P(S_{k}\in I_{\delta}) P(\left| S_{n+k} - S_{k} \right| \ge \varepsilon - \delta \ n = 1,2,\dots)$ 
-$\\ \qquad  = P(S_{k}\in I_{\delta}) P(\left| S_{n} \right| \ge \varepsilon - \delta \ n = 1,2,\dots) = 0$
-$\\ \because \displaystyle  0 < \frac{\varepsilon - \delta}{2} < \frac{l}{2}$なので$(*)$より $P(\left| S_{n} \right| \ge \varepsilon - \delta \ n = 1,2,\dots) =0 \\$
+$$ P(S_{k}\in I_{\delta}, \ \left| S_{n+k} - S_{k} \right| \ge \varepsilon - \delta \ n = 1,2,\dots ) = P(S_{k}\in I_{\delta}) P(\left| S_{n+k} - S_{k} \right| \ge \varepsilon - \delta \ n = 1,2,\dots)$$
+$$ = P(S_{k}\in I_{\delta}) P(\left| S_{n} \right| \ge \varepsilon - \delta \ n = 1,2,\dots) = 0$$
+$\because \displaystyle  0 < \frac{\varepsilon - \delta}{2} < \frac{l}{2}$なので$(*)$より $P(\left| S_{n} \right| \ge \varepsilon - \delta \ n = 1,2,\dots) =0 \\$
 以上で$P(A_{k})=0 \ ({}^\forall k \ge 1)$となる. 
 $\\ 0< \varepsilon<\frac{l}{2}$だから$0<\frac{\varepsilon}{2} < \frac{l}{2}$なので $P(A_{0}) = P(S_{n} \notin I \ n=1,2,\dots) = P(\left| S_{n} \right| \ge \varepsilon \ n=1,2,\dots) = 0$
-これまでのことから$0 < {}^\forall \varepsilon < \frac{l}{2}, \ I= (-\varepsilon, \varepsilon)$に対して, $P (S_{n} \in I \ i.o.)=1 $ 
-$\\$よって,0は再帰的となる. $\therefore L_{d}$の全ての状態は再帰的である.
+以上から$0 < {}^\forall \varepsilon < \frac{l}{2}, \ I= (-\varepsilon, \varepsilon)$に対して, $P (S_{n} \in I \ i.o.)=1 $ 
+よって, $0$は再帰的となる. $\therefore L_{d}$の全ての状態は再帰的である.
 \end{proof}
 
 \begin{cor}
@@ -623,39 +632,48 @@ $\displaystyle \sum_{n=1}^{\infty} P \left(S_{n} \in I \right) \le 1 + \sum_{n=1
 \end{prop}
 \begin{proof}
 $\displaystyle \\ I$を長さ$a$の任意の区間としてとる.
-$\displaystyle N := \sum_{n=1}^{\infty} 1_{ \left\{ S_{n} \in I \right\} }$とおくと, $N$は和　$S_{1}, S_{2}, \dots$の中で$I$に含まれるものを数えたものとなる.
-$\displaystyle \\ n^{*} (\omega) := \begin{cases} S_{n}(\omega) \in I となる最小の n \in \mathbb{N} \\ \infty & (もしS_{n}(\omega) \notin I \ , n = 1,2,\dots ) \end{cases}$とおく. $\displaystyle \\ \left\{ n^{*} = k \right\}$ 上では $1_{ \left\{ S_{n} \in I \right\} } = 0$ $({}^\forall n < k)$ , $1_{ \left\{ S_{k} \in I \right\} } = 1$ となるから,
-$\displaystyle \\ N = \sum_{n=1}^{k-1} 1_{ \left\{ S_{n} \in I \right\} } + 1_{ \left\{ S_{k} \in I \right\} } + \sum_{n=k+1}^{\infty} 1_{ \left\{ S_{n} \in I \right\} } = 1 + \sum_{n=1}^{\infty} 1_{ \left\{ S_{k+n} \in I \right\} } = 1 + \sum_{n=1}^{\infty} 1_{ \left\{ S_{k+n} - S_{k} \in I - S_{k} \right\} } \\ \le 1 + \sum_{n=1}^{\infty} 1_{ \left\{ S_{k+n} - S_{k} \in \left[-a,a\right] \right\} }$
+$\displaystyle N := \sum_{n=1}^{\infty} 1_{ \left\{ S_{n} \in I \right\} }$とおくと, $N$は和$S_{1}, S_{2}, \dots$の中で$I$に含まれるものの個数を数えたものとなる.
+$\displaystyle \\ n^{*} (\omega) := \begin{cases} S_{n}(\omega) \in I となる最小の n \in \mathbb{N} \\ \infty & (もしS_{n}(\omega) \notin I \ , n = 1,2,\dots ) \end{cases}$とおく. $\displaystyle \\ \left\{ n^{*} = k \right\}$ 上では $1_{ \left\{ S_{n} \in I \right\} } = 0$ $({}^\forall n < k)$ , $1_{ \left\{ S_{k} \in I \right\} } = 1$ となるから
+$$ N = \sum_{n=1}^{k-1} 1_{ \left\{ S_{n} \in I \right\} } + 1_{ \left\{ S_{k} \in I \right\} } + \sum_{n=k+1}^{\infty} 1_{ \left\{ S_{n} \in I \right\} } = 1 + \sum_{n=1}^{\infty} 1_{ \left\{ S_{k+n} \in I \right\} } = 1 + \sum_{n=1}^{\infty} 1_{ \left\{ S_{k+n} - S_{k} \in I - S_{k} \right\} } \\ \le 1 + \sum_{n=1}^{\infty} 1_{ \left\{ S_{k+n} - S_{k} \in \left[-a,a\right] \right\} }$$
 $\displaystyle \\ \quad \because {}^\forall \omega \in \left\{ n^{*} = k \right\}$に対して, $I - S_{k}(\omega) \subset [-a, a] $となる. つまり $1_{ \left\{ I - S_{k}(\omega)  \right\} } \le 1_{ \left[ -a, a \right]}$が成立する.
 $\\$なぜなら, $\overline{I} = \left[ I_{1}, I_{1}+a \right]$とかくと$(I_{1} \in \mathbb{R})$ 
 $\\ -I_{1} - a \le -S_{k}(\omega) \le -I_{1}$ であって, $I - I_{1} - a = \left[-a, 0\right], \ I - I_{1}= \left[0,a\right]$であるから,
 $\\I - S_{k}(\omega) \subset \left[-a, a\right]$だから, $1_{ \left\{ I - S_{k}  \right\} } \le 1_{ \left[ -a, a \right]}$となる.
+
 $\\ \left\{ n^{*} = k \right\} \in \sigma (X_{1}, X_{2}, \dots, X_{k}) $なので, $\left\{ n^{*} = k \right\}$と$\left\{ S_{k+n} - S_{k} \in [-a,a] \right\}$は独立となる.
-$\displaystyle \\ \int_{ \left\{ n^{*} = k \right\} }{N(\omega) P (d\omega)} \le \int_{ \left\{ n^{*} = k \right\} } { \left( 1 + \sum_{n=1}^{\infty} 1_{ \left\{ (S_{k+n} - S_{k})(\omega) \in \left[-a,a\right] \right\}  } \right) P (d\omega) } \ $ 単調収束定理から, 
-$\displaystyle \\ = P( n^{*} = k ) + \sum_{n=1}^{\infty} \int_{ \left\{ n^{*} = k \right\} } {1_{ \left\{ S_{k+n}(\omega) - S_{k}(\omega) \in \left[-a,a\right] \right\}  } P (d\omega) } = P( n^{*} = k ) + \sum_{n=1}^{\infty} P\left( \left\{ n^{*}=k \right\} \cap  \left\{ S_{k+n} - S_{k} \in \left[-a,a\right] \right\}  \right) \\ =  P( n^{*} = k ) +  \sum_{n=1}^{\infty} P(n^{*} = k) P (S_{k+n} - S_{k} \in \left[-a,a\right]) \qquad ( \because$  独立性から$) \ $また同一分布性から 
-$\displaystyle \\ = P( n^{*} = k ) + P(n^{*} = k) \sum_{n=1}^{\infty} P ( \left| S_{n} \right| \le a)$ ここで両辺$k$で和をとると, 左辺は単調収束定理を使って,
-$\displaystyle \\ \sum_{k=1}^{\infty} \int_{ \left\{ n^{*} = k \right\} }{N(\omega) P (d\omega)} = \int_{ \Omega }{\sum_{n=1}^{\infty} 1_{ \left\{ S_{n}(\omega) \in I \right\} } P (d\omega)} = \sum_{n=1}^{\infty} P(S_{n} \in I )$となって,
-$\displaystyle \\ \sum_{n=1}^{\infty} P(S_{n} \in I ) \le 1 + \sum_{n=1}^{\infty} P ( \left| S_{n} \right| \le a)$が成立する.
+$$\int_{ \left\{ n^{*} = k \right\} }{N(\omega) P (d\omega)} \le \int_{ \left\{ n^{*} = k \right\} } { \left( 1 + \sum_{n=1}^{\infty} 1_{ \left\{ (S_{k+n} - S_{k})(\omega) \in \left[-a,a\right] \right\}  } \right) P (d\omega) } $$ 単調収束定理から, 
+$$ = P( n^{*} = k ) + \sum_{n=1}^{\infty} \int_{ \left\{ n^{*} = k \right\} } {1_{ \left\{ S_{k+n}(\omega) - S_{k}(\omega) \in \left[-a,a\right] \right\}  } P (d\omega) } = P( n^{*} = k ) + \sum_{n=1}^{\infty} P\left( \left\{ n^{*}=k \right\} \cap  \left\{ S_{k+n} - S_{k} \in \left[-a,a\right] \right\}  \right) $$ 
+独立性から
+$$=  P( n^{*} = k ) +  \sum_{n=1}^{\infty} P(n^{*} = k) P (S_{k+n} - S_{k} \in \left[-a,a\right])$$ 
+同一分布性から 
+$$ = P( n^{*} = k ) + P(n^{*} = k) \sum_{n=1}^{\infty} P ( \left| S_{n} \right| \le a)$$ ここで両辺$k$で和をとると, 左辺は単調収束定理を使って,
+$$ \sum_{k=1}^{\infty} \int_{ \left\{ n^{*} = k \right\} }{N(\omega) P (d\omega)} = \int_{ \Omega }{\sum_{n=1}^{\infty} 1_{ \left\{ S_{n}(\omega) \in I \right\} } P (d\omega)} = \sum_{n=1}^{\infty} P(S_{n} \in I )$$
+となって, $\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I ) \le 1 + \sum_{n=1}^{\infty} P ( \left| S_{n} \right| \le a)$が成立する.
 \end{proof}
  
- 命題21を使って, 定理20を証明する.
+ 命題22を使って, 定理21を証明する.
  \begin{proof}
- $\displaystyle \\ {}^\forall M \in \mathbb{N}$をとる. $\displaystyle \sum_{n=1}^{\infty} P (\left| S_{n} \right| < M) = 
- \sum_{k=-M}^{M-1} \sum_{n=1}^{\infty} P (S_{n} \in (k, k+1))$   命題21より
- $\displaystyle \\ \le \sum_{k=-M}^{M-1}(1 + \sum_{n=1}^{\infty} P (\left| S_{n} \right| \le 1) ) =  2M (1 + \sum_{n=1}^{\infty} P( \left| S_{n} \right| \le 1))$つまり
- $\displaystyle \\ \varlimsup_{M \to \infty} \frac{1}{2M} \sum_{n=1}^{\infty} P( \left| S_{n} \right| < M) \le 1 + \sum_{n=1}^{\infty}P( \left| S_{n} \right| \le 1) - (*)$
- $\\$大数の強法則から $\frac{S_{n}}{n} \stackrel{P}{\rightarrow} 0 \ (\because 概収束 \Rightarrow 確率収束)$となる. ${}^\forall \varepsilon >0$をとる.このとき
- $\displaystyle \\ {}^\exists m \in \mathbb{N} \ s.t. \ P(\left|S_{n} \right| < \varepsilon n) > \frac{1}{2} \ ({}^\forall n > m)$となる. $M \in \mathbb{N}$を $\displaystyle \varepsilon (m+1) < M$となるようにとれば,
+ $\displaystyle \\ M \in \mathbb{N}$を任意にとる. 
+ $$\sum_{n=1}^{\infty} P (\left| S_{n} \right| < M) =  \sum_{k=-M}^{M-1} \sum_{n=1}^{\infty} P (S_{n} \in (k, k+1))$$
+ 命題22より
+ $$ \le \sum_{k=-M}^{M-1}(1 + \sum_{n=1}^{\infty} P (\left| S_{n} \right| \le 1) ) =  2M (1 + \sum_{n=1}^{\infty} P( \left| S_{n} \right| \le 1))$$
+ つまり $\displaystyle \varlimsup_{M \to \infty} \frac{1}{2M} \sum_{n=1}^{\infty} P( \left| S_{n} \right| < M) \le 1 + \sum_{n=1}^{\infty}P( \left| S_{n} \right| \le 1) - (*)$が成立する.
+ $\\$大数の強法則から $\frac{S_{n}}{n} \stackrel{P}{\rightarrow} 0 \ (\because 概収束 \Rightarrow 確率収束)$となる. 
+ $ \varepsilon >0$を任意にとる.このとき
+ $\\$
+ $\displaystyle  m \in \mathbb{N}$が存在して, $P(\left|S_{n} \right| < \varepsilon n) > \frac{1}{2} \ ( n > m)$となる. 
+ $M \in \mathbb{N}$を $\displaystyle \varepsilon (m+1) < M$となるようにとれば,
  $\displaystyle \\ P(\left|S_{n} \right| < M ) \ge P(\left|S_{n} \right| < \varepsilon (m+1) ) > \frac{1}{2} $ となる.
  $\displaystyle \\ \therefore \sum_{n=1}^{\infty} P(\left|S_{n} \right| < M) \ge \sum_{n=m+1}^{\infty} P(\left|S_{n} \right| < M) > \frac{1}{2} (\frac{M}{\varepsilon}-m) \ $から $\displaystyle \frac{1}{2M} \sum_{n=1}^{\infty} P(|S_{n}| < M) \ge \frac{1}{4 \varepsilon} - \frac{m}{4M}$
  $\displaystyle \\ (*)$から $\displaystyle 1+\sum_{n=1}^{\infty} P ( |S_{n}| \le 1 ) \ge \varlimsup_{M \to \infty} \frac{1}{2M} \sum_{n=1}^{\infty} P( |S_{n}| < M ) \ge \frac{1}{4 \varepsilon}$ となり, $\varepsilon \downarrow 0$とすれば, 
- $\\ \displaystyle \sum_{n=1}^{\infty}P(|S_{n}| \le 1) = \infty$ となる. ここで　$\displaystyle 0 < {}^\forall \delta < \frac{1}{2}$に対して, 
- $\displaystyle \frac{1}{N} < \delta$となる $N \in \mathbb{N}$をとって, $\displaystyle \sum_{n=1}^{\infty} P (\left| S_{n} \right| < M) =  \sum_{k= -MN}^{N(M-1)} \sum_{n=1}^{\infty} P(S_{n} \in (\frac{k}{N}, \frac{k+1}{N})) \le 2MN (1+ \sum_{n=1}^{\infty}P(|S_{n}| \le \frac{1}{N}))$となって,
- $\\ \displaystyle 1 + \sum_{n=1}^{\infty} P (|S_{n}| < \frac{1}{\delta}) \ge 
- 1 + \sum_{n=1}^{\infty} P (|S_{n}| \le \frac{1}{N}) \ge 
- \varlimsup_{M \to \infty} \frac{1}{MN} \sum_{n=1}^{\infty} P(|S_{n}| < M) \ge
- \frac{1}{4 \varepsilon N} \rightarrow \infty \ (\varepsilon \downarrow 0)$だから, $\\ \displaystyle \sum_{n=1}^{\infty} P (|S_{n}| < \frac{1}{\delta}) = \infty$となる.
- このことから, 定理17$(ii)$より$L_{d}$の全ての元は再帰的. $\\$系18から$\displaystyle { \left\{ S_{n} \right\} }_{n}^{\infty}$は再帰的となる.
+ $\\ \displaystyle \sum_{n=1}^{\infty}P(|S_{n}| \le 1) = \infty$ となる. 
+ ここで任意の$\displaystyle \delta \in  (0, \frac{1}{2})$ を固定する. 
+ $\displaystyle \frac{1}{N} < \delta$となる $N \in \mathbb{N}$をとると, 
+ $$\sum_{n=1}^{\infty} P (\left| S_{n} \right| < M) =  \sum_{k= -MN}^{N(M-1)} \sum_{n=1}^{\infty} P(S_{n} \in (\frac{k}{N}, \frac{k+1}{N})) \le 2MN (1+ \sum_{n=1}^{\infty}P(\left|S_{n} \right| \le \frac{1}{N}))$$
+ となって
+ $$ 1 + \sum_{n=1}^{\infty} P (|S_{n}| < \frac{1}{\delta}) \ge  1 + \sum_{n=1}^{\infty} P (|S_{n}| \le \frac{1}{N}) $$
+ $$\ge \varlimsup_{M \to \infty} \frac{1}{MN} \sum_{n=1}^{\infty} P(\left|S_{n} \right| < M) \ge \frac{1}{4 \varepsilon N} \rightarrow \infty \ (\varepsilon \downarrow 0)$$
+ だから, $ \displaystyle \sum_{n=1}^{\infty} P (|S_{n}| < \frac{1}{\delta}) = \infty$となる.このことから, 定理18$(ii)$より$L_{d}$の全ての元は再帰的である.よって系19から$\displaystyle { \left\{ S_{n} \right\} }_{n}^{\infty}$は再帰的となる.
  \end{proof}
  
  例
@@ -668,6 +686,6 @@ $\displaystyle \\ \sum_{n=1}^{\infty} P(S_{n} \in I ) \le 1 + \sum_{n=1}^{\infty
 \end{array}
 \right., Z_{n} = Y_{1} + \dots + Y_{n}$とする.
 $\\$このとき$\displaystyle Y_{1}, Y_{2}, \dots$は独立同一分布に従い,$L_{1}$上に分布する. $\displaystyle E\left[Y_{1} \right] = 0$なので, $\left\{ Z_{n} \right\}_{n \in \mathbb{N}}$は再帰的になる.
-$\\$また, 定理8,  $\displaystyle P(Z_{n} = 0 \ i.o.) = 1$ となることからも,$系18$により $\left\{ Z_{n} \right\}_{n \in \mathbb{N}}$は再帰的になることがわかる.
+$\\$また, 定理9が従うので,  $\displaystyle P(Z_{n} = 0 \ i.o.) = 1$より,系18から$\left\{ Z_{n} \right\}_{n \in \mathbb{N}}$は再帰的になることがわかる.
  
  \end{document}
