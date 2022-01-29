@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.12.28)  26 JAN 2022 10:55
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.12.28)  29 JAN 2022 18:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -234,62 +234,102 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 9.60999pt on input line 41.
 LaTeX Font Info:    Font shape `JT1/mc/bx/it' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 54.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 54.
+(Font)              scaled to size 9.60999pt on input line 52.
 LaTeX Font Info:    Font shape `JY1/mc/bx/it' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 54.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 54.
+(Font)              scaled to size 9.60999pt on input line 52.
 LaTeX Font Info:    Font shape `JT1/mc/m/it' in size <7> not available
-(Font)              Font shape `JT1/mc/m/n' tried instead on input line 54.
+(Font)              Font shape `JT1/mc/m/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 54.
+(Font)              scaled to size 6.72699pt on input line 52.
 LaTeX Font Info:    Font shape `JY1/mc/m/it' in size <7> not available
-(Font)              Font shape `JY1/mc/m/n' tried instead on input line 54.
+(Font)              Font shape `JY1/mc/m/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 54.
+(Font)              scaled to size 6.72699pt on input line 52.
 LaTeX Font Info:    Font shape `JT1/mc/m/it' in size <5> not available
-(Font)              Font shape `JT1/mc/m/n' tried instead on input line 54.
+(Font)              Font shape `JT1/mc/m/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 54.
+(Font)              scaled to size 4.805pt on input line 52.
 LaTeX Font Info:    Font shape `JY1/mc/m/it' in size <5> not available
-(Font)              Font shape `JY1/mc/m/n' tried instead on input line 54.
+(Font)              Font shape `JY1/mc/m/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 54.
- [1
+(Font)              scaled to size 4.805pt on input line 52.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 53.
+
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [1
 
 ] [2]
-[3] [4] [5] [6]
-Overfull \hbox (40.6799pt too wide) in paragraph at lines 270--277
-[]$ \JY1/mc/m/n/10 単調性から\OT1/cmr/m/n/10 , $[] \OML/cmm/m/it/10 P [] \OT1/c
-mr/m/n/10 = \OML/cmm/m/it/10 P [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P []$
+[3] [4]
+Overfull \hbox (5.21846pt too wide) detected at line 199
+\OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ![] \O
+T1/cmr/m/n/10 = \OML/cmm/m/it/10 s[]\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10 P\OT1
+/cmr/m/n/10 (\OML/cmm/m/it/10 ![] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 s[]\OT1/cm
+r/m/n/10 ) = \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10 ![]; [] ; ![]
+\OT1/cmr/m/n/10 ) = [])\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10 ![]
+; [] ; ![]\OT1/cmr/m/n/10 ) = [])
  []
 
-[7] [8]
-Overfull \hbox (38.90494pt too wide) in paragraph at lines 343--382
-[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 < "
-\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ([] [] []) = \OML/cmm/m/it/1
-0 P\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 < "\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 P\
-OT1/cmr/m/n/10 ([] [] [])[] 
+[5] [6] [7]
+Overfull \hbox (68.8683pt too wide) detected at line 319
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 S[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 !\OT1/c
+mr/m/n/10 )\OMS/cmsy/m/n/10 j ^^@ j\OML/cmm/m/it/10 S[]\OT1/cmr/m/n/10 (\OML/cm
+m/m/it/10 !\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j ^^T \OML/cmm/m/it/10 ^^K \JY1/mc
+/m/n/10 かつ \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 S[]\OT1/cmr/m/n/10 (\OML/cmm/m/
+it/10 !\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 > \OT1/cmr/m/n/10 2
+\OML/cmm/m/it/10 ^^K \OMS/cmsy/m/n/10 , j\OML/cmm/m/it/10 S[]\OT1/cmr/m/n/10 (\
+OML/cmm/m/it/10 !\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j ^^@ \OML/cmm/m/it/10 ^^K \
+OMS/cmsy/m/n/10 ^^T j\OML/cmm/m/it/10 S[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 !\OT
+1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j \JY1/mc/m/n/10 かつ \OMS/cmsy/m/n/10 j\OML/cmm
+/m/it/10 S[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 !\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/1
+0 j \OML/cmm/m/it/10 > \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ^^K         
  []
 
-[9] [10] [11]
-Overfull \hbox (39.46245pt too wide) in paragraph at lines 468--482
+
+Overfull \hbox (5.36993pt too wide) detected at line 330
+\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c\OT1/cmr/m/n/10 )\OML
+/cmm/m/it/10 P\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 S[]\OMS/cm
+sy/m/n/10 j \OML/cmm/m/it/10 > \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ^^K\OT1/cmr/m/
+n/10 ) \OMS/cmsy/m/n/10 ^^T [] \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OMS/cmsy/m/n
+/10 j\OML/cmm/m/it/10 S[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 S[]\OMS/cmsy/m/
+n/10 j ^^T \OML/cmm/m/it/10 ^^K;  j[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 j\OT1/
+cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^T \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OMS/cmsy/
+m/n/10 j\OML/cmm/m/it/10 S[]\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 > ^^K;  [] \OMS
+/cmsy/m/n/10 j\OML/cmm/m/it/10 S[]\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 > \OT1/cm
+r/m/n/10 2\OML/cmm/m/it/10 ^^K\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^T \OML/cmm/m
+/it/10 P\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 S[]\OMS/cmsy/m/n/10
+ j \OML/cmm/m/it/10 > ^^K\OT1/cmr/m/n/10 )
+ []
+
+[8] [9] [10] [11]
+Overfull \hbox (36.12723pt too wide) detected at line 481
+\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 < "\OT
+1/cmr/m/n/10 )\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ([] [] []) = \OML/cmm/m/it/10 P
+\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 < "\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 P\OT1
+/cmr/m/n/10 ([] [] [])
+ []
+
+[12] [13] [14]
+Overfull \hbox (39.46245pt too wide) in paragraph at lines 625--639
 [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n[] \O
 T1/cmr/m/n/10 = \OML/cmm/m/it/10 k\OT1/cmr/m/n/10 ) + [] [][] [] = \OML/cmm/m/i
 t/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 
 k\OT1/cmr/m/n/10 ) + [] \OML/cmm/m/it/10 P [] [] 
  []
 
-[12] [13] [14] (./zemi_texfile.aux) ) 
+[15] [16] [17] (./zemi_texfile.aux) ) 
 Here is how much of TeX's memory you used:
- 1968 strings out of 479466
- 25479 string characters out of 5870547
- 351328 words of memory out of 5000000
- 19664 multiletter control sequences out of 15000+600000
- 422369 words of font info for 114 fonts, out of 8000000 for 9000
+ 1982 strings out of 479466
+ 25736 string characters out of 5870547
+ 342328 words of memory out of 5000000
+ 19672 multiletter control sequences out of 15000+600000
+ 423077 words of font info for 117 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 67i,15n,74p,1041b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,14n,74p,1008b,269s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on zemi_texfile.dvi (14 pages, 87448 bytes).
+Output written on zemi_texfile.dvi (17 pages, 93052 bytes).

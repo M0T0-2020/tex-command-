@@ -25,7 +25,7 @@
 %ボレルカンテリの補題
 %\begin{thm}
 
-%Borel-Ccantelli Lamma 
+%Borel-Cantelli Lamma 
 
 %\end{thm}
 
@@ -39,36 +39,61 @@
 \section{末尾事象とinfinte often}
 \begin{dfn} 
 末尾事象 (tail event)
-$\\ X_{1}, X_{2}, \dots$を確率変数列とする.
-$\\ E \in \sigma (X_{1}, X_{2}, \dots)$が末尾事象(tail event)であるとは
-$E \in \sigma (X_{n}, X_{n+1},\dots) \quad ({}^\forall n \in \mathbb{N}) \\ $が成立することである.
+$\\X_{1}, X_{2}, \dots$を確率変数列とする.
+$\\E \in \sigma (X_{1}, X_{2}, \dots)$が末尾事象(tail event)であるとは
+$\\$任意の$n \in \mathbb{N}$に対して, $E \in \sigma (X_{n}, X_{n+1},\dots)$が成立することである.
 $ \\$末尾加法族(tail  $\sigma$-field) $\delta$を
 $\displaystyle \delta = \bigcap_{n \in \mathbb{N}} \sigma (X_{n}, X_{n+1}, \dots)$と定める.
 $\\$ 定義から末尾加法族の元 $E \in \delta$ は末尾事象となる.
 \end{dfn}
 
+\begin{prop}
+$\\ X_{1}, X_{2}\dots$を確率変数とする.
+このとき$\textbf{X} = (X_{1}, X_{2}, \dots)$とすると, 
+$\\$任意の$B \in \mathfrak{B}_{\infty}$に対して, $\left\{ \textbf{X} \in B \right\} \in \mathcal{F}$となる.
+\end{prop}
+\begin{proof}
+$$\displaystyle E = \bigcup_{n\in \mathbb{N}} \left\{ B_{1} \times \dots \times B_{n} \times \mathbb{R} \times \mathbb{R} \times \dots \subset \mathbb{R}^{\infty} | \, B_{1}, B_{2}, \dots , B_{n} \in \mathfrak{B}_{1} \right\}$$ と定める.
+$\\ S \in E$を任意に固定する.このとき$\, n \in \mathbb{N}$と $ B_{1} , \dots , B_{n} \in \mathfrak{B}_{1}$がとれて, $S = B_{1} \times \dots \times B_{n} \times \mathbb{R} \times \dots$ となる.
+各$k=1,2,\dots, n$について $\left\{ X_{k} \in B_{k}  \right\} \in \mathcal{F}$なので $\displaystyle \left\{ \textbf{X} \in S \right\} = \bigcap_{k=1}^n \left\{ X_{k} \in B_{k}  \right\} \in \mathcal{F}$ が成立する.
+$\\$ここで$$\displaystyle \mathcal{C} = \left\{ C \in \mathfrak{B}_{\infty} | \,  \left\{ \textbf{X} \in C \right\} \in \mathcal{F} \right\}$$とすると、$\mathcal{C}$は$\sigma$加法族になる.
+$\\ \because$
+$\\ (i) \left\{ \textbf{X} \in \mathbb{R}^{\infty} \right\} = \Omega \in \mathcal{F}$, $\left\{ \textbf{X} \in \emptyset \right\} = \emptyset \in \mathcal{F}$つまり$\Omega , \, \emptyset \in \mathcal{C}$
+$\\ (ii) \, C \in \mathcal{C}$とする.このとき $ \left\{ \textbf{X} \in C^{c} \right\} = \left\{ \textbf{X} \in C \right\}^{c} \in \mathcal{F} \,$となるから $C^{c} \in \mathcal{C}$
+$\displaystyle\\ (iii) \, \left\{ C_{k} \right\}_{k \in \mathbb{N}} $を任意にとる. $\displaystyle \left\{ \textbf{X} \in \bigcup_{k \in \mathbb{N}} C_{k} \right\} =  \bigcup_{k \in \mathbb{N}} \left\{ \textbf{X} \in C_{k} \right\} \in \mathcal{F}$となって, $\displaystyle \bigcup_{k \in \mathbb{N}} C_{k} \in \mathcal{F}$がわかる.
+以上で $\mathcal{C}$は$E$を含む$\sigma$加法族であることがわかった. $\sigma (E) = \mathfrak{B}_{\infty}$なので, $\mathcal{C} = \mathfrak{B}_{\infty}$ である.
+$\\$つまり, 任意の$B \in \mathfrak{B}_{\infty}$に対して, $ B \in \mathcal{C}$ だから $\left\{ \textbf{X} \in B \right\} \in \mathcal{F}$が成立する.
+\end{proof}
+
+
 %近似定理
 \begin{thm}
 近似定理 
 $\\ X_{1}, X_{2}, \dots$ を確率変数列とする.
-$\displaystyle \\ {}^\forall A_{1} \in \sigma (\textbf{X}),{}^\forall \varepsilon > 0$ に対して, ある$n \in \mathbb{N}, A_{2} \in \mathcal{F} (X_{1}, X_{2}, \dots , X{n})$が存在して$P(A_{1} \triangle A_{2}) \le 0$ となる. $\\$ (ただし $A \triangle B := (A-B) \cup (B-A)$ )
+$\\$任意の$\displaystyle A_{1} \in \sigma (\textbf{X}), \,  \varepsilon > 0$ に対して, ある$n \in \mathbb{N}, A_{2} \in \mathcal{F} (X_{1}, X_{2}, \dots , X_{n})$が存在して$P(A_{1} \triangle A_{2}) \le 0$ となる. (ただし $A \triangle B := (A-B) \cup (B-A)$ )
 \end{thm}
 
 \begin{proof}
-$\\$
-${}^\forall A_{1} \in \sigma (\textbf{X}), {}^\forall \varepsilon > 0$を固定する. 
-$\displaystyle \\ \mathscr{F}_{0} = \displaystyle\bigcup_{n \in  \mathbb{N}} \sigma (X_{1}, X_{2}, \dots, X_{n}) $, $\mathcal{C} = {\lbrace A \in \mathcal{F} | \ {}^\forall \varepsilon > 0 に対して, {}^\exists B \in \mathscr{F}_{0} \ s.t. \ P(A \triangle B) \le \varepsilon \rbrace  }$と定める. 
-$\displaystyle \\ \mathscr{F}_{0}  \subset \mathcal{C}$は明らかだから,$\mathcal{C}$が$\sigma$加法族であることを示せば, $\sigma (\mathscr{F}_{0}) \subset \mathcal{C}$で, $\sigma (\mathscr{F}_{0}) = \sigma (\textbf {X})$であることから,
-$\displaystyle \\ A_{1} \in \sigma (\textbf{X}) \subset \mathcal{C}$なので,${}^\exists A_{2} \in \mathscr{F}_{0} \ s.t. \ P(A_{1} \triangle A_{2}) \le \varepsilon$となり、定理が成立するのがわかる.
+$\\$任意の$ A_{1} \in \sigma (\textbf{X}),  \varepsilon > 0$を固定する. 
+$$\displaystyle \\ \mathscr{F}_{0} = \displaystyle\bigcup_{n \in  \mathbb{N}} \sigma (X_{1}, X_{2}, \dots, X_{n}) $$
+$$\mathcal{C} = {\lbrace A \in \mathcal{F} | \ 任意の\, \varepsilon > 0 に対して,P(A \triangle B) \le \varepsilon \,となるB \in \mathscr{F}_{0} \, が存在する\  \rbrace  }$$
+と定める. 
+$\\$任意の$A \in \mathscr{F}_{0}$をとると, ある$n \in \mathbb{N}, \, B \in \mathfrak{B}_{n}$が取れて, $A = \left\{ (X_{1}, \dots, X_{n}) \in B \right\}$とかける.
+$\\$このとき $X_{1}, X_{2}\dots$は確率変数なので$A \in \mathcal{F}$となる.
+$\\$また定め方から$A\triangle A = \emptyset$だから$P(A\triangle A)=0$である.
+よって, $A \in \mathcal{C}$となる.
+つまり$\mathscr{F}_{0}  \subset \mathcal{C}$が成立する.
+$\\$ここで $\mathcal{C}$が$\sigma$加法族であることを示せば, $\sigma (\mathscr{F}_{0}) \subset \mathcal{C}$で, $\sigma (\mathscr{F}_{0}) = \sigma (\textbf {X})$であることから,
+$\displaystyle\\ A_{1} \in \sigma (\textbf{X}) \subset \mathcal{C}$なので, $P(A_{1} \triangle A_{2}) \le \varepsilon$となるような$A_{2} \in \mathscr{F}_{0}$が存在することを示せる.
 %%証明
 $\displaystyle \\ \bullet \ \mathcal{C}$が$\sigma$加法族であること示す.\par
 $\quad$ $(i)$ $\Omega \in \mathcal{C} \ (\because \ \Omega \in \ \mathscr{F}_{0}) $\par
 
-$\quad$ $(ii)$ ${}^\forall A \in \mathcal{C}に対して, A^c \in \mathcal{C}$\par
-$\qquad$ $\because {}^\forall \varepsilon > 0$ を固定する.このとき$B \in \mathcal{F}_{0}$が取れて, $P(A \triangle B) \le \varepsilon $となる.$\mathcal{F}_{0}$の定め方から, \ $B^c \in \mathcal{F}_{0}$ \par $\quad \qquad$であって, $P(A^c \triangle B^c) = P((A^c \cap B) \cup (A \cap B^c)) = P((B-A) \cup (A-B)) = P(A \triangle B) \le \varepsilon$\par $\quad \qquad$ $\therefore A^c \in \mathcal{C}$
+$\quad$ $(ii)$ $A \in \mathcal{C}とすると, A^c \in \mathcal{C}$\par
+$\qquad$ $\because  \varepsilon > 0$ を任意に固定する.このとき$B \in \mathcal{F}_{0}$が取れて, $P(A \triangle B) \le \varepsilon $となる. $\mathcal{F}_{0}$の定め方から,$\\ \qquad \qquad B^c \in \mathcal{F}_{0}$ であって, $P(A^c \triangle B^c) = P((A^c \cap B) \cup (A \cap B^c)) = P((B-A) \cup (A-B)) = P(A \triangle B) \le \varepsilon$\par $\quad \qquad$ $\therefore A^c \in \mathcal{C}$
 
-$\quad$ $(iii)$ ${}^\forall \lbrace A_{n} \rbrace_{n \in \mathbb{N}} \subset \mathcal{C}, {}^\forall \varepsilon > 0$をとる. $\lbrace B_{n} \rbrace_{n \in \mathbb{N}} \subset \mathcal{F}_{0}$を$P(A_{n} \triangle B_{n}) \le \frac{\varepsilon}{2^{n+1}} $となるようにとる.\par 
-$\quad \qquad$また,測度の上からの連続性から　ある$N \in \mathbb{N}$が取れて, $P( \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}) \le \frac{\varepsilon}{2}$となる.\par$\quad \qquad$ ここで, $\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle \displaystyle\bigcup_{n=1}^{\infty} A_{n} \subset (\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle A_{n}) \cup \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}$を示せれば,単調性と劣加法性から,\par $\quad \qquad$ $P(\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle \displaystyle\bigcup_{n=1}^{\infty} A_{n}) \le P((\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle A_{n}) \cup \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}) \le  \displaystyle\sum_{n=1}^{N}P(B_{n} \triangle A_{n}) + P(\displaystyle\bigcup_{n=N+1}^{\infty} A_{n})$ \par $\quad \qquad$ $\le \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon $となる. $\displaystyle\bigcup_{n=1}^{N} B_{n} \in \mathcal{F}_{0}$であることから　$\displaystyle\bigcup_{n=1}^{\infty} A_{n} \in \mathcal{C}$となる.
+$\quad$ $(iii)$ $ \lbrace A_{n} \rbrace_{n \in \mathbb{N}} \subset \mathcal{C},  \varepsilon > 0$を任意にとる. $\lbrace B_{n} \rbrace_{n \in \mathbb{N}} \subset \mathcal{F}_{0}$を$P(A_{n} \triangle B_{n}) \le \frac{\varepsilon}{2^{n+1}} $となるようにとる.\par 
+$\quad \qquad$また,測度の上からの連続性からある$N \in \mathbb{N}$が取れて, $P( \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}) \le \frac{\varepsilon}{2}$となる.\par$\quad \qquad$ ここで, $\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle \displaystyle\bigcup_{n=1}^{\infty} A_{n} \subset (\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle A_{n}) \cup \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}$を示せれば,単調性と劣加法性から,\par $\quad \qquad$ $P(\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle \displaystyle\bigcup_{n=1}^{\infty} A_{n}) \le P((\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle A_{n}) \cup \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}) \le  \displaystyle\sum_{n=1}^{N}P(B_{n} \triangle A_{n}) + P(\displaystyle\bigcup_{n=N+1}^{\infty} A_{n})$ \par $\quad \qquad$ $\le \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon $となる. $\displaystyle\bigcup_{n=1}^{N} B_{n} \in \mathcal{F}_{0}$であることから　$\displaystyle\bigcup_{n=1}^{\infty} A_{n} \in \mathcal{C}$となる.
 
 %%証明の中の証明
 $\displaystyle \\ \quad$ $\bullet \ \displaystyle\bigcup_{n=1}^{N} B_{n} \triangle \displaystyle\bigcup_{n=1}^{\infty} A_{n} \subset (\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle A_{n}) \cup \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}$を示す. \par
@@ -101,22 +126,23 @@ $\quad$$(i) \sim (iii)$より$\mathcal{C}$は$\sigma$加法族である.
 Kolmogorov zero-one law
 \end{thm}
 
-$X_{1},X_{2}, \dots を独立な確率変数とする.この時, E\in\delta であるとすればP(E)は0,1のいずれかの値をとる.$
+$X_{1},X_{2}, \dots$ を独立な確率変数とする.この時, $E\in\delta$ であるとすれば$P(E)$は$0$, $1$のいずれかの値をとる.
 
 \begin{proof}
-$\\ {}^\forall E \in \delta をとる. \  E \in \sigma (\textbf {X}), \ であるから,定理2により各n \in \mathbb{N}に対して,
-あるE_{n} \in \sigma (X_{1}, X_{2}, \dots , X_{n}) \ が取れて \ P(E \triangle E_{n}) \to 0 となる.
-このことからP(E_{n}) \to P(E),\\ P(E_{n} \cup E) \to P(E)がわかる.\\
-\because \\
-\bullet P(E_{n}) \to P(E)\\
-P(E_{n}) \le P((E_{n}-E) \cup E ) \le P(E_{n}-E) + P(E)からP(E_{n})-P(E) \le P(E_{n}-E) \le P(E_{n} \triangle E) \to 0 \ (n \to \infty). \ 同様にして P(E)-P(E_{n}) \le P(E-E_{n}) \le P(E_{n} \triangle E) \to 0がわかる.\\
-\bullet P(E_{n} \cup E) \to P(E) \\
-P(E \cup E_{n}) \le P((E_{n}-E) \cup E) \le P(E_{n}-E) + P(E) \le P(E_{n} \triangle E) + P(E)から\\
-P(E \cup E_{n})-P(E) \le P(E_{n} \triangle E) \to 0 \ (n \to \infty).
-また,E \subset (E \cup E_{n}) \cup (E \triangle E_{n})だからP(E)-P(E \cup E_{n}) \le P(E \triangle E_{n}) \to 0 \ (n \to \infty) \\
-この時, E \in \delta だから, E \in \sigma (X_{n+1}, X_{n+2}, \dots) \ である.つまり, EとE_{n}は独立であることがわかる.\\ 
-P(E \cap E_{n} ) = P(E)P( E_{n} )であり.\\ 各辺でn \to \infty とすれば, \ P(E) = P(E)^{2} であるから, P(E)=0,1 となることがわかった.
-$
+$\\  E \in \delta$ を任意とる. $E \in \sigma (\textbf {X})$ であるから,定理3により各$n \in \mathbb{N}$ に対して,
+ある$E_{n} \in \sigma (X_{1}, X_{2}, \dots , X_{n})$ が取れて$P(E \triangle E_{n}) \to 0$ となる.
+このことから$P(E_{n}) \to P(E), \, P(E_{n} \cup E) \to P(E)$がわかる.
+$\\ \because $ 
+$\\ \bullet P(E_{n}) \to P(E)\\$ $$
+P(E_{n}) \le P((E_{n}-E) \cup E ) \le P(E_{n}-E) + P(E)$$から$$P(E_{n})-P(E) \le P(E_{n}-E) \le P(E_{n} \triangle E) \to 0 \ (n \to \infty)$$ 同様にして 
+$$P(E)-P(E_{n}) \le P(E-E_{n}) \le P(E_{n} \triangle E) \to 0$$がわかる. 
+$\\ \bullet P(E_{n} \cup E) \to P(E)$
+$$\\ P(E \cup E_{n}) \le P((E_{n}-E) \cup E) \le P(E_{n}-E) + P(E) \le P(E_{n} \triangle E) + P(E)$$から
+$$P(E \cup E_{n})-P(E) \le P(E_{n} \triangle E) \to 0 \ (n \to \infty)$$
+また, $E \subset (E \cup E_{n}) \cup (E \triangle E_{n})$だから$$P(E)-P(E \cup E_{n}) \le P(E \triangle E_{n}) \to 0 \ (n \to \infty)$$
+この時, $E \in \delta$ だから, $E \in \sigma (X_{n+1}, X_{n+2}, \dots)$ である.つまり, $E$ と$E_{n}$ は独立.
+$\displaystyle \\ P(E \cap E_{n} ) = P(E)P( E_{n} )$ だから,各辺で$n \to \infty$ とすれば, $P(E) = P(E)^{2}$. つまり $P(E)=0,1$ となることがわかった.
+
 \end{proof}
 
 %infinite often
@@ -135,35 +161,45 @@ $\\ \left\{ A_{n} \right\}_{n \in \mathbb{N}} \subset \mathscr{F}$とする. $\l
 %ボレルカンテリの補題
 %\{, \lbrace	\}, \rbrace
 \begin{lem}
-Borel-Ccantelli Lamma 
+Borel-Cantelli Lamma 
 \end{lem}
-(\textbf{I}), ${\lbrace A_{n} \rbrace }_{n \in \mathbb{N}} \in \mathcal{F}  について, \sum_{n=1}^{\infty} P(A_{n}) < \infty ならば, P(A_{n} \ i.o.) = 0 \ が成立する.$ \par
-(\textbf{II}), ${\lbrace A_{n} \rbrace }_{n \in \mathbb{N}} \in \mathcal{F}  について, {\lbrace A_{n} \rbrace }_{n \in \mathbb{N}} が独立かつ,\sum_{n=1}^{\infty}P(A_{n}) = \infty ならば, P(A_{n}  \ i.o.) = 1 \ が成立する.$
+$\displaystyle (\textbf{I}), \ {\lbrace A_{n} \rbrace }_{n \in \mathbb{N}} \in \mathcal{F}$ について, $\displaystyle \sum_{n=1}^{\infty} P(A_{n}) < \infty $ ならば, $\displaystyle P(A_{n} \ i.o.) = 0$が成立する.
+ \par
+$\displaystyle (\textbf{II}), \ {\lbrace A_{n} \rbrace }_{n \in \mathbb{N}} \in \mathcal{F}$ について, $\displaystyle {\lbrace A_{n} \rbrace }_{n \in \mathbb{N}}$ が独立かつ, $\displaystyle \sum_{n=1}^{\infty}P(A_{n}) = \infty$ ならば, $\displaystyle P(A_{n}  \ i.o.) = 1$ が成立する.
 \begin{proof}
 $\\ (\textbf{I}) $ 
-$\\ P(A_{n} \ i.o.) = P(\displaystyle\lim_{m \to \infty} \displaystyle\bigcup_{n=m}^{\infty}{A_n}) = \displaystyle\lim_{m \to \infty} P(\displaystyle\bigcup_{n=m}^{\infty}{A_n}) \le \displaystyle\lim_{m \to \infty} (\sum_{n=m}^{\infty}P(A_{n})) (\because 二つ目の等号は測度の連続性,不等号には劣加法性を使った)\\
-\sum_{n=1}^{\infty} P(A_{n}) < \infty であるから\displaystyle\lim_{m \to \infty} (\sum_{n=m}^{\infty}P(A_{n})) = 0 \ \therefore P(A_{n} \ i.o.) = 0
-$
-
-$(\textbf{II})
-$ \par
-$
-{}^\forall m \in \mathbb{N}に対して,P(\displaystyle\bigcap_{n=m}^{\infty}{A_n}^{c})=0を示せば, P({(A_{n} \ i.o.)}^{c}) = P(\bigcup_{m \in \mathbb{N}}\bigcap_{n=m}^{\infty}{A_n}^{c}) = \displaystyle\lim_{m \to \infty} P(\bigcap_{n=m}^{\infty}{A_n}^{c}) = 0,つまりP(A_{n} \ i.o.)=1がわかる.\\
-{}^\forall m \in \mathbb{N}を固定する. {\lbrace A_{n} \rbrace }_{n \in \mathbb{N}}は独立なのでP(\displaystyle\bigcap_{n=m}^{\infty}{A_n}^{c}) = \displaystyle\prod_{n=m}^{\infty} P({A_n}^{c}) = \displaystyle\prod_{n=m}^{\infty} (1-P(A_{n}))である.ここで\log{(1-x)} \le -x \ (0 \le x \le 1)を使うと, \ \log{(\displaystyle\prod_{n=m}^{\infty}(1-P(A_{n})))} = \sum_{n=m}^{\infty}\log{(1-P(A_{n}))} \le - \sum_{n=m}^{\infty}P(A_{n}) = -\infty . \  よってP(\displaystyle\bigcap_{n=m}^{\infty}{A_n}^{c}) = 0 \ \ ({}^\forall m \in \mathbb{N})が示せた.
-$
+$$\\ P(A_{n} \ i.o.) = P(\displaystyle\lim_{m \to \infty} \displaystyle\bigcup_{n=m}^{\infty}{A_n}) = \displaystyle\lim_{m \to \infty} P(\displaystyle\bigcup_{n=m}^{\infty}{A_n}) \le \displaystyle\lim_{m \to \infty} (\sum_{n=m}^{\infty}P(A_{n}))$$ $(\because 二つ目の等号は測度の連続性,不等号には劣加法性を使った)\\
+\sum_{n=1}^{\infty} P(A_{n}) < \infty$ であるから$\displaystyle\lim_{m \to \infty} (\sum_{n=m}^{\infty}P(A_{n})) = 0 \ \therefore P(A_{n} \ i.o.) = 0
+\\(\textbf{II})$
+$\\$任意の$ m \in \mathbb{N}$に対して, $\displaystyle P(\bigcap_{n=m}^{\infty}{A_n}^{c})=0$ を示せば
+$$\displaystyle \\ P({(A_{n} \ i.o.)}^{c}) = P(\bigcup_{m \in \mathbb{N}}\bigcap_{n=m}^{\infty}{A_n}^{c}) = \lim_{m \to \infty} P(\bigcap_{n=m}^{\infty}{A_n}^{c}) = 0$$
+つまり$\displaystyle P(A_{n} \ i.o.)=1$ がわかる.
+$\\$任意の$m \in \mathbb{N}$を固定する. $\displaystyle \left\{ A_{n}  \right\}_{n \in \mathbb{N}}$は独立なので
+$$\displaystyle P(\bigcap_{n=m}^{\infty}{A_n}^{c}) = \prod_{n=m}^{\infty} P({A_n}^{c}) = \prod_{n=m}^{\infty} (1-P(A_{n}))$$
+である.ここで$\log{(1-x)} \le -x \ (0 \le x \le 1)$を使うと
+ $$\displaystyle \log{(\prod_{n=m}^{\infty}(1-P(A_{n})))} = \sum_{n=m}^{\infty}\log{(1-P(A_{n}))} \le - \sum_{n=m}^{\infty}P(A_{n}) = -\infty $$
+よって$\displaystyle P(\bigcap_{n=m}^{\infty}{A_n}^{c}) = 0$ が示せた.
 \end{proof}
 
 $\\$
 いくつか応用例を挙げる.$\\$
-(例1)コイントスを考える. \textbf {s} を長さkのH, T (表, 裏)が要素の列とする.
-$A_{n} = \lbrace \omega \ ; (\omega_{n},\dots,\omega_{n+k-1}) = \textbf {s}  \rbrace$と定める.
+(例1)コイントスを考える. \textbf {s} を長さ$k$のH, T (表, 裏)が要素の列とする.
+$A_{n} = \left\{ \omega \ ; (\omega_{n},\dots,\omega_{n+k-1}) = \textbf {s}  \right\}$と定める.
 
 %応用例1
 \begin{prop}
 $P(A_{n} \ i.o.) = 1$
 \end{prop}
 \begin{proof}
-$B_{1} = \lbrace \omega \ ; (\omega_{1},\dots,\omega_{k}) = \textbf {s}  \rbrace , B_{2} = \lbrace \omega \ ; (\omega_{k+1},\dots,\omega_{2k}) = \textbf {s}  \rbrace , \ \dots$とおく. このとき, ${\lbrace B_{n} \rbrace}_{n \in \mathbb{N}}$は独立となる. また,$\lbrace B_{n} \ i.o. \rbrace \subset \lbrace A_{n} \ i.o.\rbrace$である$( \because \ B_{l} = A_{(l-1)k + 1})$ . \ $P(B_{n}) = P(B_{1}) = \frac{1}{2^{k}} > 0$なので$\displaystyle\sum_{n=1}^{\infty}P(B_{n}) = \infty$.以上のことから補題5$(\textbf{II})$を使うと, $P(B_{n} \ i.o.) = 1 \le P(A_{n} \ i.o.) \ \therefore P(A_{n} \ i.o.)=1$
+$\\ B_{1} = \left\{ \omega \ ; (\omega_{1},\dots,\omega_{k}) = \textbf {s}  \right\} , B_{2} = \left\{ \omega \ ; (\omega_{k+1},\dots,\omega_{2k}) = \textbf {s}  \right\} , \ \dots$とおく. 
+$\\$このとき, $\left\{ B_{n} \right\} _{n \in \mathbb{N}} $は独立となる. 
+$\\ \because $任意に$i, j \in \mathbb{N}, \, (i \neq j)$をとる. $B_{i}, B_{j}$が独立であることを示したい.
+$\\$ 考えている確率はコイントスなので, 
+$$\displaystyle P(B_{i} \cap B_{j}) = P((\omega_{k(i-1)+1},\dots,\omega_{ki}) = \textbf {s}, (\omega_{k(j-1)+1},\dots,\omega_{kj}) = \textbf {s})$$
+$$= \prod_{m=1}^{k} P(\omega_{k(i-1)+m}=s_{m})\prod_{l=1}^{k} P(\omega_{k(j-1)+l}=s_{l}) = P((\omega_{k(i-1)+1},\dots,\omega_{ki}) = \textbf {s})P((\omega_{k(j-1)+1},\dots,\omega_{kj}) = \textbf {s})$$
+$$=P(B_{i})P(B_{l})$$
+$\\$また,$\left\{ B_{n} \ i.o. \right\} \subset \left\{ A_{n} \ i.o.\right\}$である$( \because \ B_{l} = A_{(l-1)k + 1})$. $P(B_{n}) = P(B_{1}) = \frac{1}{2^{k}} > 0$ なので 
+$\\ \displaystyle\sum_{n=1}^{\infty}P(B_{n}) = \infty$.以上のことから補題6$(\textbf{II})$を使うと, $P(B_{n} \ i.o.) = 1 \le P(A_{n} \ i.o.) \ \therefore P(A_{n} \ i.o.)=1$
 \end{proof}
 
 $\\$
@@ -178,37 +214,67 @@ Y_{i}(\omega)= \left \{
 $P(Head) \ne \frac{1}{2}$とする. このとき$P(Z_{n} = 0 \ i.o.) = 0$となる.
 \end{prop}
 \begin{proof}
-$\quad$\par
-$P(Head) = p$とおく.\par
-$\displaystyle\sum_{n=1}^{\infty}P(Z_{n} = 0) < \infty$であることが示せれば, 補題5($\textbf{I}$)から$P(Z_{n} = 0 \ i.o.) = 0$がわかる.
-Stirlingの近似\par 公式から,十分大きいnに対して, $^{}_{2n}C_{n} = 2^{2n} \frac{1+\delta_{n}}{\sqrt{\pi n}}$(ただし$ \delta_{n} \downarrow 0$)であり, また,$\ p \neq \frac{1}{2}$なので$2^{2}p(1-p)$\par $< 1$より,ある$0 < \lambda < 1$ が存在して$2^{2}p(1-p) < \frac{1}{\lambda} 2^{2}p(1-p) < 1$ となる.$\delta_{n} \downarrow 0$だから十分大きいn\par に対して は$\delta_{n} < \frac{\lambda}{2^{2}p(1-p)} -1$が成立する.\par 
-以上で$N \in \mathbb{N}$ を, $n \ge N $で $\displaystyle P(Z_{2n})=^{}_{2n}C_{n} \ p^{n} (1-p)^{n} = 2^{2n} \frac{1+\delta_{n}}{\sqrt{\pi n}} \ p^{n} (1-p)^{n}$ かつ$\displaystyle\delta_{n} < \frac{\lambda}{2^{2}p(1-p)} -1$\par を満たすようにとる. $\displaystyle a_{n} = 2^{2n} \frac{1+\delta_{n}}{\sqrt{\pi n}} \ p^{n} (1-p)^{n}$とおく.\ $n \ge N$ において $\displaystyle\frac{a_{n+1}}{a_{n}} =  2^{2} \frac{1+\delta_{n+1}}{1+\delta_{n}} \sqrt{\frac{n}{n+1}}$\par $\displaystyle p(1-p) \le 2^{2} \sqrt{\frac{n}{n+1}}\frac{\lambda}{2^{2}p(1-p)} p(1-p)= \lambda \sqrt{\frac{n}{n+1}} \le \lambda $だから, $\displaystyle a_{n+1} \le (1-\lambda)a_{n} \le \dots \le (1-\lambda)^{n+1-N}a_{N}$\par 
-$\displaystyle\sum_{n=1}^{\infty}P(Z_{2n} = 0) = \displaystyle\sum_{n=1}^{N}P(Z_{2n} = 0) + \displaystyle\sum_{n=N+1}^{\infty}P(Z_{2n} = 0) \le \displaystyle\sum_{n=1}^{N}P(Z_{2n} = 0) + \displaystyle\sum_{n=N+1}^{\infty} \lambda^{n-N} a_{N}$\par
-$\le \displaystyle\sum_{n=1}^{N}P(Z_{2n} = 0) + a_{N} \displaystyle\sum_{n=1}^{\infty} \lambda^{n} =\displaystyle\sum_{n=1}^{N}P(Z_{2n} = 0) + a_{N} \frac{\lambda}{1-\lambda} < \infty \  (\because \ 0 < \lambda < 1)$\par
+$\\$
+$P(Head) = p$とおく.
+$\\ \displaystyle\sum_{n=1}^{\infty}P(Z_{n} = 0) < \infty$であることが示せれば, 補題6($\textbf{I}$)から$P(Z_{n} = 0 \ i.o.) = 0$がわかる.
+$\\$Stirlingの近似公式から,十分大きい$n$に対して, $\displaystyle ^{}_{2n}C_{n} = 2^{2n} \frac{1+\delta_{n}}{\sqrt{\pi n}}$(ただし$\displaystyle \delta_{n} \downarrow 0$)であり, また,
+$\displaystyle p \neq \frac{1}{2}$なので$2^{2}p(1-p)< 1$より,ある$0 < \lambda < 1$ が存在して$\displaystyle 2^{2}p(1-p) < \frac{1}{\lambda} 2^{2}p(1-p) < 1$ となる.
+$\\ \displaystyle \delta_{n} \downarrow 0$だから十分大きい$n$に対して は$\displaystyle \delta_{n} < \frac{\lambda}{2^{2}p(1-p)} -1$が成立する.
+$\\$
+ここで$N \in \mathbb{N}$ を $n \ge N $で 
+$$\displaystyle P(Z_{2n})=^{}_{2n}C_{n} \ p^{n} (1-p)^{n} = 2^{2n} \frac{1+\delta_{n}}{\sqrt{\pi n}} \ p^{n} (1-p)^{n}$$
+かつ
+$\displaystyle\delta_{n} < \frac{\lambda}{2^{2}p(1-p)} -1$
+を満たすようにとる.
+$\\ \displaystyle a_{n} = 2^{2n} \frac{1+\delta_{n}}{\sqrt{\pi n}} \ p^{n} (1-p)^{n}$とおく.\ $n \ge N$ において
+$$ \frac{a_{n+1}}{a_{n}} =  2^{2} \frac{1+\delta_{n+1}}{1+\delta_{n}} \sqrt{\frac{n}{n+1}} p(1-p) \le 2^{2} \sqrt{\frac{n}{n+1}}\frac{\lambda}{2^{2}p(1-p)} p(1-p)= \lambda \sqrt{\frac{n}{n+1}} \le \lambda$$
+だから $\displaystyle a_{n+1} \le (1-\lambda)a_{n} \le \dots \le (1-\lambda)^{n+1-N}a_{N}$が成立する.
+$$\sum_{n=1}^{\infty}P(Z_{2n} = 0) = \sum_{n=1}^{N}P(Z_{2n} = 0) + \sum_{n=N+1}^{\infty}P(Z_{2n} = 0) \le \sum_{n=1}^{N}P(Z_{2n} = 0) + \sum_{n=N+1}^{\infty} \lambda^{n-N} a_{N}$$
+$\\$
+$$ \le \sum_{n=1}^{N}P(Z_{2n} = 0) + a_{N} \sum_{n=1}^{\infty} \lambda^{n} = \sum_{n=1}^{N}P(Z_{2n} = 0) + a_{N} \frac{\lambda}{1-\lambda} < \infty \  (\because \ 0 < \lambda < 1)$$
 以上で$\displaystyle\sum_{n=1}^{\infty}P(Z_{n} = 0) = \displaystyle\sum_{n=1}^{\infty}P(Z_{2n} = 0) < \infty$がわかった.
 \end{proof}
 $\\$
 
 \begin{thm}
-$P(Head) = \frac{1}{2}$とする. このとき$P(Z_{n} = 0 \ i.o.) = 1$となる.
+$\displaystyle P(Head) = \frac{1}{2}$とする. このとき$P(Z_{n} = 0 \ i.o.) = 1$となる.
 \end{thm}
 \begin{proof}
 $\\$
 $n_{1} < n_{2} < \dots$の自然数列とする. また, 各$k \in \mathbb{N}$に対して,$n_{k} < m_{k} < n_{k+1}$となるように$m_{1} < m_{2} < \dots$をとる.
-$C_{k} = \lbrace Y_{n_{k}+1} + \dots + Y_{m_{k}} \le -n_{k} \rbrace \bigcap  \lbrace Y_{m_{k}+1} + \dots + Y_{n_{k+1}} \ge m_{k} \rbrace$と定める.$\\$ $Y_{i} = -1, 1$だから$-n \le Z_{n} \le n$となることを使うと,
-$\omega \in C_{k}$ に対して,$Z_{m_{k}}(\omega) = (Y_{1} + \dots + Y_{m_{k}})(\omega) = (Y_{1} + \dots + Y_{n_{k}})(\omega) + (Y_{n_{k}+1} + \dots + Y_{m_{k}})(\omega) \le n_{k} - n_{k}=0 \\ $ また$Z_{n_{k+1}}(\omega) = (Y_{1} + \dots + Y_{m_{k}})(\omega) + (Y_{m_{k}+1} + \dots + Y_{n_{k+1}})(\omega) \ge -m_{k} + m_{k} = 0$よって,$\\ \omega \in C_{k}$に対して$Z_{m_{k}}(\omega) \le 0, Z_{n_{k+1}}(\omega) \ge 0$であり, $Z_{n+1} = Z_{n} \pm 1$となることから $\\ C_{k} \subset \lbrace Z_{n} = 0 ; n_{k}+1 \le {}^\exists{n} \le n_{k+1} \rbrace = \displaystyle\bigcup_{n=n_{k}+1}^{n_{k+1}} \lbrace Z_{n}=0 \rbrace \\$
-$\lbrace C_{n} \ i.o. \rbrace = \displaystyle\bigcap_{m=1}^{\infty} \displaystyle\bigcup_{k=m}^{\infty} C_{k} \subset \displaystyle\bigcap_{m=1}^{\infty} \displaystyle\bigcup_{k=m}^{\infty} \displaystyle\bigcup_{n=n_{k}+1}^{n_{k+1}} \lbrace Z_{n}=0 \rbrace \subset  \displaystyle\bigcap_{m=1}^{\infty}  \displaystyle\bigcup_{n=n_{m}+1}^{\infty} \lbrace Z_{n}=0 \rbrace = \lbrace Z_{n} =0 \ i.o. \rbrace \\$ Borel-Ccantelli Lammaから \ $\displaystyle\sum_{n=1}^{\infty} P(C_{n}) = \infty$となれば $1 = P( C_{n} \ i.o. ) \le P(Z_{n}=0 \ i.o. )$となる.つまり $\displaystyle\sum_{n=1}^{\infty} P(C_{n}) = \infty$となるような自然数列$\lbrace n_{k} \rbrace , \lbrace m_{k} \rbrace$が取れることを示せばよい.
-$\\ \bullet \ {}^\forall \alpha \in (0,1), \ {}^\forall k \in \mathbb{N} $ に対して,${}^\exists \varphi (k) \ge 1 \ s.t. \ P(|Z_{\varphi (k)}| < k) \le \alpha$となる.
-$\\ \quad (proof) \ {}^\forall \alpha \in (0,1), \ {}^\forall k \in \mathbb{N} , \  {}^\forall j \in \mathbb{Z}$ を固定する,$P(Z_{n}=j) \rightarrow 0 \ (n \rightarrow \infty)$であるから,$ \displaystyle\sum_{|j|<k} P(Z_{n} = j) \rightarrow 0 \ (n \rightarrow \infty)$となる.よって,$\varphi (k)$を$\displaystyle\sum_{|j|<k} P(Z_{\varphi (k)} = j) \le \alpha$となるように取れる. [証明終り]
+$$C_{k} = \lbrace Y_{n_{k}+1} + \dots + Y_{m_{k}} \le -n_{k} \rbrace \bigcap  \lbrace Y_{m_{k}+1} + \dots + Y_{n_{k+1}} \ge m_{k} \rbrace$$
+と定める.
+$\\$ 
+$Y_{i} = -1, 1$だから$-n \le Z_{n} \le n$となることを使うと,
+$\omega \in C_{k}$ に対して,
+$$Z_{m_{k}}(\omega) = (Y_{1} + \dots + Y_{m_{k}})(\omega) = (Y_{1} + \dots + Y_{n_{k}})(\omega) + (Y_{n_{k}+1} + \dots + Y_{m_{k}})(\omega) \le n_{k} - n_{k}=0 $$
+また
+$$Z_{n_{k+1}}(\omega) = (Y_{1} + \dots + Y_{m_{k}})(\omega) + (Y_{m_{k}+1} + \dots + Y_{n_{k+1}})(\omega) \ge -m_{k} + m_{k} = 0$$
+よって $\omega \in C_{k}$に対して 
+$Z_{m_{k}}(\omega) \le 0, \, Z_{n_{k+1}}(\omega) \ge 0$であり, $Z_{n+1} = Z_{n} \pm 1$となることから 
+$$ C_{k} \subset \lbrace Z_{n} = 0 ; n_{k}+1 \le {}^\exists{n} \le n_{k+1} \rbrace = \displaystyle\bigcup_{n=n_{k}+1}^{n_{k+1}} \lbrace Z_{n}=0 \rbrace$$
+$$\lbrace C_{n} \ i.o. \rbrace = \displaystyle\bigcap_{m=1}^{\infty} \displaystyle\bigcup_{k=m}^{\infty} C_{k} \subset \displaystyle\bigcap_{m=1}^{\infty} \displaystyle\bigcup_{k=m}^{\infty} \displaystyle\bigcup_{n=n_{k}+1}^{n_{k+1}} \lbrace Z_{n}=0 \rbrace \subset  \displaystyle\bigcap_{m=1}^{\infty}  \displaystyle\bigcup_{n=n_{m}+1}^{\infty} \lbrace Z_{n}=0 \rbrace = \lbrace Z_{n} =0 \ i.o. \rbrace $$
+Borel-Cantelli Lammaから \ $\displaystyle\sum_{n=1}^{\infty} P(C_{n}) = \infty$となれば $1 = P( C_{n} \ i.o. ) \le P(Z_{n}=0 \ i.o. )$となる.
+$\\$つまり $\displaystyle\sum_{n=1}^{\infty} P(C_{n}) = \infty$となるような自然数列$\lbrace n_{k} \rbrace , \lbrace m_{k} \rbrace$が取れることを示せばよい.
+$\\ \bullet$ 任意の$\alpha \in (0,1), \, k \in \mathbb{N} $ に対して, $P(|Z_{\varphi (k)}| < k) \le \alpha$となる $\varphi (k) \ge 1$がとれる.
+$\\(proof)$ 任意の $\alpha \in (0,1), \ k \in \mathbb{N},\ j \in \mathbb{Z}$ を固定する,
+$P(Z_{n}=j) \rightarrow 0 \ (n \rightarrow \infty)$であるから,
+$\\ \displaystyle\sum_{|j|<k} P(Z_{n} = j) \rightarrow 0 \ (n \rightarrow \infty)$となる.よって,$\varphi (k)$を$\displaystyle\sum_{|j|<k} P(Z_{\varphi (k)} = j) \le \alpha$となるように取れる. $\\$[証明終り]
 %続き
-$\\$ ${}^\forall \alpha \in (0,1), \ {}^\forall k \in \mathbb{N}$を固定する. $\lbrace \varphi (k) \rbrace_{k \in \mathbb{N}}$を上で示したものと同様にとる. $n_{k}, m_{k}$を$n_{1}=1, \\ m_{k} = n_{k} + \varphi (n_{k}), \ n_{k+1} = m_{k} + \varphi (m_{k})$とする.
+$\\$任意に $\alpha \in (0,1), \ k \in \mathbb{N}$を固定する. $\lbrace \varphi (k) \rbrace_{k \in \mathbb{N}}$を上で示したものと同様にとる. 
+$\\ n_{k}, m_{k}$を$n_{1}=1, m_{k} = n_{k} + \varphi (n_{k}), \ n_{k+1} = m_{k} + \varphi (m_{k})$とする.
 %
 $\\ P(C_{k}) = P(Y_{n_{k} + 1} + \dots + Y_{m_{k}} \le -n_{k}) P(Y_{m_{k} + 1} + \dots + Y_{n_{k+1}} \ge m_{k})$  ( $\because \ {\lbrace Y_{i}} \rbrace_{ i \in \mathbb{N}}$は独立）
-$\\ P(Head) = \frac{1}{2}$であるから,対象性を使うと$\\ P(\left| Y_{n_{k} + 1} + \dots + Y_{m_{k}} \right| \ge n_{k}) = 2P(Y_{n_{k} + 1} + \dots + Y_{m_{k}} \le -n_{k})$
-$\\ P(\left| Y_{m_{k} + 1} + \dots + Y_{n_{k+1}} \right| \ge m_{k}) = 2P(Y_{m_{k} + 1} + \dots + Y_{n_{k+1}} \ge m_{k})$となるから,
-$\\ P(C_{k}) = \frac{1}{4} P(\left| Y_{n_{k} + 1} + \dots + Y_{m_{k}} \right| \ge n_{k}) P(\left| Y_{m_{k} + 1} + \dots + Y_{n_{k+1}} \right| \ge m_{k})  \ , \lbrace Y_{i} \rbrace_{ i \in \mathbb{N}}$の同一分布性から
-$\\ \qquad  =\frac{1}{4} P(\left| Y_{1} + \dots + Y_{m_{k}-n_{k}} \right| \ge n_{k}) P(\left| Y_{1} + \dots + Y_{n_{k+1}-m_{k}} \right| \ge m_{k})  \ , \varphi (k)$の定め方から,
-$\\ \qquad  =\frac{1}{4} P(\left| Y_{1} + \dots + Y_{\varphi(n_{k})} \right| \ge n_{k}) P(\left| Y_{1} + \dots + Y_{\varphi(m_{k})} \right| \ge m_{k}) \ge \frac{1}{4} (1-\alpha)^{2}$
+$\\ P(Head) = \frac{1}{2}$であるから,対象性を使うと
+$$ P(\left| Y_{n_{k} + 1} + \dots + Y_{m_{k}} \right| \ge n_{k}) = P(Y_{n_{k} + 1} + \dots + Y_{m_{k}} \ge n_{k} ) + P( Y_{n_{k} + 1} + \dots + Y_{m_{k}} \le -n_{k} ) $$ 
+$$ = P(Y_{n_{k} + 1} + \dots + Y_{m_{k}} \le -n_{k} ) + P( Y_{n_{k} + 1} + \dots + Y_{m_{k}} \le -n_{k} ) = 2P(Y_{n_{k} + 1} + \dots + Y_{m_{k}} \le -n_{k})$$
+同様にして
+$ P(\left| Y_{m_{k} + 1} + \dots + Y_{n_{k+1}} \right| \ge m_{k}) = 2P(Y_{m_{k} + 1} + \dots + Y_{n_{k+1}} \ge m_{k})$となるから
+$$ P(C_{k}) = \frac{1}{4} P(\left| Y_{n_{k} + 1} + \dots + Y_{m_{k}} \right| \ge n_{k}) P(\left| Y_{m_{k} + 1} + \dots + Y_{n_{k+1}} \right| \ge m_{k})$$
+$\lbrace Y_{i} \rbrace_{ i \in \mathbb{N}}$の同一分布性から
+$$ =\frac{1}{4} P(\left| Y_{1} + \dots + Y_{m_{k}-n_{k}} \right| \ge n_{k}) P(\left| Y_{1} + \dots + Y_{n_{k+1}-m_{k}} \right| \ge m_{k})$$ 
+$\varphi (k)$の定め方から
+$$  =\frac{1}{4} P(\left| Y_{1} + \dots + Y_{\varphi(n_{k})} \right| \ge n_{k}) P(\left| Y_{1} + \dots + Y_{\varphi(m_{k})} \right| \ge m_{k}) \ge \frac{1}{4} (1-\alpha)^{2}$$
 $\\ \qquad \because \displaystyle\sum_{|j|<k} P(Z_{\varphi (k)} = j)$ $\underbrace{=}_{\lbrace Z_{\varphi (k)} = j \rbrace_{|j|<k} は非交和}$ $P( \displaystyle\bigcup_{|j|<k} Z_{\varphi (k)} = j) = P(\left| Y_{1} + \dots + Y_{\varphi(k)} \right| < k) \le \alpha$なので$\\ \qquad \qquad P(\left| Y_{1} + \dots + Y_{\varphi(k)} \right| \ge k) \ge 1- \alpha$
 $\\$ 以上で　$ \displaystyle\sum_{k=1}^{\infty} P(C_{k}) \ge  \displaystyle\sum_{k=1}^{\infty} \frac{1}{4} (1-\alpha)^{2} = \infty$となって,$\ P(Z_{n} = 0 \ i.o.) = 1$が示せた.
 %$\stackrel{=}{as}$
@@ -222,99 +288,156 @@ $\\$ 以上で　$ \displaystyle\sum_{k=1}^{\infty} P(C_{k}) \ge  \displaystyle\
 %RANDOM SIGNS PROBLEM
 \begin{thm}
 $X_{1}, X_{2}, \dots$を独立確率変数とする.$\\$
-このとき, \par $\displaystyle \sum_{k=1}^{n}X_{k}$ が確率収束する $\Leftrightarrow \displaystyle\sum_{k=1}^{n}X_{k}$ が概収束する$\quad$が成立する.
+このとき, \par $\displaystyle \sum_{k=1}^{n}X_{k}$ が確率収束する. $\Leftrightarrow \displaystyle\sum_{k=1}^{n}X_{k}$ が概収束する.
 \end{thm}
 まず、補題を示す.
 %補題
-\begin{lem}$N \in \mathbb{N}$を固定する. $X_{1}, X_{2}, \dots, X_{N}$を独立確率変数とし,\ $S_{n} = X_{1} + \dots + X_{n}$とおく.$\\$
-${}^\forall \alpha > 0$に対して, $\displaystyle\sup_{1 \le j \le N} P(|S_{N}-S_{j}| > \alpha) = c < 1$となるとき, $\\ \displaystyle P( \sup_{1 \le j \le N} |S_{j}| > 2\alpha ) \le \frac{1}{1-c} P(|S_{N}|>\alpha)$となる.
+\begin{lem}$N \in \mathbb{N}$を固定する. $X_{1}, X_{2}, \dots, X_{N}$を独立確率変数とし,\ $S_{n} = X_{1} + \dots + X_{n}$とおく.
+$\\$任意の$\alpha > 0$に対して, $\displaystyle\sup_{1 \le j \le N} P(|S_{N}-S_{j}| > \alpha) = c < 1$となるとき, $\\ \displaystyle P( \sup_{1 \le j \le N} |S_{j}| > 2\alpha ) \le \frac{1}{1-c} P(|S_{N}|>\alpha)$が成立する.
 \end{lem}
 \begin{proof}
 $\\$
-$j^{*} (\omega)を|S_{j}(\omega)| > 2 \alpha$となる$1 \le j \le N$で一番小さいものとする.存在しないときは０とする.ここで$\displaystyle\bigcup_{1 \le j \le N} \lbrace j^{*} = j \rbrace = \emptyset$であるとき$\displaystyle P( \sup_{1 \le j \le N} |S_{j}| > 2\alpha ) = 0$なので,$\displaystyle P( \sup_{1 \le j \le N} |S_{j}| > 2\alpha ) = 0 \le \frac{1}{1-c} P(|S_{N}|>\alpha)$が成立する.よって,$\displaystyle\bigcup_{1 \le j \le N} \lbrace j^{*} = j \rbrace \neq \emptyset$のときを考える. $\\ \displaystyle P(|S_{N}| > \alpha, \ \sup_{1 \le j \le N} |S_{j} | > 2\alpha) = \sum_{j=1}^{N} P(|S_{N}| > \alpha, \ j^{*} = j) \ge \sum_{j=1}^{N} P(|S_{N} - S_{j}| \le \alpha, \ j^{*} = j) \\$
+$j^{*} (\omega)を|S_{j}(\omega)| > 2 \alpha$となる$1 \le j \le N$で一番小さいものとする.存在しないときは$0$とする.
+$\\$ここで$\displaystyle \bigcup_{1 \le j \le N} \left\{ j^{*} = j \right\} = \emptyset$であるとき$\displaystyle P\left( \sup_{1 \le j \le N} |S_{j}| > 2\alpha \right) = 0$なので
+$\\ \displaystyle P\left( \sup_{1 \le j \le N} |S_{j}| > 2\alpha \right) = 0 \le \frac{1}{1-c} P(|S_{N}|>\alpha)$が成立する.
+$\\$よって $\displaystyle\bigcup_{1 \le j \le N} \lbrace j^{*} = j \rbrace \neq \emptyset$のときを考える. 
+$\\ \displaystyle P(|S_{N}| > \alpha, \ \sup_{1 \le j \le N} |S_{j} | > 2\alpha) = \sum_{j=1}^{N} P(|S_{N}| > \alpha, \ j^{*} = j) \ge \sum_{j=1}^{N} P(|S_{N} - S_{j}| \le \alpha, \ j^{*} = j)$ が成立する.
 %becuase1
-$\displaystyle \because \ \bullet \bigcup_{1 \le j \le N} \lbrace j^{*} = j \rbrace = \lbrace \sup_{1 \le j \le N}|S_{j}| > 2\alpha \rbrace$を示せば,一つ目の等号が成立する.\par
+$\\ \displaystyle \because \ \bullet \bigcup_{1 \le j \le N} \lbrace j^{*} = j \rbrace = \lbrace \sup_{1 \le j \le N}|S_{j}| > 2\alpha \rbrace$を示せば,一つ目の等号が成立する.\par
 $(\subset)$ \par
 $\omega \in$ (左辺)とすれば, $1 \le {}^\exists j \le N \ s.t. \ j^{*}(\omega) = k$だから $|S_{k}(\omega)|>2 \alpha$なので$\displaystyle\sup_{1 \le j \le N}  |S_{j}| \ge |S_{k}(\omega)| > 2\alpha$となって, $\omega \in$ (右辺) \par
 $( \supset )$ \par
-$\omega \in$ (右辺)とすれば, $\displaystyle\sup_{1 \le j \le N } |S_{j}(\omega)| > 2\alpha$であるから, ${}^\exists \lbrace k_{1}, k_{2}, \dots, k_{K} \rbrace \subset \lbrace 1,2,\dots ,N \rbrace \ s.t. \\ |S_{k_{m}}|>2 \alpha \  (m = 1,2,\dots, K) $となる. $\displaystyle j^{**}(\omega)= \min{ \lbrace k_{1}, k_{2}, \dots, k_{K} \rbrace }$とすれば$j^{*}(\omega) = j^{**}(\omega)$となるから,$\omega \in $(左辺)となる.
+$\omega \in$ (右辺)とすれば, $\displaystyle\sup_{1 \le j \le N } |S_{j}(\omega)| > 2\alpha$であるから, 
+$\\ K \in \left\{1,2, \dots , N  \right\}, \, \lbrace k_{1}, k_{2}, \dots, k_{K} \rbrace \subset \lbrace 1,2,\dots ,N \rbrace$ が存在して
+$|S_{k_{m}}|>2 \alpha \  (m = 1,2,\dots, K) $となる.
+$\displaystyle j^{**}(\omega)= \min{ \lbrace k_{1}, k_{2}, \dots, k_{K} \rbrace }$とすれば$j^{*}(\omega) = j^{**}(\omega)$となるから $\omega \in $(左辺)となる.
 $ \\ $
 %becuase 2
-$\bullet $ 各k $\in \lbrace 1,2,\dots, N \rbrace$ に対して,$\ \lbrace |S_{N}| > \alpha \rbrace \cap \lbrace j^{*} = j \rbrace \supset \lbrace |S_{N}-S_{j}| \le \alpha \rbrace  \cap \lbrace j^{*} = j \rbrace$となるのを示せば２つ目の不等号が示せる.\par
-k $\in \lbrace 1,2,\dots, N \rbrace$を固定しておく.$\omega \in $(右辺)をとる. $|S_{N}(\omega) - S_{j}(\omega)| \le \alpha$かつ$j^{*}(\omega) = j$であるから,
-$\\$ $|S_{j}(\omega)| - |S_{N}(\omega)| \le \alpha$かつ$|S_{j}(\omega)| > 2\alpha$ $\Leftrightarrow$ $|S_{j}(\omega)| - \alpha \le |S_{N}(\omega)|$かつ$ |S_{j}(\omega)| > 2\alpha$\par $\quad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \Rightarrow 2\alpha - \alpha = \alpha < |S_{N}(\omega)|$\par
+$\bullet $ 各$k$ $\in \lbrace 1,2,\dots, N \rbrace$ に対して,$\ \lbrace |S_{N}| > \alpha \rbrace \cap \lbrace j^{*} = j \rbrace \supset \lbrace |S_{N}-S_{j}| \le \alpha \rbrace  \cap \lbrace j^{*} = j \rbrace$となるのを示せば２つ目の不等号が示せる.\par
+$k \in \lbrace 1,2,\dots, N \rbrace$を任意に固定しておく. $\omega \in $(右辺)をとる. $|S_{N}(\omega) - S_{j}(\omega)| \le \alpha$かつ$j^{*}(\omega) = j$であるから
+$$|S_{j}(\omega)| - |S_{N}(\omega)| \le \alpha \, かつ \, |S_{j}(\omega)| > 2\alpha \Leftrightarrow |S_{j}(\omega)| - \alpha \le |S_{N}(\omega)| \, かつ \,
+ |S_{j}(\omega)| > 2\alpha \quad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad$$
+ $$\Rightarrow 2\alpha - \alpha = \alpha < |S_{N}(\omega)|$$
+ \par
 以上で$ \lbrace |S_{N}| > \alpha \rbrace \cap \lbrace j^{*} = j \rbrace \supset \lbrace |S_{N}-S_{j}| \le \alpha \rbrace  \cap \lbrace j^{*} = j \rbrace $
 $\displaystyle\\ \ \lbrace j^{*} = j \rbrace = ( \bigcap_{k=1}^{j-1}\lbrace |S_{k}| > 2\alpha \rbrace^{c} ) \cap \lbrace |S_{j}| > 2\alpha \rbrace$なので,$\lbrace j^{*} = j \rbrace \in \sigma (X_{1}, \dots , X_{j})$,
 $\\ \lbrace |S_{N} - S_{j} | \le \alpha \rbrace \in \sigma (X_{j+1}, \dots , X_{N})$であるから, $ \lbrace j^{*} = j \rbrace $と$ \lbrace |S_{N} - S_{j} | \le \alpha \rbrace $は独立.
-仮定から$ P(|S_{N}-S_{j}| > \alpha) \le c $なので$1 - P(|S_{N}-S_{j}| > \alpha) = P(|S_{N}-S_{j}| \le \alpha) \ge 1-c$
+$\\$仮定から$\displaystyle P(|S_{N}-S_{j}| > \alpha) \le c $なので$\displaystyle 1 - P(|S_{N}-S_{j}| > \alpha) = P(|S_{N}-S_{j}| \le \alpha) \ge 1-c$となる.よって
 %まとめ
-$\\ \displaystyle \sum_{j=1}^{N}P(|S_{N}-S_{j}| \le \alpha , \ j^{*}=j) = \sum_{j=1}^{N} P(|S_{N}-S_{j}| \le \alpha)P( j^{*}=j) \ge (1-c)\sum_{j=1}^{N} P(j^{*}=j) \\ = (1-c) P(\sup_{1 \le j \le N} |S_{j}| > 2\alpha) \\ (1-c) P(\sup_{1 \le j \le N} |S_{j}| > 2\alpha) \le \sum_{j=1}^{N}P(|S_{N}-S_{j}| \le \alpha , \ j^{*}=j)  \le P(|S_{N}| > \alpha, \ \sup_{1 \le j \le N} |S_{j} | > 2\alpha) \\ \le P(|S_{N}| > \alpha) \quad \therefore P(\sup_{1 \le j \le N} |S_{j}| > 2\alpha) \le \frac{1}{1-c} P(|S_{N}| > \alpha)$
+$$ \sum_{j=1}^{N}P(|S_{N}-S_{j}| \le \alpha , \ j^{*}=j) = \sum_{j=1}^{N} P(|S_{N}-S_{j}| \le \alpha)P( j^{*}=j) $$
+$$\ge (1-c)\sum_{j=1}^{N} P(j^{*}=j) \\ = (1-c) P(\sup_{1 \le j \le N} |S_{j}| > 2\alpha)$$ 
+となる. まとめると
+$$(1-c) P(\sup_{1 \le j \le N} |S_{j}| > 2\alpha) \le \sum_{j=1}^{N}P(|S_{N}-S_{j}| \le \alpha , \ j^{*}=j)  \le P(|S_{N}| > \alpha, \ \sup_{1 \le j \le N} |S_{j} | > 2\alpha) \le P(|S_{N}| > \alpha)$$
+が成立する.
+$\\ \quad \therefore P(\sup_{1 \le j \le N} |S_{j}| > 2\alpha) \le \frac{1}{1-c} P(|S_{N}| > \alpha)$
 \end{proof}
-補題 10を使って,定理9の証明をする.
+補題 11を使って,定理10の証明をする.
 %定理9の証明
 \begin{proof}
 $\\ (\Leftarrow) \ 概収束するならば確率収束するので成立する.$
 $\displaystyle \\ (\Rightarrow) \sum_{k=1}^{n}X_{k}$は確率収束するとする. ここで$\displaystyle \sum_{k=1}^{n}X_{k}$が概収束しないと仮定する.(背理法)
-$\\$ここで実数列$\lbrace s_{n} \rbrace$が収束しないとすれば$\lbrace s_{n} \rbrace$はCauchy列でないので
-$\\{}^\exists \varepsilon>0 \ s.t. \ {}^\forall N \in \mathbb{N} , \ {}^\forall n,m \ge N \land |s_{n}-s_{m}| > \varepsilon$であるから,
-$\displaystyle \\ {}^\exists \varepsilon>0 \ s.t. \ {}^\forall m \in \mathbb{N}, \ \sup_{n>m} |s_{n}-s_{m}| > \varepsilon$となる. $\displaystyle \sum_{k=1}^{n}X_{k}$はほとんど確実にCauchy列でないから,
-$\displaystyle \\ {}^\exists \varepsilon >0, \ {}^\exists \delta \in (0,1] \ s.t. \ \left[ {}^\forall m \in \mathbb{N},\ P\left(\sup_{n>m} |\sum_{k=1}^{n}X_{k} - \sum_{k=1}^{m}X_{k}| > \varepsilon \right) \ge \delta  \right]$となる.この$\varepsilon, \ \delta$を固定する.
+$\\$ここで実数列$\displaystyle \lbrace s_{n} \rbrace$が収束しないとすれば$\displaystyle \lbrace s_{n} \rbrace$はCauchy列でないので
+$\\$
+ある$\varepsilon>0$が存在して, 任意の$N \in \mathbb{N}, \, n,m \ge N$に対して,$|s_{n}-s_{m}| > \varepsilon$が成立する.
+$\\$
+また, 
+ある$\varepsilon>0$が存在して, 任意の$m \in \mathbb{N}$に対して, $\sup_{n>m} |s_{n}-s_{m}| > \varepsilon$となる.
+$\\ \displaystyle \sum_{k=1}^{n}X_{k}$はほとんど確実にCauchy列でないから,
+$\\$
+ある $\displaystyle \varepsilon >0, \, \delta \in (0,1]$ が存在して, 任意の $m \in \mathbb{N}$に対して, 
+$\\ \displaystyle P\left(\sup_{n>m} |\sum_{k=1}^{n}X_{k} - \sum_{k=1}^{m}X_{k}| > \varepsilon \right) \ge \delta$が成立する.
+$\\$
+この$\displaystyle \varepsilon, \ \delta$を固定する.
 %Cm,Nを定める.
  $\\ \displaystyle \displaystyle \sum_{k=1}^{n}X_{k}$は確率収束するので$\displaystyle \sum_{k=1}^{N} X_{k} - \sum_{k=1}^{m}X_{k} \stackrel{P}{\rightarrow} 0 $となる. 
 %何故ならば
-$\displaystyle \\ \because \sum_{k=1}^{n}X_{k} \stackrel{P}{\rightarrow} s$とすると, $\displaystyle P\left( \left| \sum_{k=1}^{N} X_{k} - \sum_{k=1}^{m}X_{k} \right| > \varepsilon\right) = P\left( \left| \sum_{k=1}^{N} X_{k} - s +s - \sum_{k=1}^{m}X_{k} \right| > \varepsilon\right) \le P\left( \left| \sum_{k=1}^{N} X_{k} - s\right| + \left| s - \sum_{k=1}^{m}X_{k} \right| > \varepsilon\right) \le P\left( \left\{ \left| \sum_{k=1}^{N} X_{k} - s\right| > \frac{\varepsilon}{2} \right\} \cup \left\{  \left| s - \sum_{k=1}^{m}X_{k} \right| > \frac{\varepsilon}{2} \right\} \right) \\ \le P\left( \left| \sum_{k=1}^{N} X_{k} - s\right| > \frac{\varepsilon}{2} \right) + P\left( \left| \sum_{k=1}^{m} X_{k} - s\right| > \frac{\varepsilon}{2} \right) \to 0 \ (m,\ N \to \infty)$となるから. $\\$
-よって,ある$M \in \mathbb{N}$が存在して, ${}^\forall m, \ N \ge M \ (m < N)$に対して,$\displaystyle P\left( \left| \sum_{k=m+1}^{N} X_{k} \right| > \frac{\varepsilon}{2}\right) < 1$で, $\displaystyle P\left( \left| \sum_{k=m+1}^{N} X_{k} \right| > \frac{\varepsilon}{2}\right) \to 0 \ (m, \ N \to \infty)$この$m, \ N $を固定する.$\\$
+$\displaystyle \\ \because \sum_{k=1}^{n}X_{k} \stackrel{P}{\rightarrow} S$とすると, 
+$$ P\left( \left| \sum_{k=1}^{N} X_{k} - \sum_{k=1}^{m}X_{k} \right| > \varepsilon\right) = P\left( \left| \sum_{k=1}^{N} X_{k} - S +S - \sum_{k=1}^{m}X_{k} \right| > \varepsilon\right)$$
+$$\le P\left( \left| \sum_{k=1}^{N} X_{k} - s\right| + \left| S - \sum_{k=1}^{m}X_{k} \right| > \varepsilon\right) \le P\left( \left\{ \left| \sum_{k=1}^{N} X_{k} - S\right| > \frac{\varepsilon}{2} \right\} \cup \left\{  \left| S - \sum_{k=1}^{m}X_{k} \right| > \frac{\varepsilon}{2} \right\} \right)$$ 
+$$\le P\left( \left| \sum_{k=1}^{N} X_{k} - S\right| > \frac{\varepsilon}{2} \right) + P\left( \left| \sum_{k=1}^{m} X_{k} - S\right| > \frac{\varepsilon}{2} \right) \to 0 \ (m,\ N \to \infty)$$
+となる.
+$\\$
+よって,ある$M \in \mathbb{N}$が存在して, 任意の $m, \ N \ge M \ (m < N)$に対して 
+$\\ \displaystyle P\left( \left| \sum_{k=m+1}^{N} X_{k} \right| > \frac{\varepsilon}{2}\right) < 1$ かつ $\displaystyle P\left( \left| \sum_{k=m+1}^{N} X_{k} \right| > \frac{\varepsilon}{2}\right) \to 0 \ (m, \ N \to \infty)$この$m, \ N $を固定する.$\\$
 $ \displaystyle C_{m, N} = \sup_{m < n \le N} P\left( \left| \sum_{k=n}^{N}X_{k} \right| > \frac{\varepsilon}{2} \right)$とおくと,$ \displaystyle \  C_{m, N} < 1$ かつ$\displaystyle C_{m, N} \to 0 \ (m, \ N \to \infty)$となる.
 
 %
-ここで補題 8を使うと,
+ここで補題9を使うと,
 $\displaystyle \\ P\left(\sup_{ m < n \le N } \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) \le \frac{1}{1-C_{m, N}} P\left( \left| \sum_{ k = m+1 }^{N} X_{k} \right| > \frac{\varepsilon}{2} \right)$ とかけて,
 まず$\displaystyle N \to \infty$とすると,$\\$
-単調性から, $\displaystyle \lim_{N \to \infty} P\left(\sup_{ m < n \le N } \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) =   P\left( \lim_{N \to \infty} \sup_{ m < n \le N } \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right)=   P\left( \sup_{ m < n} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right)$ 
-$\displaystyle \\ \le \lim_{N \to \infty} \frac{1}{1-C_{m, N}} P\left( \left| \sum_{ k = m+1 }^{N} X_{k} \right| > \frac{\varepsilon}{2} \right)$, $\ \displaystyle \lim_{m \to \infty} \lim_{N \to \infty} \frac{1}{1-C_{m, N}} P\left( \left| \sum_{ k = m+1 }^{N} X_{k} \right| > \frac{\varepsilon}{2} \right)$だから,
-$\displaystyle \\ \lim_{m \to \infty}  P\left( \sup_{ m < n} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) = 0$
- これは$\displaystyle {}^\forall m \in \mathbb{N},\ P\left(\sup_{n>m} |\sum_{k=1}^{n}X_{k} - \sum_{k=1}^{m}X_{k}| > \varepsilon \right) \ge \delta > 0$に矛盾する. 背理法により $\displaystyle \sum_{k=1}^{n}X_{k}$は概収束することがわかった.
+単調性から
+$$ \lim_{N \to \infty} P\left(\sup_{ m < n \le N } \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) =   P\left( \lim_{N \to \infty} \sup_{ m < n \le N } \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right)=   P\left( \sup_{ m < n} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right)$$
+$$ \\ \le \lim_{N \to \infty} \frac{1}{1-C_{m, N}} P\left( \left| \sum_{ k = m+1 }^{N} X_{k} \right| > \frac{\varepsilon}{2} \right)$$であり
+$$\ \displaystyle \lim_{m \to \infty} \lim_{N \to \infty} \frac{1}{1-C_{m, N}} P\left( \left| \sum_{ k = m+1 }^{N} X_{k} \right| > \frac{\varepsilon}{2} \right)=0$$だから
+$\displaystyle \lim_{m \to \infty}  P\left( \sup_{ m < n} \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) = 0$ 
+$\\$これは任意の $m \in \mathbb{N}$ に対して 
+$\displaystyle P\left(\sup_{n>m} |\sum_{k=1}^{n}X_{k} - \sum_{k=1}^{m}X_{k}| > \varepsilon \right) \ge \delta > 0$となることに矛盾する. 
+$\\$背理法により $\displaystyle \sum_{k=1}^{n}X_{k}$は概収束することがわかった.
 \end{proof}
 
 %系
 \begin{cor}
-$\displaystyle \\ E[X_{k}] = 0 \ ( {}^\forall k \in \mathbb{N} ), \ \sum_{k=1}^{\infty}E[X_{k}^{2}] < \infty$とする.このとき$\displaystyle \sum_{k=1}^{n}X_{ k }$は概収束する.
+$\\$
+任意の $k \in \mathbb{N}$に対して, $\displaystyle E[X_{k}] = 0$ かつ $\sum_{k=1}^{\infty}E[X_{k}^{2}] < \infty$であるとする.
+$\\$このとき$\displaystyle \sum_{k=1}^{n}X_{ k }$は概収束する.
 \end{cor}
 \begin{proof}
-$\displaystyle \\ X_{1}, X_{2}, \dots$は独立なので,$\displaystyle \sum_{k=1}^{n}X_{ k }$が確率収束することを示せば定理9から$\displaystyle \sum_{k=1}^{n}X_{ k }$は概収束する.
-$\displaystyle \\ \sum_{k=1}^{\infty}E[X_{k}^{2}] = s^{2}$ (ただし $s \ge 0$ )とする. ${}^\forall \varepsilon > 0$ に対してChebyshevの不等式から $\displaystyle \\ P\left( \left| \sum_{k=1}^{n}X_{ k } - s \right| > \varepsilon \right) \le \frac{1}{ \varepsilon ^ {2} } E\left[ \left| \sum_{k=1}^{n}X_{ k } - s \right|^{2} \right]$ となる.
-$\displaystyle E\left[ \left| \sum_{k=1}^{n}X_{ k } - s \right|^{2} \right] \to 0 \ (n \to \infty )$を示したい. $\displaystyle \\ E\left[ \left| \sum_{k=1}^{n}X_{ k } - s \right|^{2} \right] = E\left[ \left| \sum_{k=1}^{n}X_{ k } \right|^{2} \right] -2sE\left[ \sum_{k=1}^{n}X_{ k } \right] + s^{2} \\ = E\left[ \sum_{k=1}^{n}X_{ k }^{2} + 2 \sum_{i<j}X_{ i }X_{ j }  \right]-2sE\left[ \sum_{k=1}^{n}X_{ k } \right] + s^{2} $ここで,$\displaystyle X_{1}, X_{2}, \dots$は独立だから 
-$\displaystyle \\ \sum_{i<j} E\left[ X_{ i }X_{ j }  \right] = \sum_{i<j} E\left[ X_{ i } \right] E\left[X_{ j }  \right]$が成立する. また$\displaystyle E[X_{k}] = 0 \ ( {}^\forall k \in \mathbb{N} )$なので
-$\displaystyle \\ = \sum_{k=1}^{n} E\left[ {X_{ k }}^{2} \right] -2s\sum_{k=1}^{n} E\left[ X_{ k } \right] + s^{2} \to s^{2} -2s^{2}+s^{2}=0 \ (n \to \infty) \\ \sum_{k=1}^{n}X_{ k }$が確率収束することがわかったので$\displaystyle \sum_{k=1}^{n}X_{ k }$は概収束する.
+$\displaystyle \\ X_{1}, X_{2}, \dots$は独立なので,$\displaystyle \sum_{k=1}^{n}X_{ k }$が確率収束することを示せば定理10から$\displaystyle \sum_{k=1}^{n}X_{ k }$は概収束する.
+$\displaystyle \\ \sum_{k=1}^{\infty}E[X_{k}^{2}] = s^{2}$ (ただし $s \ge 0$ )とする. 任意の $\varepsilon > 0$ に対してChebyshevの不等式から $\displaystyle \\ P\left( \left| \sum_{k=1}^{n}X_{ k } - s \right| > \varepsilon \right) \le \frac{1}{ \varepsilon ^ {2} } E\left[ \left| \sum_{k=1}^{n}X_{ k } - s \right|^{2} \right]$ となる.
+$\displaystyle E\left[ \left| \sum_{k=1}^{n}X_{ k } - s \right|^{2} \right] \to 0 \ (n \to \infty )$を示したい. 
+$$E\left[ \left| \sum_{k=1}^{n}X_{ k } - s \right|^{2} \right] = E\left[ \left| \sum_{k=1}^{n}X_{ k } \right|^{2} \right] -2sE\left[ \sum_{k=1}^{n}X_{ k } \right] + s^{2} \\ = E\left[ \sum_{k=1}^{n}X_{ k }^{2} + 2 \sum_{i<j}X_{ i }X_{ j }  \right]-2sE\left[ \sum_{k=1}^{n}X_{ k } \right] + s^{2} $$
+
+$ \left(
+\begin{tabular}{clll}
+ここで, $ X_{1}, X_{2}, \dots$は独立だから \\
+$\displaystyle \sum_{i<j} E\left[ X_{ i }X_{ j }  \right] = \sum_{i<j} E\left[ X_{ i } \right] E\left[X_{ j }  \right]$が成立する. また$\displaystyle E[X_{k}] = 0$ なので
+\end{tabular}
+\right)$
+$$= \sum_{k=1}^{n} E\left[ {X_{ k }}^{2} \right] -2s\sum_{k=1}^{n} E\left[ X_{ k } \right] + s^{2} \to s^{2} -2s^{2}+s^{2}=0 \ (n \to \infty)$$ 
+$\sum_{k=1}^{n}X_{ k }$ が確率収束することがわかったので $\displaystyle \sum_{k=1}^{n}X_{ k }$は概収束する.
 \end{proof}
 
 
 %独立確率変数に対する大数の法則
 \begin{thm}
 独立確率変数に対する大数の法則$\\$
-$X_{1}, X_{2}, \dots$を独立確率変数とする. $E\left[ X_{k} \right] = 0, \ E\left[ X_{k}^{2} \right] < \infty \ \left( {}^\forall k \in \mathbb{N} \right)$であるとする.
-正数列　$\\ \lbrace b_{n} \rbrace_{ n \in \mathbb{N} }$が$b_{n} \uparrow \infty$かつ$\displaystyle\sum_{k=1}^{\infty} E\left[ \frac{X_{k}^{2}}{b_{k}^{2}} \right] < \infty$を満たすとき,$\displaystyle\frac{X_{1} + \dots + X_{n}}{b_{n}} \stackrel{a.s.}{\longrightarrow}  0 $が成立する.
+$X_{1}, X_{2}, \dots$を独立確率変数とする. 任意の$k \in \mathbb{N}$に対して $E\left[ X_{k} \right] = 0, \ E\left[ X_{k}^{2} \right] < \infty$であるとする.
+$\\$正数列 $\lbrace b_{n} \rbrace_{ n \in \mathbb{N} }$が$b_{n} \uparrow \infty$かつ$\displaystyle\sum_{k=1}^{\infty} E\left[ \frac{X_{k}^{2}}{b_{k}^{2}} \right] < \infty$を満たすとき,$\displaystyle\frac{X_{1} + \dots + X_{n}}{b_{n}} \stackrel{a.s.}{\longrightarrow}  0 $が成立する.
 \end{thm}
 証明の前に一つ補題を示す.
 \begin{lem}
 Kronecker's Lemma
-$\\$ $x_{1}, x_{2}, \dots$を$\displaystyle\sum_{k=1}^{n} x_{k} \to s < \infty$を満たす実数列とする.このとき, $b_{n} \uparrow \infty$となる整数列$\lbrace b_{n} \rbrace_{n \in \mathbb{N}}$が取れて, $\displaystyle\frac{1}{b_{n}} \sum_{k=1}^{n} b_{k} x_{k} \to 0 $となる.
+$\\$ $x_{1}, x_{2}, \dots$を$\displaystyle\sum_{k=1}^{n} x_{k} \to s$ (ただし$s$は有限値)を満たす実数列とする.
+$\\$このとき, $b_{n} \uparrow \infty$となる整数列$\lbrace b_{n} \rbrace_{n \in \mathbb{N}}$が取れて, $\displaystyle\frac{1}{b_{n}} \sum_{k=1}^{n} b_{k} x_{k} \to 0 $となる.
 \end{lem}
 \begin{proof}
 $\\$
-$\displaystyle r_{n} = \sum_{k=n+1}^{\infty}x_{k}, \ r_{0} = s$とおく.このとき$x_{n} = r_{n-1} - r_{n}, \ n = 1,2, \dots$.また,$\displaystyle\sum_{k=1}^{n} b_{k}x_{k} = \\ \sum_{k=1}^{n} b_{k} (r_{k-1}-r_{k}) = \sum_{k=0}^{n-1} b_{k+1} r_{k} - \sum_{k=1}^{n} b_{k} r_{k}  = \sum_{k=1}^{n-1} (b_{k+1}-b_{k})r_{k} + b_{1}s - b_{n}r_{n}$となるから
+$\displaystyle r_{n} = \sum_{k=n+1}^{\infty}x_{k}, \ r_{0} = s$とおく.このとき$x_{n} = r_{n-1} - r_{n}, \ n = 1,2, \dots$.また,
+$$\sum_{k=1}^{n} b_{k}x_{k} = \\ \sum_{k=1}^{n} b_{k} (r_{k-1}-r_{k}) = \sum_{k=0}^{n-1} b_{k+1} r_{k} - \sum_{k=1}^{n} b_{k} r_{k}  = \sum_{k=1}^{n-1} (b_{k+1}-b_{k})r_{k} + b_{1}s - b_{n}r_{n}$$
+となるから
 $\\ \displaystyle\left| \sum_{k=1}^{n} b_{k}x_{k} \right| \le \sum_{k=1}^{n-1}(b_{k+1}-b_{k}) |r_{k}| + b_{1}|s| + b_{n}|r_{n}| \ $   ($ \because$ 三角不等式, $b_{n}$は単調増加なので$b_{n+1}-b_{n} \ge 0$)$\\$
-ここで${}^\forall \varepsilon >0$をとる. $\displaystyle\sum_{k＝1}^{\infty}x_{k}$は収束するから $r_{k}$の定め方から $N \in \mathbb{N}$を${}^\forall n \ge N$に対して, $|r_{k}| \le \varepsilon$となるように取れる.このNを固定する. $\displaystyle \tilde{r} := \max \lbrace |r_{1}|, \dots, |r_{N-1}|, \varepsilon \rbrace$とする.
-$n > N$において,$\\$
-$\displaystyle \sum_{k=1}^{n-1}(b_{k+1}-b_{k}) |r_{k}| \le \sum_{k=1}^{N-1}(b_{k+1}-b_{k}) |r_{k}| + \varepsilon \sum_{k=N}^{n-1}(b_{k+1}-b_{k}) \le \tilde{r} (b_{N}-b_{1}) + \varepsilon (b_{n}-b_{N}) \ よって$ $\\$
-$\displaystyle\left| \frac{ \sum_{k=1}^{n} b_{k}x_{k} }{b_{n}}\right| \le \frac{1}{b_{n}} ( \tilde{r}(b_{N}-b_{1}) + \varepsilon ( b_{n} -b_{N} ) + b_{1}|s| + b_{n}\varepsilon ) \to \varepsilon $つまり$\displaystyle \varlimsup_{n \to \infty} \left| \frac{ \sum_{k=1}^{n} b_{k}x_{k} }{b_{n}}\right| \le \varepsilon$となるから$\displaystyle \lim_{n \to \infty} \left| \frac{ \sum_{k=1}^{n} b_{k}x_{k} }{b_{n}}\right| \le \varepsilon$がわかった.ここで$\varepsilon \downarrow 0$とすれば,$\displaystyle\frac{1}{b_{n}} \sum_{k=1}^{n} b_{k} x_{k} \to 0 $が示された.
+ここで${}^\forall \varepsilon >0$をとる. $\displaystyle\sum_{k＝1}^{\infty}x_{k}$は収束するから $r_{k}$の定め方から $N \in \mathbb{N}$を任意の $n \ge N$に対して, 
+$\\$ 
+$|r_{k}| \le \varepsilon$となるように取れる.この$N$を固定する. $\displaystyle \tilde{r} := \max \lbrace |r_{1}|, \dots, |r_{N-1}|, \varepsilon \rbrace$とする.
+$n > N$において 
+$\\$
+$$ \sum_{k=1}^{n-1}(b_{k+1}-b_{k}) |r_{k}| \le \sum_{k=1}^{N-1}(b_{k+1}-b_{k}) |r_{k}| + \varepsilon \sum_{k=N}^{n-1}(b_{k+1}-b_{k}) \le \tilde{r} (b_{N}-b_{1}) + \varepsilon (b_{n}-b_{N})$$ よって 
+$\\$
+$$ \left| \frac{ \sum_{k=1}^{n} b_{k}x_{k} }{b_{n}}\right| \le \frac{1}{b_{n}} ( \tilde{r}(b_{N}-b_{1}) + \varepsilon ( b_{n} -b_{N} ) + b_{1}|s| + b_{n}\varepsilon ) \to \varepsilon $$ 
+つまり
+$\displaystyle \varlimsup_{n \to \infty} \left| \frac{ \sum_{k=1}^{n} b_{k}x_{k} }{b_{n}}\right| \le \varepsilon$
+となるから
+$\displaystyle \lim_{n \to \infty} \left| \frac{ \sum_{k=1}^{n} b_{k}x_{k} }{b_{n}}\right| \le \varepsilon$
+がわかった.
+$\\$
+ここで$\varepsilon \downarrow 0$とすれば,$\displaystyle\frac{1}{b_{n}} \sum_{k=1}^{n} b_{k} x_{k} \to 0 $が示された.
 \end{proof}
-この補題を使って定理12を証明する.
+この補題14を使って定理13を証明する.
 \begin{proof}
 $\\$
 Kronecker's Lemmaにより, $\displaystyle\sum_{k=1}^{n}\frac{X_{k}}{b_{k}}$がほとんど確実に収束すれば,$\displaystyle \frac{1}{b_{k}} \sum_{k=1}^{n} b_{k} \frac{X_{k}}{b_{k}} = \frac{1}{b_{k}} \sum_{k=1}^{n} X_{k} \stackrel{a.s.}{\longrightarrow}  0$となる.仮定から,
 $X_{1}, X_{2}, \dots$は独立確率変数,
-$\displaystyle E\left[ \frac{X_{k}}{b_{k}} \right] = 0, \ \sum_{k=1}^{\infty} E\left[ \frac{X_{k}^{2}}{b_{k}^{2}} \right] < \infty$であるから,系 9から $\displaystyle\sum_{k=1}^{n}\frac{X_{k}}{b_{k}}$は概収束する. 
+$\displaystyle E\left[ \frac{X_{k}}{b_{k}} \right] = 0, \ \sum_{k=1}^{\infty} E\left[ \frac{X_{k}^{2}}{b_{k}^{2}} \right] < \infty$であるから,補題14から $\displaystyle\sum_{k=1}^{n}\frac{X_{k}}{b_{k}}$は概収束する. 
 $\displaystyle \ \therefore \frac{X_{1} + \dots + X_{n}}{b_{n}} \stackrel{a.s.}{\longrightarrow}  0 $
 \end{proof}
 
@@ -336,73 +459,107 @@ $\\ X$が格子上に分布しないとき, $L_{0} = \mathbb{R}$とかいて, $X
 
 %定理3.33
 \begin{thm}
-$X_{1}, X_{2}, \dots$を$L_{d} \ (d \ge 0)$上に分布する確率変数列とする.
-$\\$このとき$\displaystyle L_{d}$に含まれる状態は全て再帰的または全て非再帰的である.
+$\\ X_{1}, X_{2}, \dots$を$L_{d} \ (d \ge 0)$上に分布する確率変数列とする. このとき$\displaystyle L_{d}$に含まれる状態は全て再帰的または全て非再帰的である.
 \end{thm}
 \begin{proof}
 $\displaystyle \\ G = \left\{ x \in L_{d} | \ xは再帰的\right\}$
 とおくと, $G$は閉集合となる.($G$が空のときは全ての状態が非再帰的なので$G \neq \emptyset$とする.)
-$\displaystyle \\ \because {}^\forall \left\{ x_{n} \right\}_{n=1}^{\infty} \subset G$をとって $x_{n} \to x $とする.このとき$x \in G$を示したい.
+$\displaystyle \\ \because$ 任意に $\left\{ x_{n} \right\}_{n=1}^{\infty} \subset G$をとって $x_{n} \to x $とする.このとき$x \in G$を示したい.
 $\displaystyle \\ x$の開近傍$I$を任意にとる.$I$に対してnを十分大きく取れば$x_{n} \in I$となる.この$n$を固定する.$I$は$x_{n}$の近傍でもあるから,$P(S_{n} \in I \ i.o.) = 1 \ \therefore x \in G$
-$\displaystyle \\ y \in \mathbb{R}$が$y$の任意の近傍$I$に対して$k \in \mathbb{N}$が存在して$P(S_{k} \in I) >0$となるときyは候補状態であるとする.
-$x$が再帰的かつ$y$が候補状態$\Rightarrow \ x-y$は再帰的である. 
-$\displaystyle \\ {}^\forall \varepsilon >0$をとって,\ $k \in \mathbb{N}$を$P(\left| S_{k} - y \right| < \varepsilon) >0$を満たすようにとる.
-$\\ x$は再帰的より$\displaystyle P(\bigcap_{m \in \mathbb{N} } \bigcup_{n > m} \left\{ \left| S_{n} - x \right| < \varepsilon \right\}) = 1$となるから,
-$\displaystyle  \\
-0=P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\}) \ge 
-P( \left| S_{k} - y \right| < \varepsilon, \ \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\}) \\
-= P(\left| S_{k} - y \right| < \varepsilon)P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\})= P(\left| S_{k} - y \right| < \varepsilon)P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - (x-y) \right| \ge 2\varepsilon \right\}) \\
-$
-$\displaystyle \because \displaystyle {}^\forall \omega \in \left\{ \left| S_{k} - y \right|  < \varepsilon \right\} \cap \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\}$をとると,$\displaystyle {}^\exists m \in \mathbb{N} \ s.t. \\ {}^\forall n \ge m, \ \left| S_{k+n}(\omega) - S_{k}(\omega) -(x-y) \right| \ge 2 \varepsilon$となる.
-$\displaystyle 2\varepsilon \le \left| S_{k+n}(\omega) -  x \right| + \left| S_{k}(\omega) -y \right| <  \left| S_{k+n}(\omega) -  x \right|  + \varepsilon$から
-$\displaystyle \varepsilon \le \left| S_{k+n}(\omega) -  x \right| \ ({}^\forall n \ge m), \ N=k+m$とおけば, \\
-$\displaystyle {}^\forall n \ge N$に対して, $ \left| S_{n}(\omega) -  x \right| \ge \varepsilon$ なので $\displaystyle \omega \in \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\} \\ \therefore \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\} \supset \left\{ \left| S_{k} - y \right|  < \varepsilon \right\} \cap \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\}$ 
-$\\$また $X_{1}, X_{2}, \dots$は独立なので,$\ S_{k}$と$\displaystyle S_{k+n} - S_{k} = \sum_{m=k+1}^{k+n} X_{m}$は独立.\ また同一分布性から
-$\displaystyle \\ P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\})= P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - (x-y) \right| \ge 2\varepsilon \right\})$も成立する.
+%候補状態
+$\\$
+$\displaystyle y \in \mathbb{R}$が候補状態であるとは$y$の任意の近傍$I$に対して, ある自然数$k \in \mathbb{N}$が存在して
+$\\$
+$P(S_{k} \in I) >0$が成立することをいう.
+$\\$
+「$x$が再帰的かつ$y$が候補状態$\Rightarrow \ x-y$は再帰的」が成立することを示したい. 
+$\\ \because \\$
+$\displaystyle \varepsilon >0$を任意にとる. このとき$y$は候補状態だから, ある $k \in \mathbb{N}$が存在して $P(\left| S_{k} - y \right| < \varepsilon) >0$となる.
+$\\ x$は再帰的より$\displaystyle P(\bigcap_{m \in \mathbb{N} } \bigcup_{n > m} \left\{ \left| S_{n} - x \right| < \varepsilon \right\}) = 1$となるから
+$$0=P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\})$$ 
+$$\ge P( \left| S_{k} - y \right| < \varepsilon, \ \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\})$$
+$$= P(\left| S_{k} - y \right| < \varepsilon)P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\})= P(\left| S_{k} - y \right| < \varepsilon)P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - (x-y) \right| \ge 2\varepsilon \right\})$$
+\par
+$\quad \because \\ \quad$  任意の$\omega \in \left\{ \left| S_{k} - y \right|  < \varepsilon \right\} \cap \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\}$をとる. 
+$\\$
+ある $m \in \mathbb{N}$ が存在して, 任意の$n \ge m$ に対して, $\left| S_{k+n}(\omega) - S_{k}(\omega) -(x-y) \right| \ge 2 \varepsilon$となる.
+$\\$この$m$ を固定する. 任意の$n \ge m$に対して
+$\\$
+$ 2\varepsilon \le \left| S_{k+n}(\omega) -  x \right| + \left| S_{k}(\omega) -y \right| <  \left| S_{k+n}(\omega) -  x \right|  + \varepsilon$
+から
+$\displaystyle \varepsilon \le \left| S_{k+n}(\omega) -  x \right|$となる. 
+$\\$
+ここで
+$N=k+m$とおけば, 
+$\displaystyle n \ge N$に対して, $ \left| S_{n}(\omega) -  x \right| \ge \varepsilon$ なので $\displaystyle \omega \in \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\} \\ \therefore \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - x \right| \ge \varepsilon \right\} \supset \left\{ \left| S_{k} - y \right|  < \varepsilon \right\} \cap \bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\}$ 
+$\\$また $X_{1}, X_{2}, \dots$は独立なので,$\ S_{k}$と$\displaystyle S_{k+n} - S_{k} = \sum_{m=k+1}^{k+n} X_{m}$は独立.
+$\\$また同一分布性から
+$$P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{k+n} - S_{k} - (x-y) \right| \ge 2\varepsilon \right\})= P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - (x-y) \right| \ge 2\varepsilon \right\})$$も成立する.
 $\displaystyle \\ P(\left| S_{k} - y \right| < \varepsilon) >0$なので$P(\bigcup_{m \in \mathbb{N} } \bigcap_{n > m} \left\{ \left| S_{n} - (x-y) \right| \ge 2\varepsilon \right\}) = 0$つまり $\displaystyle \\ P(\left\{ \left| S_{n} - (x-y) \right| < 2\varepsilon \right\} \ i.o.) = 1 \quad I_{\varepsilon} = (x-y -2\varepsilon, x-y + 2\varepsilon)$とおけば,$P( \left| S_{n} \right| \in I_{\varepsilon}  \ i.o.) = 1$
 $\\ \varepsilon >0$は任意だったから$x-y$は再帰的である.
-$\displaystyle \\ x \in G$は候補状態である
+$\\$
+$\\$
+$x \in G$は候補状態である
 %x in G$は候補状態.
-$\because {}^\forall x \in G$をとる.\ $x$の開近傍$I$を任意にとる. $\displaystyle P(S_{n} \in I \ i.o.) = 1$であるから,${}^\forall k \in \mathbb{N}$に対して$P(S_{k} \in I )= 0$であるとすれば \ $\displaystyle \sum_{k=1}^{\infty} P(S_{k} \in I) < \infty$よりBorel-Ccantelli Lammaから$P(S_{k} \in I \ i.o.)= 0$これは$\displaystyle P(S_{n} \in I \ i.o.) = 1$に矛盾する.よって${}^\exists m \in \mathbb{N} \ s.t. \ P(S_{k} \in I ) > 0$となる.
+$\\$
+$\because$ $x \in G$を任意にとる.\ $x$の開近傍$I$を任意にとる. $\displaystyle P(S_{n} \in I \ i.o.) = 1$である. 任意の$k \in \mathbb{N}$に対して$P(S_{k} \in I )= 0$であるとすると$\displaystyle \sum_{k=1}^{\infty} P(S_{k} \in I) < \infty$よりBorel-Cantelli Lammaから$P(S_{k} \in I \ i.o.)= 0$
+$\\$これは$\displaystyle P(S_{n} \in I \ i.o.) = 1$に矛盾する.よって$P(S_{k} \in I ) > 0$となる$m \in \mathbb{N}$が存在する.
 $\\$よって\ $x-x =0 \in G$である.
-このことから$G$は群である.$G$が$\mathbb{R}$上で閉なので$G$は$\mathbb{R}$上の閉部分群である. 
+このことから$G$は群である. $G$が$\mathbb{R}$上で閉なので$G$は$\mathbb{R}$上の閉部分群である. 
 %ここで$\mathbb{R}$上の閉部分群はある格子$L_{l} \ (l \ge 0)$である.
 %$X_{1}, X_{2},\dots$は$L_{d}$上に分布するので$S_{n} \in L_{d}$から任意の候補状態$y$は$y \in L_{d}$となる.よって
 全ての候補状態$y$に対して $0-y = y \in G$となる.
 %$L_{d} \subset G$となる.
 %$S_{n} \in L_{d}$から $G \subset L_{d}$である.
 %d>0
-$\displaystyle \\ \bullet d>0$のとき\ $P(X_{1} = nd) >0$ かつ$P(X_{1}=(n+1)d)>0$となる$n \in \mathbb{Z}$が存在しないとき
-$\\ 0 \in G$なので0は候補状態なので
+$\displaystyle \\ \bullet d>0$のとき
+$\\ P(X_{1} = nd) >0$ かつ$P(X_{1}=(n+1)d)>0$となる$n \in \mathbb{Z}$が存在しないと仮定する.(背理法)
+$\\$
+このとき $0 \in G$は候補状態なので
 $\displaystyle \sum_{n \in \mathbb{Z}} P(X_{1} = (2d) n)=1$となって, $d$の最大性に反する. 
 よってある$n \in \mathbb{Z}$が取れて$nd, (n+1)d \in G$となる. $G$は群なので$(n+1)d - nd = d \in G$このことから$L_{d} \subset G$である.
 %d=0
-$\displaystyle \\ \bullet d=0$のとき\ このとき$G$に対して${}^\exists l > 0 \ s.t. \ G=\left\{ nl | n \in \mathbb{Z}  \right\}となると仮定する(背理法).$候補状態は$G$の元なので$\displaystyle \sum_{n \in \mathbb{Z}}P(X_{1}=nl)=1$となり,これは$d=0$に矛盾する.よって$G=\mathbb{R} = L_{0}$
+$\displaystyle \\ \bullet d=0$のとき
+$\\$
+このとき$G$に対して,ある$ l > 0$が存在して, $G=\left\{ nl | n \in \mathbb{Z}  \right\}$となると仮定する(背理法).
+$\\$候補状態は$G$の元なので$\displaystyle \sum_{n \in \mathbb{Z}}P(X_{1}=nl)=1$となり,これは$d=0$に矛盾する.よって$G=\mathbb{R} = L_{0}$
 $\\$以上で$d \ge 0$に対して$L_{d} = G$となり, $L_{d}$の全ての状態は再帰的となる.
 \end{proof}
 
 %定理3.34
+%ここまで
 \begin{thm}
 $\displaystyle X_{1}, X_{2}, \dots$を$L_{d}$上に分布する確率変数列とする(ただし$d \ge 0$). 
-$\\ (i)$もし, 有界区間$J \subset \mathbb{R}$が存在して $J \cap L_{d} \neq \emptyset$かつ $\displaystyle \sum_{n=1}^{\infty}P(S_{n} \in J) < \infty$を満たせば,再帰状態は存在しない.$\\ (ii)$もし, 有界区間$\displaystyle J \subset \mathbb{R}$で$0 < {}^\forall \varepsilon < \frac{\left|\left|J\right|\right|}{2}$に対して, ${}^\exists x \in \mathbb{R} \ s.t. \ I = (x-\varepsilon, x+\varepsilon) \subset J$かつ$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I) = \infty$となるものが存在すれば, $L_{d}$の全ての状態は再帰状態である.
+$\\ (i)$もし, 有界区間$J \subset \mathbb{R}$が存在して $J \cap L_{d} \neq \emptyset$かつ $\displaystyle \sum_{n=1}^{\infty}P(S_{n} \in J) < \infty$を満たせば,再帰状態は存在しない.
+$\\ (ii)$もし, 有界区間$\displaystyle J \subset \mathbb{R}$で任意の$\displaystyle \varepsilon \in (0, \frac{\left|\left|J\right|\right|}{2})$に対して, ある$x \in \mathbb{R}$が存在して $I = (x-\varepsilon, x+\varepsilon) \subset J$かつ$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I) = \infty$となれば, $L_{d}$の全ての状態は再帰状態である.
 \end{thm}
 \begin{proof}
-$\\$ $(i) \ J \cap L_{d} \neq \emptyset$かつ $\displaystyle \sum_{n=1}^{\infty}P(S_{n} \in J) < \infty$を満たす有界区間$J \subset \mathbb{R}$がとれたとする.
-Borel-Canteli's Lemma$\\$から$P(S_{n} \in J \ i.o.)=0$となって, $L_{d}$は少なくとも再帰的でない状態が含まれる.$\displaystyle \\ \because x \in L{d} \cap J$をとれば, $x$の開近傍$I \subset J$がとれて, $P(S_{n} \in I \ i.o.) \le P(S_{n} \in J \ i.o.) = 0$となって$x$は再帰的でない$L_{d}$の元である.
-$\displaystyle \\ $定理16から$L_{d}$の元は全て再帰状態にはならない.つまり再帰状態は存在しない.
+$\\$ $(i) \ J \cap L_{d} \neq \emptyset$かつ $\displaystyle \sum_{n=1}^{\infty}P(S_{n} \in J) < \infty$を満たす有界区間$J \subset \mathbb{R}$が存在することを仮定する.
+$\\$
+Borel-Canteli Lemmaから$P(S_{n} \in J \ i.o.)=0$となって, $L_{d}$は少なくとも再帰的でない状態が含まれる.
+$\displaystyle \\ \because x \in L_{d} \cap J$をとれば, $x$の開近傍$I \subset J$がとれて, $P(S_{n} \in I \ i.o.) \le P(S_{n} \in J \ i.o.) = 0$となって$x$は再帰的でない$L_{d}$の元である.
+$\displaystyle \\ $定理17から$L_{d}$の元は全て再帰状態にはならない.つまり再帰状態は存在しない.
 %(ii)の証明
-$\displaystyle \\ \\ (ii)$長さ$l$の有界区間$\displaystyle J \subset \mathbb{R}$で$0 < {}^\forall \varepsilon < \frac{l}{2}$に対して, ${}^\exists x \in \mathbb{R} \ s.t. \ I = (x-\varepsilon, x+\varepsilon) \subset J$かつ$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I) = \infty$となるものがとれたとする. $0 \in L_{d}$なので,0が再帰的であることがわかれば$\\$定理16から$L_{d}$の全ての状態が再帰的である.
+$\displaystyle \\ \\ (ii)$長さ$l$の有界区間$\displaystyle J \subset \mathbb{R}$で任意の$\displaystyle \varepsilon \in (0, \frac{l}{2})$に対して, ある$x \in \mathbb{R}$が存在して, $I = (x-\varepsilon, x+\varepsilon) \subset J$かつ$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I) = \infty$となるものがとれたとする. $0 \in L_{d}$なので, $0$が再帰的であることがわかれば$\\$定理17から$L_{d}$の全ての状態が再帰的である.
 %
-$A_{k} = \begin{cases} \left\{ S_{k} \in I, \ S_{n+k} \notin I \ n=1,2,\dots \right\} & (k \geq 1) \\ \left\{ S_{n} \notin I \ n=1,2,\dots \right\} & (k = 0) \end{cases} \\$と定めると,$\displaystyle \bigcup_{m \in \mathbb{N}} \bigcap_{n>m} \left\{ S_{n} \notin I \right\} = \bigcup_{k=0}^{\infty} A_{k}$となる.
+$$A_{k} = \begin{cases} \left\{ S_{k} \in I, \ S_{n+k} \notin I \ n=1,2,\dots \right\} & (k \geq 1) \\ \left\{ S_{n} \notin I \ n=1,2,\dots \right\} & (k = 0) \end{cases}$$と定めると,
+$\displaystyle \bigcup_{m \in \mathbb{N}} \bigcap_{n>m} \left\{ S_{n} \notin I \right\} = \bigcup_{k=0}^{\infty} A_{k}$となる.
 %
-$\\ \displaystyle \because (\subset) {}^\forall \omega \in$ (左辺) とする. このとき${}^\exists m \in \mathbb{N}$がとれて, $S_{n}(\omega) \notin I \ ({}^\forall n > m)$となる. $1 \le i \le m-1$の中で$S_{i}(\omega) \in I$となるものが存在するときその最大値を$k$とすれば, $S_{k}(\omega) \in I, \ S_{n}(\omega) \notin I \ ({}^\forall n \ge k)$が成立する.
-よって, $\omega \in A_{k}$となる. $S_{i} \notin I \ (1 \le {}^\forall i \le m-1)$のときは, $\omega \in \left\{ S_{n} \notin I \ n=1,2,\dots \right\} = A_{0}$ 以上で $\\ \displaystyle \omega \in$ (右辺)
+$\\ \displaystyle \because (\subset)$  $\omega \in$ (左辺) とする. このときある $m \in \mathbb{N}$がとれて, 任意の$n > m$に対して, $S_{n}(\omega) \notin I$となる. $1 \le i \le m-1$の中で$S_{i}(\omega) \in I$となるものが存在するときその最大値を$k$とすれば, 
+$\\ S_{k}(\omega) \in I, \ S_{n}(\omega) \notin I \ (n \ge k)$が成立する.
+よって, $\omega \in A_{k}$となる. 
+$\\$
+任意の$i \in \left\{ 1, \dots , m-1 \right\}$に対して, $S_{i} \notin I $のときは, $\omega \in \left\{ S_{n} \notin I \ n=1,2,\dots \right\} = A_{0}$ 以上で
+$\displaystyle \omega \in$ (右辺)
 %
-$\\ (\supset)$ $ {}^\forall \omega \in$ (右辺)とする. ${}^\exists k \in \mathbb{N} \ s.t. \ \omega \in A_{k}$となる.
+$\\ (\supset)$ $\omega \in$ (右辺)とする. このとき$ k \in \mathbb{N}$が存在して $\omega \in A_{k}$となる.
 $\\ k \ge 1$のとき $\displaystyle \omega \in A_{k} \subset \left\{ S_{n+k} \notin n=1,2,\dots \right\} = \bigcap_{n=k+1}^{\infty} \left\{ S_{n} \notin I \right\} ,\ k=0$のとき $\displaystyle \omega \in A_{0} = \bigcap_{n=1}^{\infty} \left\{ S_{n}\notin I \right\}$
-定め方から$A_{0}, A_{1}, \dots$は非交和なので, $\displaystyle P(\bigcup_{m \in \mathbb{N}} \bigcap_{n>m} \left\{ S_{n} \notin I \right\} ) = P(\bigcup_{k=0}^{\infty} A_{k}) = \sum_{k=0}^{\infty} P(A_{k})$
-$\\ k \ge 1$のとき, $P(A_{k}) \ge P(S_{k} \in I, \ \left| S_{n+k} - S_{k} \right| \ge 2\varepsilon, \ n=1,2,\dots)$
-$\displaystyle \\ \because \omega \in \left\{ S_{k} \in I \right\} \cap \left\{ \left| S_{n+k} - S_{k} \right| \ge 2\varepsilon, \ n=1,2,\dots \right\}$を任意にとる.
+定め方から$A_{0}, A_{1}, \dots$は非交和なので
+$$\displaystyle P(\bigcup_{m \in \mathbb{N}} \bigcap_{n>m} \left\{ S_{n} \notin I \right\} ) = P(\bigcup_{k=0}^{\infty} A_{k}) = \sum_{k=0}^{\infty} P(A_{k})$$
+$\\ k \ge 1$のとき
+$$P(A_{k}) \ge P(S_{k} \in I, \ \left| S_{n+k} - S_{k} \right| \ge 2\varepsilon, \ n=1,2,\dots)$$
+$\\$
+$\displaystyle \because \omega \in \left\{ S_{k} \in I \right\} \cap \left\{ \left| S_{n+k} - S_{k} \right| \ge 2\varepsilon, \ n=1,2,\dots \right\}$を任意にとる.
 $\displaystyle \\ S_{k}(\omega)\in I$かつ$ ( S_{n+k}(\omega) - S_{k}(\omega) \le -2\varepsilon$または$2\varepsilon \le S_{n+k}(\omega) - S_{k}(\omega), \ n=1,2,\dots )$
 $\\ I$の定め方から, $x-\varepsilon < S_{k} < x+\varepsilon $だから
 $\\ \Rightarrow $
