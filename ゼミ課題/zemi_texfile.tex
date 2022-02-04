@@ -18,7 +18,7 @@
 
 
 \title{課題研究 レポート}
-\author{加納基晴}
+\author{M$0$T$0$}
 \date{}
 \maketitle
 
@@ -48,7 +48,7 @@ $\\$ 定義から末尾加法族の元 $E \in \delta$ は末尾事象となる.
 \end{dfn}
 
 \begin{prop}
-$\\ X_{1}, X_{2}\dots$を確率変数とする.
+$X_{1}, X_{2}\dots$を確率変数とする.
 このとき$\textbf{X} = (X_{1}, X_{2}, \dots)$とすると, 
 $\\$任意の$B \in \mathfrak{B}_{\infty}$に対して, $\left\{ \textbf{X} \in B \right\} \in \mathcal{F}$となる.
 \end{prop}
@@ -61,6 +61,7 @@ $\\ \because$
 $\\ (i) \left\{ \textbf{X} \in \mathbb{R}^{\infty} \right\} = \Omega \in \mathcal{F}$, $\left\{ \textbf{X} \in \emptyset \right\} = \emptyset \in \mathcal{F}$つまり$\Omega , \, \emptyset \in \mathcal{C}$
 $\\ (ii) \, C \in \mathcal{C}$とする.このとき $ \left\{ \textbf{X} \in C^{c} \right\} = \left\{ \textbf{X} \in C \right\}^{c} \in \mathcal{F} \,$となるから $C^{c} \in \mathcal{C}$
 $\displaystyle\\ (iii) \, \left\{ C_{k} \right\}_{k \in \mathbb{N}} $を任意にとる. $\displaystyle \left\{ \textbf{X} \in \bigcup_{k \in \mathbb{N}} C_{k} \right\} =  \bigcup_{k \in \mathbb{N}} \left\{ \textbf{X} \in C_{k} \right\} \in \mathcal{F}$となって, $\displaystyle \bigcup_{k \in \mathbb{N}} C_{k} \in \mathcal{F}$がわかる.
+$\\$
 以上で $\mathcal{C}$は$E$を含む$\sigma$加法族であることがわかった. $\sigma (E) = \mathfrak{B}_{\infty}$なので, $\mathcal{C} = \mathfrak{B}_{\infty}$ である.
 $\\$つまり, 任意の$B \in \mathfrak{B}_{\infty}$に対して, $ B \in \mathcal{C}$ だから $\left\{ \textbf{X} \in B \right\} \in \mathcal{F}$が成立する.
 \end{proof}
@@ -74,7 +75,7 @@ $\\$任意の$\displaystyle A_{1} \in \sigma (\textbf{X}), \,  \varepsilon > 0$ 
 \end{thm}
 
 \begin{proof}
-$\\$任意の$ A_{1} \in \sigma (\textbf{X}),  \varepsilon > 0$を固定する. 
+$\\$任意の$ A_{1} \in \sigma (\textbf{X})$,  $\varepsilon > 0$を固定する. 
 $$\displaystyle \\ \mathscr{F}_{0} = \displaystyle\bigcup_{n \in  \mathbb{N}} \sigma (X_{1}, X_{2}, \dots, X_{n}) $$
 $$\mathcal{C} = {\lbrace A \in \mathcal{F} | \ 任意の\, \varepsilon > 0 に対して,P(A \triangle B) \le \varepsilon \,となるB \in \mathscr{F}_{0} \, が存在する\  \rbrace  }$$
 と定める. 
@@ -96,7 +97,7 @@ $\quad$ $(iii)$ $ \lbrace A_{n} \rbrace_{n \in \mathbb{N}} \subset \mathcal{C}, 
 $\quad \qquad$また,測度の上からの連続性からある$N \in \mathbb{N}$が取れて, $P( \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}) \le \frac{\varepsilon}{2}$となる.\par$\quad \qquad$ ここで, $\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle \displaystyle\bigcup_{n=1}^{\infty} A_{n} \subset (\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle A_{n}) \cup \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}$を示せれば,単調性と劣加法性から,\par $\quad \qquad$ $P(\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle \displaystyle\bigcup_{n=1}^{\infty} A_{n}) \le P((\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle A_{n}) \cup \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}) \le  \displaystyle\sum_{n=1}^{N}P(B_{n} \triangle A_{n}) + P(\displaystyle\bigcup_{n=N+1}^{\infty} A_{n})$ \par $\quad \qquad$ $\le \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon $となる. $\displaystyle\bigcup_{n=1}^{N} B_{n} \in \mathcal{F}_{0}$であることから　$\displaystyle\bigcup_{n=1}^{\infty} A_{n} \in \mathcal{C}$となる.
 
 %%証明の中の証明
-$\displaystyle \\ \quad$ $\bullet \ \displaystyle\bigcup_{n=1}^{N} B_{n} \triangle \displaystyle\bigcup_{n=1}^{\infty} A_{n} \subset (\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle A_{n}) \cup \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}$を示す. \par
+$\displaystyle \\ \quad \bullet \ \displaystyle\bigcup_{n=1}^{N} B_{n} \triangle \displaystyle\bigcup_{n=1}^{\infty} A_{n} \subset (\displaystyle\bigcup_{n=1}^{N} B_{n} \triangle A_{n}) \cup \displaystyle\bigcup_{n=N+1}^{\infty} A_{n}$を示す. \par
 $\quad \qquad$ $\because \ \omega \in \displaystyle\bigcup_{n=1}^{N} B_{n} \triangle \displaystyle\bigcup_{n=1}^{\infty} A_{n} \Leftrightarrow (\omega \in \displaystyle\bigcup_{n=1}^{N} B_{n} - \displaystyle\bigcup_{n=1}^{\infty} A_{n}) \lor  (\omega \in \displaystyle\bigcup_{n=1}^{\infty} A_{n} - \displaystyle\bigcup_{n=1}^{N} B_{n})$ \par 
 $\qquad \qquad \qquad$
 $ \Leftrightarrow (\omega \in \displaystyle\bigcup_{n=1}^{N} B_{n} \cap \displaystyle\bigcap_{n=1}^{\infty} A_{n}^{c}) \lor 
@@ -150,6 +151,7 @@ $\displaystyle \\ P(E \cap E_{n} ) = P(E)P( E_{n} )$ だから,各辺で$n \to \
 infinite often
 $\\ \left\{ A_{n} \right\}_{n \in \mathbb{N}} \subset \mathscr{F}$とする. $\left\{ A_{n} \ i.o. \right\}$を
  $\displaystyle \left\{ A_{n} \ i.o. \right\} = \lim_{m \to \infty} \bigcup_{n>m} A_{n}$と定める.
+$\\ \quad$
  $\\  \left\{ A_{n} \ i.o. \right\}$は $\left\{ \omega \ | \ \omega \in A_{n} となるnが無限個存在する. \right\}$ともかける.
  $\\ \displaystyle \because \omega \in \lim_{m \to \infty} \bigcup_{n>m} A_{n}$を任意にとる. $1$に対して$\omega \in A_{n_{1}}$となる$n_{1} \in \mathbb{N}$をとる.続いて $n_{1}$に対して$\omega \in A_{n_{2}}$となる$n_{2} \in \mathbb{N}$をとる.これを続ければ $\omega \in A_{n}$となる$n$の列として$\left\{ n_{k} \right\}_{k \in \mathbb{N}}$が取れるので, $\omega \in \left\{ \omega ' \ | \ \omega ' \in A_{n} となるnが無限個存在する. \right\}$である.
  $\\ \omega \in \left\{ \omega \ | \ \omega \in A_{n} となるnが無限個存在する. \right\}$を任意にとる.このとき任意の$m \in \mathbb{N}$に対して
@@ -165,11 +167,11 @@ Borel-Cantelli Lamma
 \end{lem}
 $\displaystyle (\textbf{I}), \ {\lbrace A_{n} \rbrace }_{n \in \mathbb{N}} \in \mathcal{F}$ について, $\displaystyle \sum_{n=1}^{\infty} P(A_{n}) < \infty $ ならば, $\displaystyle P(A_{n} \ i.o.) = 0$が成立する.
  \par
-$\displaystyle (\textbf{II}), \ {\lbrace A_{n} \rbrace }_{n \in \mathbb{N}} \in \mathcal{F}$ について, $\displaystyle {\lbrace A_{n} \rbrace }_{n \in \mathbb{N}}$ が独立かつ, $\displaystyle \sum_{n=1}^{\infty}P(A_{n}) = \infty$ ならば, $\displaystyle P(A_{n}  \ i.o.) = 1$ が成立する.
+$\displaystyle (\textbf{II}), \ {\lbrace A_{n} \rbrace }_{n \in \mathbb{N}} \in \mathcal{F}$ について, $\displaystyle {\lbrace A_{n} \rbrace }_{n \in \mathbb{N}}$ が独立かつ $\displaystyle \sum_{n=1}^{\infty}P(A_{n}) = \infty$ ならば, $\displaystyle P(A_{n}  \ i.o.) = 1$ が成立する.
 \begin{proof}
 $\\ (\textbf{I}) $ 
-$$\\ P(A_{n} \ i.o.) = P(\displaystyle\lim_{m \to \infty} \displaystyle\bigcup_{n=m}^{\infty}{A_n}) = \displaystyle\lim_{m \to \infty} P(\displaystyle\bigcup_{n=m}^{\infty}{A_n}) \le \displaystyle\lim_{m \to \infty} (\sum_{n=m}^{\infty}P(A_{n}))$$ $(\because 二つ目の等号は測度の連続性,不等号には劣加法性を使った)\\
-\sum_{n=1}^{\infty} P(A_{n}) < \infty$ であるから$\displaystyle\lim_{m \to \infty} (\sum_{n=m}^{\infty}P(A_{n})) = 0 \ \therefore P(A_{n} \ i.o.) = 0
+$$\\ P(A_{n} \ i.o.) = P(\displaystyle\lim_{m \to \infty} \displaystyle\bigcup_{n=m}^{\infty}{A_n}) = \displaystyle\lim_{m \to \infty} P(\displaystyle\bigcup_{n=m}^{\infty}{A_n}) \le \displaystyle\lim_{m \to \infty} (\sum_{n=m}^{\infty}P(A_{n}))$$ $(\because$ 二つ目の等号は測度の連続性,不等号には劣加法性を使った)
+$\displaystyle \\ \sum_{n=1}^{\infty} P(A_{n}) < \infty$ であるから$\displaystyle\lim_{m \to \infty} (\sum_{n=m}^{\infty}P(A_{n})) = 0 \ \therefore P(A_{n} \ i.o.) = 0
 \\(\textbf{II})$
 $\\$任意の$ m \in \mathbb{N}$に対して, $\displaystyle P(\bigcap_{n=m}^{\infty}{A_n}^{c})=0$ を示せば
 $$\displaystyle \\ P({(A_{n} \ i.o.)}^{c}) = P(\bigcup_{m \in \mathbb{N}}\bigcap_{n=m}^{\infty}{A_n}^{c}) = \lim_{m \to \infty} P(\bigcap_{n=m}^{\infty}{A_n}^{c}) = 0$$
@@ -194,12 +196,12 @@ $P(A_{n} \ i.o.) = 1$
 $\\ B_{1} = \left\{ \omega \ ; (\omega_{1},\dots,\omega_{k}) = \textbf {s}  \right\} , B_{2} = \left\{ \omega \ ; (\omega_{k+1},\dots,\omega_{2k}) = \textbf {s}  \right\} , \ \dots$とおく. 
 $\\$このとき, $\left\{ B_{n} \right\} _{n \in \mathbb{N}} $は独立となる. 
 $\\ \because $任意に$i, j \in \mathbb{N}, \, (i \neq j)$をとる. $B_{i}, B_{j}$が独立であることを示したい.
-$\\$ 考えている確率はコイントスなので, 
+$\\$ 考えている確率はコイントスなので, $\textbf{s}=(s_{1}, \dots ,s_{k})$とかくと,
 $$\displaystyle P(B_{i} \cap B_{j}) = P((\omega_{k(i-1)+1},\dots,\omega_{ki}) = \textbf {s}, (\omega_{k(j-1)+1},\dots,\omega_{kj}) = \textbf {s})$$
 $$= \prod_{m=1}^{k} P(\omega_{k(i-1)+m}=s_{m})\prod_{l=1}^{k} P(\omega_{k(j-1)+l}=s_{l}) = P((\omega_{k(i-1)+1},\dots,\omega_{ki}) = \textbf {s})P((\omega_{k(j-1)+1},\dots,\omega_{kj}) = \textbf {s})$$
 $$=P(B_{i})P(B_{l})$$
-$\\$また,$\left\{ B_{n} \ i.o. \right\} \subset \left\{ A_{n} \ i.o.\right\}$である$( \because \ B_{l} = A_{(l-1)k + 1})$. $P(B_{n}) = P(B_{1}) = \frac{1}{2^{k}} > 0$ なので 
-$\\ \displaystyle\sum_{n=1}^{\infty}P(B_{n}) = \infty$.以上のことから補題6$(\textbf{II})$を使うと, $P(B_{n} \ i.o.) = 1 \le P(A_{n} \ i.o.) \ \therefore P(A_{n} \ i.o.)=1$
+$\\$また,$\left\{ B_{n} \ i.o. \right\} \subset \left\{ A_{n} \ i.o.\right\}$である. $( \because \ B_{l} = A_{(l-1)k + 1})$ また, $\displaystyle P(B_{n}) = P(B_{1}) = \frac{1}{2^{k}} > 0$ なので 
+$\displaystyle \sum_{n=1}^{\infty}P(B_{n}) = \infty$.以上のことから補題6$(\textbf{II})$を使うと, $P(B_{n} \ i.o.) = 1 \le P(A_{n} \ i.o.) \ \therefore P(A_{n} \ i.o.)=1$
 \end{proof}
 
 $\\$
@@ -246,14 +248,16 @@ $$C_{k} = \lbrace Y_{n_{k}+1} + \dots + Y_{m_{k}} \le -n_{k} \rbrace \bigcap  \l
 と定める.
 $\\$ 
 $Y_{i} = -1, 1$だから$-n \le Z_{n} \le n$となることを使うと,
-$\omega \in C_{k}$ に対して,
+任意の $\omega \in C_{k}$ に対して,
 $$Z_{m_{k}}(\omega) = (Y_{1} + \dots + Y_{m_{k}})(\omega) = (Y_{1} + \dots + Y_{n_{k}})(\omega) + (Y_{n_{k}+1} + \dots + Y_{m_{k}})(\omega) \le n_{k} - n_{k}=0 $$
 また
 $$Z_{n_{k+1}}(\omega) = (Y_{1} + \dots + Y_{m_{k}})(\omega) + (Y_{m_{k}+1} + \dots + Y_{n_{k+1}})(\omega) \ge -m_{k} + m_{k} = 0$$
-よって $\omega \in C_{k}$に対して 
-$Z_{m_{k}}(\omega) \le 0, \, Z_{n_{k+1}}(\omega) \ge 0$であり, $Z_{n+1} = Z_{n} \pm 1$となることから 
-$$ C_{k} \subset \lbrace Z_{n} = 0 ; n_{k}+1 \le {}^\exists{n} \le n_{k+1} \rbrace = \displaystyle\bigcup_{n=n_{k}+1}^{n_{k+1}} \lbrace Z_{n}=0 \rbrace$$
-$$\lbrace C_{n} \ i.o. \rbrace = \displaystyle\bigcap_{m=1}^{\infty} \displaystyle\bigcup_{k=m}^{\infty} C_{k} \subset \displaystyle\bigcap_{m=1}^{\infty} \displaystyle\bigcup_{k=m}^{\infty} \displaystyle\bigcup_{n=n_{k}+1}^{n_{k+1}} \lbrace Z_{n}=0 \rbrace \subset  \displaystyle\bigcap_{m=1}^{\infty}  \displaystyle\bigcup_{n=n_{m}+1}^{\infty} \lbrace Z_{n}=0 \rbrace = \lbrace Z_{n} =0 \ i.o. \rbrace $$
+つまり任意の $\omega \in C_{k}$に対して 
+$Z_{m_{k}}(\omega) \le 0, \, Z_{n_{k+1}}(\omega) \ge 0$が成立する. $Z_{n+1} = Z_{n} \pm 1$となることから 
+$$ C_{k} \subset \left\{ \omega \in \Omega ; Z_{n}(\omega) = 0 となるn \in \mathbb{N} が少なくとも一つ存在する. (ただし n_{k}+1 \le n \le n_{k+1} ) \right\}$$
+$$= \bigcup_{n=n_{k}+1}^{n_{k+1}} \lbrace Z_{n}=0 \rbrace$$
+よって
+$$\lbrace C_{n} \ i.o. \rbrace = \bigcap_{m=1}^{\infty} \displaystyle\bigcup_{k=m}^{\infty} C_{k} \subset \displaystyle\bigcap_{m=1}^{\infty} \displaystyle\bigcup_{k=m}^{\infty} \bigcup_{n=n_{k}+1}^{n_{k+1}} \lbrace Z_{n}=0 \rbrace \subset  \bigcap_{m=1}^{\infty}  \bigcup_{n=n_{m}+1}^{\infty} \lbrace Z_{n}=0 \rbrace = \lbrace Z_{n} =0 \ i.o. \rbrace $$
 Borel-Cantelli Lammaから \ $\displaystyle\sum_{n=1}^{\infty} P(C_{n}) = \infty$となれば $1 = P( C_{n} \ i.o. ) \le P(Z_{n}=0 \ i.o. )$となる.
 $\\$つまり $\displaystyle\sum_{n=1}^{\infty} P(C_{n}) = \infty$となるような自然数列$\lbrace n_{k} \rbrace , \lbrace m_{k} \rbrace$が取れることを示せばよい.
 $\\ \bullet$ 任意の$\alpha \in (0,1), \, k \in \mathbb{N} $ に対して, $P(|Z_{\varphi (k)}| < k) \le \alpha$となる $\varphi (k) \ge 1$がとれる.
@@ -275,7 +279,9 @@ $\lbrace Y_{i} \rbrace_{ i \in \mathbb{N}}$の同一分布性から
 $$ =\frac{1}{4} P(\left| Y_{1} + \dots + Y_{m_{k}-n_{k}} \right| \ge n_{k}) P(\left| Y_{1} + \dots + Y_{n_{k+1}-m_{k}} \right| \ge m_{k})$$ 
 $\varphi (k)$の定め方から
 $$  =\frac{1}{4} P(\left| Y_{1} + \dots + Y_{\varphi(n_{k})} \right| \ge n_{k}) P(\left| Y_{1} + \dots + Y_{\varphi(m_{k})} \right| \ge m_{k}) \ge \frac{1}{4} (1-\alpha)^{2}$$
-$\\ \qquad \because \displaystyle\sum_{|j|<k} P(Z_{\varphi (k)} = j)$ $\underbrace{=}_{\lbrace Z_{\varphi (k)} = j \rbrace_{|j|<k} は非交和}$ $P( \displaystyle\bigcup_{|j|<k} Z_{\varphi (k)} = j) = P(\left| Y_{1} + \dots + Y_{\varphi(k)} \right| < k) \le \alpha$なので$\\ \qquad \qquad P(\left| Y_{1} + \dots + Y_{\varphi(k)} \right| \ge k) \ge 1- \alpha$
+$\\ \qquad \because$ $\lbrace Z_{\varphi (k)} = j \rbrace_{ \left\{ |j|<k \right\} }$は非交和だから
+$$\displaystyle\sum_{|j|<k} P(Z_{\varphi (k)} = j) = P( \bigcup_{|j|<k} Z_{\varphi (k)} = j) = P(\left| Y_{1} + \dots + Y_{\varphi(k)} \right| < k) \le \alpha$$
+$\qquad$よって $P(\left| Y_{1} + \dots + Y_{\varphi(k)} \right| \ge k) \ge 1- \alpha$
 $\\$ 以上で　$ \displaystyle\sum_{k=1}^{\infty} P(C_{k}) \ge  \displaystyle\sum_{k=1}^{\infty} \frac{1}{4} (1-\alpha)^{2} = \infty$となって,$\ P(Z_{n} = 0 \ i.o.) = 1$が示せた.
 %$\stackrel{=}{as}$
 %$\stackrel{=}{\lbrace Z_{\varphi (k)} = j \rbrace_{|j|<k} は非交和} $ 
@@ -290,7 +296,7 @@ $\\$ 以上で　$ \displaystyle\sum_{k=1}^{\infty} P(C_{k}) \ge  \displaystyle\
 $X_{1}, X_{2}, \dots$を独立確率変数とする.$\\$
 このとき, \par $\displaystyle \sum_{k=1}^{n}X_{k}$ が確率収束する. $\Leftrightarrow \displaystyle\sum_{k=1}^{n}X_{k}$ が概収束する.
 \end{thm}
-まず、補題を示す.
+まず補題を示す.
 %補題
 \begin{lem}$N \in \mathbb{N}$を固定する. $X_{1}, X_{2}, \dots, X_{N}$を独立確率変数とし,\ $S_{n} = X_{1} + \dots + X_{n}$とおく.
 $\\$任意の$\alpha > 0$に対して, $\displaystyle\sup_{1 \le j \le N} P(|S_{N}-S_{j}| > \alpha) = c < 1$となるとき, $\\ \displaystyle P( \sup_{1 \le j \le N} |S_{j}| > 2\alpha ) \le \frac{1}{1-c} P(|S_{N}|>\alpha)$が成立する.
@@ -305,9 +311,10 @@ $\\ \displaystyle P(|S_{N}| > \alpha, \ \sup_{1 \le j \le N} |S_{j} | > 2\alpha)
 %becuase1
 $\\ \displaystyle \because \ \bullet \bigcup_{1 \le j \le N} \lbrace j^{*} = j \rbrace = \lbrace \sup_{1 \le j \le N}|S_{j}| > 2\alpha \rbrace$を示せば,一つ目の等号が成立する.\par
 $(\subset)$ \par
-$\omega \in$ (左辺)とすれば, $1 \le {}^\exists j \le N \ s.t. \ j^{*}(\omega) = k$だから $|S_{k}(\omega)|>2 \alpha$なので$\displaystyle\sup_{1 \le j \le N}  |S_{j}| \ge |S_{k}(\omega)| > 2\alpha$となって, $\omega \in$ (右辺) \par
+$\omega \in$ (左辺)を任意にとる.このとき $j^{*}(\omega) = k$となる$j \in \left\{ 1, \dots , N  \right\} $が存在するから, $|S_{k}(\omega)|>2 \alpha$より
+$\\ \displaystyle\sup_{1 \le j \le N}  |S_{j}| \ge |S_{k}(\omega)| > 2\alpha$となって, $\omega \in$ (右辺) \par
 $( \supset )$ \par
-$\omega \in$ (右辺)とすれば, $\displaystyle\sup_{1 \le j \le N } |S_{j}(\omega)| > 2\alpha$であるから, 
+$\omega \in$ (右辺)を任意にとる.このとき $\displaystyle\sup_{1 \le j \le N } |S_{j}(\omega)| > 2\alpha$であるから, 
 $\\ K \in \left\{1,2, \dots , N  \right\}, \, \lbrace k_{1}, k_{2}, \dots, k_{K} \rbrace \subset \lbrace 1,2,\dots ,N \rbrace$ が存在して
 $|S_{k_{m}}|>2 \alpha \  (m = 1,2,\dots, K) $となる.
 $\displaystyle j^{**}(\omega)= \min{ \lbrace k_{1}, k_{2}, \dots, k_{K} \rbrace }$とすれば$j^{*}(\omega) = j^{**}(\omega)$となるから $\omega \in $(左辺)となる.
@@ -362,7 +369,7 @@ $\\ \displaystyle P\left( \left| \sum_{k=m+1}^{N} X_{k} \right| > \frac{\varepsi
 $ \displaystyle C_{m, N} = \sup_{m < n \le N} P\left( \left| \sum_{k=n}^{N}X_{k} \right| > \frac{\varepsilon}{2} \right)$とおくと,$ \displaystyle \  C_{m, N} < 1$ かつ$\displaystyle C_{m, N} \to 0 \ (m, \ N \to \infty)$となる.
 
 %
-ここで補題9を使うと,
+ここで補題11を使うと,
 $\displaystyle \\ P\left(\sup_{ m < n \le N } \left| \sum_{ k = m+1 }^{n} X_{k} \right| > \varepsilon \right) \le \frac{1}{1-C_{m, N}} P\left( \left| \sum_{ k = m+1 }^{N} X_{k} \right| > \frac{\varepsilon}{2} \right)$ とかけて,
 まず$\displaystyle N \to \infty$とすると,$\\$
 単調性から
@@ -416,7 +423,7 @@ $\displaystyle r_{n} = \sum_{k=n+1}^{\infty}x_{k}, \ r_{0} = s$とおく.この�
 $$\sum_{k=1}^{n} b_{k}x_{k} = \\ \sum_{k=1}^{n} b_{k} (r_{k-1}-r_{k}) = \sum_{k=0}^{n-1} b_{k+1} r_{k} - \sum_{k=1}^{n} b_{k} r_{k}  = \sum_{k=1}^{n-1} (b_{k+1}-b_{k})r_{k} + b_{1}s - b_{n}r_{n}$$
 となるから
 $\\ \displaystyle\left| \sum_{k=1}^{n} b_{k}x_{k} \right| \le \sum_{k=1}^{n-1}(b_{k+1}-b_{k}) |r_{k}| + b_{1}|s| + b_{n}|r_{n}| \ $   ($ \because$ 三角不等式, $b_{n}$は単調増加なので$b_{n+1}-b_{n} \ge 0$)$\\$
-ここで${}^\forall \varepsilon >0$をとる. $\displaystyle\sum_{k＝1}^{\infty}x_{k}$は収束するから $r_{k}$の定め方から $N \in \mathbb{N}$を任意の $n \ge N$に対して, 
+ここで$\varepsilon >0$を任意にとる. $\displaystyle\sum_{k＝1}^{\infty}x_{k}$は収束するから $r_{k}$の定め方から $N \in \mathbb{N}$を任意の $n \ge N$に対して, 
 $\\$ 
 $|r_{k}| \le \varepsilon$となるように取れる.この$N$を固定する. $\displaystyle \tilde{r} := \max \lbrace |r_{1}|, \dots, |r_{N-1}|, \varepsilon \rbrace$とする.
 $n > N$において 
@@ -453,7 +460,7 @@ $\\ x \in \mathbb{R}$ とする. $x$が再帰状態(recurrent state)であると
 
 \begin{dfn} 
 格子上に分布する確率変数 
-$\\ X$が格子$\displaystyle L_{d} = \left\{ nd \ | \ n \in \mathbb{Z} \right\}, \ (d >0)$上に分布するとは, $\displaystyle \sum_{n \in \mathbb{Z}} P(X = nd)=1$かつ$\displaystyle \\ {}^\exists l >d \ s.t. \sum_{n \in \mathbb{Z}} P(X = nl)=1$とならないことである.
+$\\ X$が格子$\displaystyle L_{d} = \left\{ nd \ | \ n \in \mathbb{Z} \right\}, \ (d >0)$上に分布するとは, $\displaystyle \sum_{n \in \mathbb{Z}} P(X = nd)=1$かつ $\displaystyle \sum_{n \in \mathbb{Z}} P(X = nl)=1$となる$l >d$が存在しないことである.
 $\\ X$が格子上に分布しないとき, $L_{0} = \mathbb{R}$とかいて, $X$は$L_{0}$上に分布するという.
 \end{dfn}
 
@@ -598,9 +605,9 @@ $\\$
 $$ P(S_{k}\in I_{\delta}, \ \left| S_{n+k} - S_{k} \right| \ge \varepsilon - \delta \ n = 1,2,\dots ) = P(S_{k}\in I_{\delta}) P(\left| S_{n+k} - S_{k} \right| \ge \varepsilon - \delta \ n = 1,2,\dots)$$
 $$ = P(S_{k}\in I_{\delta}) P(\left| S_{n} \right| \ge \varepsilon - \delta \ n = 1,2,\dots) = 0$$
 $\because \displaystyle  0 < \frac{\varepsilon - \delta}{2} < \frac{l}{2}$なので$(*)$より $P(\left| S_{n} \right| \ge \varepsilon - \delta \ n = 1,2,\dots) =0 \\$
-以上で$P(A_{k})=0 \ ({}^\forall k \ge 1)$となる. 
+以上で$P(A_{k})=0 \ ( k \ge 1)$となる. 
 $\\ 0< \varepsilon<\frac{l}{2}$だから$0<\frac{\varepsilon}{2} < \frac{l}{2}$なので $P(A_{0}) = P(S_{n} \notin I \ n=1,2,\dots) = P(\left| S_{n} \right| \ge \varepsilon \ n=1,2,\dots) = 0$
-以上から$0 < {}^\forall \varepsilon < \frac{l}{2}, \ I= (-\varepsilon, \varepsilon)$に対して, $P (S_{n} \in I \ i.o.)=1 $ 
+以上から任意の$\varepsilon \in  (0 , \frac{l}{2}), \ I= (-\varepsilon, \varepsilon)$に対して, $P (S_{n} \in I \ i.o.)=1 $ 
 よって, $0$は再帰的となる. $\therefore L_{d}$の全ての状態は再帰的である.
 \end{proof}
 
@@ -610,7 +617,7 @@ $\\  (i) \ L_{d} \cap I \neq \emptyset$ を満たす全ての有界区間$I$に�
 $\\ (ii) \ L_{d} \cap I \neq \emptyset$を満たす全ての有界区間$I$ に対して, $P(S_{n} \in I  \ i.o.)=0$
 \end{cor}
 \begin{proof}
-$\\ L_{d} \cap I \neq \emptyset$となる全ての有界区間$I$に対して$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I)= \infty$となるとき, 定理17から$L_{d}$の全ての状態は再帰的である.つまり　$L_{d} \cap I \neq \emptyset$となる任意の有界区間$I$とすれば, $ {}^\forall x \in L_{d} \cap I$として 
+$\\ L_{d} \cap I \neq \emptyset$となる全ての有界区間$I$に対して$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I)= \infty$となるとき, 定理17から$L_{d}$の全ての状態は再帰的である.つまり　$L_{d} \cap I \neq \emptyset$となる任意の有界区間$I$とすれば, $ x \in L_{d} \cap I$を任意にとって 
 $ P(S_{n} \in I \ i.o.) \ge P(S_{n} = x \ i.o.) =1 \quad (\because \ x$は再帰的)となる.
 $\\ L_{d} \cap I \neq \emptyset$となる有界区間$I$が存在して$\displaystyle \sum_{n=1}^{\infty} P(S_{n} \in I) < \infty$となるとき, 定理17から再帰状態は存在しない. よって任意の有界区間$I \ ( L_{d} \cap I \neq \emptyset )$ に対して $I$を含む開区間$J$とすれば $P(S_{n}\in I \ i.o.) \le P(S_{n} \in J \ i.o. ) =0$ ( $\because \ J$は $L_{d}$のある元の開近傍)
 \end{proof}
@@ -633,9 +640,9 @@ $\displaystyle \sum_{n=1}^{\infty} P \left(S_{n} \in I \right) \le 1 + \sum_{n=1
 \begin{proof}
 $\displaystyle \\ I$を長さ$a$の任意の区間としてとる.
 $\displaystyle N := \sum_{n=1}^{\infty} 1_{ \left\{ S_{n} \in I \right\} }$とおくと, $N$は和$S_{1}, S_{2}, \dots$の中で$I$に含まれるものの個数を数えたものとなる.
-$\displaystyle \\ n^{*} (\omega) := \begin{cases} S_{n}(\omega) \in I となる最小の n \in \mathbb{N} \\ \infty & (もしS_{n}(\omega) \notin I \ , n = 1,2,\dots ) \end{cases}$とおく. $\displaystyle \\ \left\{ n^{*} = k \right\}$ 上では $1_{ \left\{ S_{n} \in I \right\} } = 0$ $({}^\forall n < k)$ , $1_{ \left\{ S_{k} \in I \right\} } = 1$ となるから
+$\displaystyle \\ n^{*} (\omega) := \begin{cases} S_{n}(\omega) \in I となる最小の n \in \mathbb{N} \\ \infty & (もしS_{n}(\omega) \notin I \ , n = 1,2,\dots ) \end{cases}$とおく. $\displaystyle \\ \left\{ n^{*} = k \right\}$ 上では, $n < k$となる $n\in \mathbb{N}$に対しては $1_{ \left\{ S_{n} \in I \right\} } = 0$,また $1_{ \left\{ S_{k} \in I \right\} } = 1$ となるから
 $$ N = \sum_{n=1}^{k-1} 1_{ \left\{ S_{n} \in I \right\} } + 1_{ \left\{ S_{k} \in I \right\} } + \sum_{n=k+1}^{\infty} 1_{ \left\{ S_{n} \in I \right\} } = 1 + \sum_{n=1}^{\infty} 1_{ \left\{ S_{k+n} \in I \right\} } = 1 + \sum_{n=1}^{\infty} 1_{ \left\{ S_{k+n} - S_{k} \in I - S_{k} \right\} } \\ \le 1 + \sum_{n=1}^{\infty} 1_{ \left\{ S_{k+n} - S_{k} \in \left[-a,a\right] \right\} }$$
-$\displaystyle \\ \quad \because {}^\forall \omega \in \left\{ n^{*} = k \right\}$に対して, $I - S_{k}(\omega) \subset [-a, a] $となる. つまり $1_{ \left\{ I - S_{k}(\omega)  \right\} } \le 1_{ \left[ -a, a \right]}$が成立する.
+$\displaystyle \\ \quad \because$ 任意に $\omega \in \left\{ n^{*} = k \right\}$をとる.このとき $I - S_{k}(\omega) \subset [-a, a] $となる. つまり $1_{ \left\{ I - S_{k}(\omega)  \right\} } \le 1_{ \left[ -a, a \right]}$が成立する.
 $\\$なぜなら, $\overline{I} = \left[ I_{1}, I_{1}+a \right]$とかくと$(I_{1} \in \mathbb{R})$ 
 $\\ -I_{1} - a \le -S_{k}(\omega) \le -I_{1}$ であって, $I - I_{1} - a = \left[-a, 0\right], \ I - I_{1}= \left[0,a\right]$であるから,
 $\\I - S_{k}(\omega) \subset \left[-a, a\right]$だから, $1_{ \left\{ I - S_{k}  \right\} } \le 1_{ \left[ -a, a \right]}$となる.
@@ -685,7 +692,6 @@ $$ \sum_{k=1}^{\infty} \int_{ \left\{ n^{*} = k \right\} }{N(\omega) P (d\omega)
 -1 & (\omega_{i}がTのとき)
 \end{array}
 \right., Z_{n} = Y_{1} + \dots + Y_{n}$とする.
-$\\$このとき$\displaystyle Y_{1}, Y_{2}, \dots$は独立同一分布に従い,$L_{1}$上に分布する. $\displaystyle E\left[Y_{1} \right] = 0$なので, $\left\{ Z_{n} \right\}_{n \in \mathbb{N}}$は再帰的になる.
-$\\$また, 定理9が従うので,  $\displaystyle P(Z_{n} = 0 \ i.o.) = 1$より,系18から$\left\{ Z_{n} \right\}_{n \in \mathbb{N}}$は再帰的になることがわかる.
+$\\$このとき$\displaystyle Y_{1}, Y_{2}, \dots$は独立同一分布に従い,$L_{1}$上に分布する. $\displaystyle E\left[Y_{1} \right] = 0$なので,定理21により $\left\{ Z_{n} \right\}_{n \in \mathbb{N}}$は再帰的になる. また, 定理9が従うので,  $\displaystyle P(Z_{n} = 0 \ i.o.) = 1$より,系19から$\left\{ Z_{n} \right\}_{n \in \mathbb{N}}$は再帰的になることがわかる.
  
  \end{document}

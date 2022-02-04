@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.12.28)  29 JAN 2022 21:49
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.12.28)  4 FEB 2022 21:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -266,7 +266,7 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 
 ] [2]
 [3] [4]
-Overfull \hbox (5.21846pt too wide) detected at line 199
+Overfull \hbox (5.21846pt too wide) detected at line 201
 \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ![] \O
 T1/cmr/m/n/10 = \OML/cmm/m/it/10 s[]\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10 P\OT1
 /cmr/m/n/10 (\OML/cmm/m/it/10 ![] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 s[]\OT1/cm
@@ -276,7 +276,7 @@ r/m/n/10 ) = \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10 ![]; [] ; ![]
  []
 
 [5] [6] [7]
-Overfull \hbox (68.8683pt too wide) detected at line 319
+Overfull \hbox (68.8683pt too wide) detected at line 326
 \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 S[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 !\OT1/c
 mr/m/n/10 )\OMS/cmsy/m/n/10 j ^^@ j\OML/cmm/m/it/10 S[]\OT1/cmr/m/n/10 (\OML/cm
 m/m/it/10 !\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j ^^T \OML/cmm/m/it/10 ^^K \JY1/mc
@@ -291,7 +291,7 @@ OMS/cmsy/m/n/10 ^^T j\OML/cmm/m/it/10 S[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 !\OT
  []
 
 
-Overfull \hbox (5.36993pt too wide) detected at line 330
+Overfull \hbox (5.36993pt too wide) detected at line 337
 \OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c\OT1/cmr/m/n/10 )\OML
 /cmm/m/it/10 P\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 S[]\OMS/cm
 sy/m/n/10 j \OML/cmm/m/it/10 > \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ^^K\OT1/cmr/m/
@@ -307,7 +307,7 @@ r/m/n/10 2\OML/cmm/m/it/10 ^^K\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^T \OML/cmm/m
  []
 
 [8] [9] [10] [11]
-Overfull \hbox (36.12723pt too wide) detected at line 481
+Overfull \hbox (36.12723pt too wide) detected at line 488
 \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 < "\OT
 1/cmr/m/n/10 )\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ([] [] []) = \OML/cmm/m/it/10 P
 \OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 < "\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 P\OT1
@@ -315,13 +315,13 @@ Overfull \hbox (36.12723pt too wide) detected at line 481
  []
 
 [12] [13] [14] [15]
-Overfull \hbox (46.2356pt too wide) detected at line 637
+Overfull \hbox (46.2356pt too wide) detected at line 644
 \OML/cmm/m/it/10 N \OT1/cmr/m/n/10 = [] 1[] + 1[] + [] 1[] = 1 + [] 1[] = 1 + [
 ] 1[][] [] \OMS/cmsy/m/n/10 ^^T \OT1/cmr/m/n/10 1 + [] 1[]
  []
 
 
-Overfull \hbox (35.01811pt too wide) detected at line 645
+Overfull \hbox (35.01811pt too wide) detected at line 652
 \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n[] \OT1/
 cmr/m/n/10 = \OML/cmm/m/it/10 k\OT1/cmr/m/n/10 ) + [] [][] [] = \OML/cmm/m/it/1
 0 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 k\O
@@ -336,6 +336,6 @@ Here is how much of TeX's memory you used:
  19672 multiletter control sequences out of 15000+600000
  423077 words of font info for 117 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 67i,14n,74p,1008b,269s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,14n,74p,1008b,267s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on zemi_texfile.dvi (17 pages, 93264 bytes).
+Output written on zemi_texfile.dvi (17 pages, 93716 bytes).
